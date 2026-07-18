@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditing the Audit — The 9.80665 m/s² "Legal Fiction" Carousel, Reviewed</title>
+<meta name="description" content="A slide-by-slide review of the unpublished 'Audit of Terrestrial Gravity and Geodetic Standardizations' circulating as a TikTok carousel.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="Auditing the Audit — the 9.80665 m/s² 'legal fiction' paper, reviewed">
+<meta property="og:description" content="The paper demands drop tests. Absolute gravimeters drop a mirror in vacuum, thousands of times a day, worldwide. The paper never mentions them. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/gravity-audit-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/gravity-audit-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auditing the Audit — the 9.80665 m/s² 'legal fiction' paper, reviewed">
+<meta name="twitter:description" content="The paper demands drop tests. Absolute gravimeters perform them worldwide. The paper never mentions them. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/gravity-audit-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/gravity-audit-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0;
+    --card:#FBFBF8;
+    --ink:#1B2433;
+    --navy:#24405E;
+    --burgundy:#79212E;
+    --brass:#8A661C;
+    --grey:#5C6470;
+    --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  /* ---------- header / drop trace ---------- */
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:56ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  .droptrace{position:absolute;top:0;right:24px;bottom:0;width:64px;display:flex;justify-content:center}
+  .droptrace .rail{width:1px;background:var(--rule);height:100%;position:relative}
+  .droptrace .tick{position:absolute;left:-5px;width:11px;height:1px;background:var(--rule)}
+  .droptrace .cube{position:absolute;left:-6px;width:13px;height:13px;border:2px solid var(--navy);background:var(--card);animation:drop 2.6s cubic-bezier(.35,0,.9,.6) infinite}
+  .droptrace .lbl{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9.5px;color:var(--grey);white-space:nowrap}
+  @keyframes drop{0%{top:2%;opacity:0}8%{opacity:1}86%{top:86%;opacity:1}92%{opacity:0}100%{top:86%;opacity:0}}
+  @media (prefers-reduced-motion:reduce){.droptrace .cube{animation:none;top:40%}}
+  @media (max-width:660px){.droptrace{display:none}}
+
+  /* ---------- generic ---------- */
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  h3{font-family:var(--sans);font-weight:600;font-size:17px;margin:22px 0 8px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  em{font-style:italic}
+  strong{font-weight:600}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  /* ---------- claim cards ---------- */
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px;padding:0}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+
+  /* ---------- steelman ---------- */
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  /* ---------- counterargument q&a ---------- */
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0;color:var(--ink)}
+  .qa dd p{font-size:16px}
+
+  /* ---------- sources ---------- */
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="droptrace" aria-hidden="true">
+      <div class="rail">
+        <span class="tick" style="top:10%"></span><span class="tick" style="top:25%"></span>
+        <span class="tick" style="top:40%"></span><span class="tick" style="top:55%"></span>
+        <span class="tick" style="top:70%"></span><span class="tick" style="top:85%"></span>
+        <div class="cube"></div>
+      </div>
+      <span class="lbl">FG5 drop</span>
+    </div>
+    <div class="eyebrow"><a href="../" style="color:inherit;text-decoration:none">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>Auditing the Audit</h1>
+    <p class="sub">A slide-by-slide review of <em>“An Audit of Terrestrial Gravity and Geodetic Standardizations”</em> — a 13-slide document circulating on TikTok that argues standard gravity, 9.80665&nbsp;m/s², is a “legal fiction.”</p>
+    <p class="byline"><b>Verdict up front:</b> the history is mostly real. The physics conclusions drawn from it are not. And the decisive counter-evidence — instruments that measure gravity by literally dropping a mirror in vacuum and timing it — goes entirely unmentioned.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document, and where does it live?</h2>
+  <p>The document is formatted to look like a research paper: title page, abstract-style framing, section headings, justified type, and the attribution <em>“Independent Research.”</em> It appears as a photo carousel on the TikTok account Azimutha.FE.</p>
+  <p>As of this review, exact-title and phrase searches return no trace of it anywhere else. It is not on Zenodo, viXra, ResearchGate, Academia.edu, OSF, or any preprint server. There is no PDF to download, no DOI, no named author, no reference list, and no way to cite, check, or respond to it outside of screenshots.</p>
+  <div class="note warn">
+    <div class="kicker">Why this matters</div>
+    <p>Academic formatting is doing rhetorical work here. The layout borrows the <em>authority signals</em> of a paper — while carrying none of the accountability that even minimal self-publication provides. A document that exists only as images cannot be searched, quoted precisely, or held to its own claims. That is a choice, and it's worth noticing before evaluating a single argument inside it.</p>
+  </div>
+  <p>Stylistically, the text is also strongly consistent with large-language-model drafting: the recurring “a strict operational analysis confirms…”, “a critical audit demonstrates…” register; tidy parallel section scaffolding; and confident passive-voice constructions in place of any named method, apparatus, or dataset. There is no measurement anywhere in a document about measurement.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" style="margin:0 -24px;padding-left:24px;padding-right:24px">
+  <div class="kicker">02 · The Steelman</div>
+  <h2>The strongest version of the argument</h2>
+  <p>Before pulling it apart, here is the best case the document could make — because parts of it are genuinely correct, and pretending otherwise would be dishonest.</p>
+  <p><strong>Standard gravity is a convention, not a measurement of anywhere in particular.</strong> The value 9.80665&nbsp;m/s² was codified by the 3rd General Conference on Weights and Measures in 1901 as a defined constant for converting between mass and force. Real local gravity varies from about 9.78&nbsp;m/s² at the equator to about 9.83&nbsp;m/s² at the poles, and no place on Earth is required to have exactly the standard value.</p>
+  <p><strong>The history it recounts is largely accurate.</strong> Gilbert Defforges really did run reversible-pendulum measurements at the Pavillon de Breteuil in 1888. The CIPM really did apply a latitude reduction to produce an idealized 45°-latitude sea-level value. The Lapland and Peru arc expeditions, the Great Trigonometrical Survey of India, and the Kalyan–Kaliana plumb-line discrepancy are all real episodes, told roughly correctly.</p>
+  <p><strong>Measurement always involves models and corrections.</strong> Surveyors do correct for refraction; metrologists do reduce raw data to reference conditions. Any honest philosophy of measurement has to grapple with that.</p>
+  <p>If the document concluded <em>“standard gravity is a defined reference value, and local gravity must be measured where precision matters,”</em> it would be correct — and it would be restating what every metrology textbook already says openly. The problem is what it concludes instead.</p>
+</section>
+
+<!-- ============ THE MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>True footnotes, poisoned epistemology</h2>
+  <p>The document's method is consistent across all thirteen slides: take a genuine piece of metrological history, then smuggle in an unstated philosophical premise — <strong>that only direct physical contact counts as “empirical.”</strong> Pendulums “swing sideways, so they don't measure free fall.” Triangulation “replaces a chain with light, so it isn't a measurement.” Vacuum chambers are “artificial tension zones.” Refraction corrections are “analytical fabrications.”</p>
+  <p>Apply that standard consistently and <em>nothing</em> is empirical. Reading a thermometer uses light refracted through your cornea. A tape measure relies on a thermal-expansion model of steel — which slide 11 itself concedes when it praises engineers for “calibrating tape measures to the temperature of the steel.” The document's own favored instruments (plumb bobs, core drills, tape measures) are every bit as theory-laden as the ones it rejects. The tactile-only criterion isn't a higher standard of rigor; it's a filter tuned to exclude exactly the measurements that give inconvenient answers.</p>
+  <p>With the method named, the slides themselves.</p>
+</section>
+
+<!-- ============ SLIDE BY SLIDE ============ -->
+<section id="slides">
+  <div class="kicker">04 · Slide by Slide</div>
+  <h2>The claims, audited</h2>
+  <p style="margin-bottom:22px">Each card paraphrases a claim, states what's true in it, and where it goes wrong.</p>
+
+  <!-- Claim 1 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slides 2 &amp; 4 · Definition &amp; history</span>
+      <span class="stamp true">Accurate</span>
+    </div>
+    <div class="claim-body">
+      <h2>“9.80665 m/s² is a 1901 convention derived by reducing Defforges' Paris data to an idealized 45° latitude.”</h2>
+      <p class="assertion">Claim: the standard value was mathematically engineered from one lab's pendulum data rather than discovered as a universal constant of nature.</p>
+      <span class="lbl t">What's true</span>
+      <p>Essentially all of it. Defforges measured local gravity at Sèvres in 1888 with a reversible pendulum; the CIPM divided by a latitude coefficient to reference the value to 45° at sea level; the 3rd CGPM codified 980.665&nbsp;cm/s² in 1901 for defining standard weight. This is textbook metrology history and no one hides it — the BIPM publishes it.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Nothing yet — except the framing that this is a discovery. It's the setup for a bait-and-switch: establishing (correctly) that g₀ is conventional, then treating that as if it undermined the <em>measured</em> variation of local gravity, which is a different quantity entirely. Watch how the later slides trade on this confusion.</p>
+    </div>
+  </article>
+
+  <!-- Claim 2 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 3 · WGS84 formula</span>
+      <span class="stamp misleading">Self-defeating</span>
+    </div>
+    <div class="claim-body">
+      <h2>“The International Gravity Formula gives 9.7803 m/s² at the equator and 9.8322 m/s² at the poles.”</h2>
+      <p class="assertion">Claim: the standard value corresponds to no direct drop test, only a calculated latitude.</p>
+      <span class="lbl t">What's true</span>
+      <p>The formula is quoted correctly, and yes — g₀ matches the model value near 45° 32′ 33″ rather than a specific drop test.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>This slide quietly concedes the whole game. The pole-to-equator variation it cites — about 0.5% — is a <em>prediction</em> of the rotating oblate spheroid: part centrifugal effect, part equatorial bulge. A flat, stationary Earth predicts no such systematic latitude dependence. That predicted variation has been confirmed by thousands of independent gravity measurements on every continent for over a century, which is precisely how the formula's coefficients were fitted. The document reproduces the globe's most latitude-sensitive fingerprint and never notices what it's holding.</p>
+    </div>
+  </article>
+
+  <!-- Claim 3 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slides 5–6 · Geodetic history</span>
+      <span class="stamp misleading">Backfires</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Shape models kept changing, and the Indian survey found a 5.23-arcsecond plumb-line discrepancy.”</h2>
+      <p class="assertion">Claim: sphere → oblate spheroid → ellipsoid revisions show models being adjusted to fit mismatched data rather than measuring reality; the Kalyan–Kaliana discrepancy forced surveyors to “estimate” crust density.</p>
+      <span class="lbl t">What's true</span>
+      <p>The expedition history is broadly right: Maupertuis in Lapland, Bouguer and La Condamine near the equator, Lambton and Everest in India, and a real deflection-of-the-vertical discrepancy that led Pratt and Airy to propose competing compensation models in 1855.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Two things. First, successive refinement — sphere, then spheroid, then ellipsoid with parameters — is what measurement convergence looks like. The revisions got <em>smaller</em> each time, from percent-level to parts-per-million. Models fitted to “mismatched data” at random don't converge; models tracking a real shape do.</p>
+      <p>Second, and fatally for slide 10: the Kalyan–Kaliana anomaly exists because <strong>the Himalayas gravitationally attract plumb bobs.</strong> A plumb line — the document's own gold standard of tactile, physical instrumentation — is pulled measurably sideways toward a mountain range, in the open air, with no laboratory, no vacuum, and no telescope. This is mass attracting mass in nature, observed with the very apparatus the author trusts most. (Maskelyne demonstrated the same thing at Schiehallion in 1774, a quarter-century <em>before</em> Cavendish.) The document cites the strongest field evidence against its own later argument and doesn't realize it.</p>
+    </div>
+  </article>
+
+  <!-- Claim 4 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 7 · Triangulation</span>
+      <span class="stamp false">False criterion</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Optical triangulation isn't a physical measurement, because light must touch the terrain to count.”</h2>
+      <p class="assertion">Claim: measurements require direct physical contact between an instrument of known length and the terrain; refraction corrections are “analytical fabrications.”</p>
+      <span class="lbl t">What's true</span>
+      <p>Atmospheric refraction is real, surveyors do apply modeled corrections, and light in air doesn't travel in perfectly straight lines.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The contact-only criterion is invented, not derived — no philosophy of science, no standards body, no court of law defines measurement this way. Refraction corrections aren't free parameters; they're independently constrained by measuring the same line in both directions, at different temperatures, and against physical baselines — which is exactly what slide 5 describes the Indian survey doing with its “baselines of verification.”</p>
+      <p>More to the point, modern geodesy doesn't rest on optical triangulation. Satellite laser ranging is a time-of-flight measurement — photons physically travel to a retroreflector and return, timed by atomic clocks. GNSS, VLBI, and DORIS provide three fully independent techniques that agree on Earth's shape to centimeters. The document attacks a 19th-century method as if it were the load-bearing wall of a building that was re-founded decades ago.</p>
+    </div>
+  </article>
+
+  <!-- Claim 5 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 8 · Kater's pendulum</span>
+      <span class="stamp false">False</span>
+    </div>
+    <div class="claim-body">
+      <h2>“A pendulum swings sideways, so it can't measure free-fall acceleration.”</h2>
+      <p class="assertion">Claim: the reversible pendulum yields only “a mechanical frequency count specific to that hardware,” untranslatable to falling objects.</p>
+      <span class="lbl t">What's true</span>
+      <p>The description of Kater's design and Huygens' theorem is correct — the document explains the apparatus rather well.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The claim that pendulum g and free-fall g are unrelated quantities is empirically testable, and it fails. The same gravitational acceleration that sets a pendulum's restoring torque sets a dropped object's acceleration — that's not an assumption, it's a prediction you can check. Measure g with a pendulum, then drop an object and time it: the numbers agree. This cross-check has been performed continuously for two centuries, culminating in modern absolute gravimeters (next card) which use <em>actual free fall</em> and reproduce pendulum-derived values to the precision of the older instruments. If pendulums produced hardware-specific artifacts, different pendulums in the same room would disagree. They don't.</p>
+    </div>
+  </article>
+
+  <!-- Claim 6 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 9 · Vacuum &amp; buoyancy</span>
+      <span class="stamp false">False</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Feathers fall slowly because of buoyant support; vacuums are artificial tension zones that strip it away.”</h2>
+      <p class="assertion">Claim: there is no uniform rate of fall — heavy dense objects consistently fall faster — and the vacuum-chamber feather test only shows the destruction of buoyancy.</p>
+      <span class="lbl t">What's true</span>
+      <p>Air drag and buoyancy are real, a vacuum chamber is under external compression, and 9.8&nbsp;m/s² is indeed defined for the vacuum case.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Almost everything else, and testably so. A feather is <em>denser than air</em> — that's why it falls at all. An object with genuine net “buoyant support” doesn't drift down slowly; it rises, like a helium balloon. What slows a feather is drag, which scales with speed and area, not buoyancy, which doesn't. You can separate the two at home: crumple one of two identical sheets of paper. Same mass, same material, same buoyant force — radically different fall. Buoyancy can't explain that; drag does.</p>
+      <p>“Heavy, dense objects consistently fall faster” is also just false at short drops: a golf ball and a bowling ball — an eightfold mass difference — land together from a few meters, exactly as Galileo argued.</p>
+      <p>And the “artificial pressurized chamber” objection has a clean counterexample the document never mentions: in 1971 David Scott dropped a hammer and a falcon feather on the Moon — open environment, no chamber walls, no engineered “tension zone” — and they struck the ground together. The footage is public. On the density-and-buoyancy account, that result is impossible.</p>
+    </div>
+  </article>
+
+  <!-- Claim 7 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 10 · Cavendish &amp; shielding</span>
+      <span class="stamp false">Non sequitur</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Gravity can't be shielded or reversed, so it fails the standard of a verifiable force.”</h2>
+      <p class="assertion">Claim: mass-attracts-mass rests on one 1798 experiment vulnerable to electrostatics and thermal currents, and General Relativity is untestable because spacetime can't be isolated in a lab.</p>
+      <span class="lbl t">What's true</span>
+      <p>Cavendish's original setup did have to control for exactly those confounders — he documented them himself. And gravity genuinely can't be shielded.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>“Rests on one experiment” hasn't been true for 200 years. The torsion-balance measurement has been replicated hundreds of times with progressively brutal controls: grounded Faraday shielding for electrostatics, vacuum operation for air currents, seismic isolation, different masses, different geometries — and in recent decades by entirely different methods, including beam balances and atom-interferometry measurements of G that share none of Cavendish's failure modes. They agree. Add the mountain-scale plumb-line deflections from the document's own slide 6, and mass-attracts-mass is among the most redundantly confirmed facts in physics.</p>
+      <p>The shielding argument is a non sequitur: “can be shielded and reversed” is a property of electromagnetism, not a definition of “force.” Gravity coupling to everything equally is the equivalence principle — a measured property, tested to parts per quadrillion by torsion-balance and satellite experiments — not a disqualification. As for GR being untestable: GPS satellite clocks must be corrected by ~38 microseconds per day for relativistic effects or positions drift by kilometers within hours. Every engineer the document lionizes in the next slide is relying on tested General Relativity each time they use GNSS equipment.</p>
+    </div>
+  </article>
+
+  <!-- Claim 8 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 11 · Engineering practice</span>
+      <span class="stamp misleading">Inverted</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Real engineers reject planetary values for plumb bobs, core drills, and tape measures.”</h2>
+      <p class="assertion">Claim: geodetic models are useless for high-precision construction; skyscrapers relying on 9.80665 m/s² or optical triangulation would fail.</p>
+      <span class="lbl t">What's true</span>
+      <p>Engineers do use site investigations, expansion joints, shielded plumb lines, and local verification. No structural engineer designs a column by plugging in g₀ — a fact which threatens nobody, because g₀ was never meant for that.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The examples are inverted. A plumb bob <em>is</em> a gravity instrument — it points along the local gravity vector, the same “downward vector” the document spent nine slides calling unmeasurable. Trusting a plumb line while denying that local g is a well-defined, measurable quantity is self-contradictory.</p>
+      <p>And modern supertall construction runs on exactly the geodetic infrastructure the slide dismisses: the Burj Khalifa's verticality was controlled with GNSS metrology — coordinates delivered in the WGS84 frame the previous slides called a “mathematical compromise.” Long-span bridges must account for Earth's curvature explicitly: the Verrazzano-Narrows towers are built plumb yet are measurably farther apart at the top than at the base, because local verticals on a sphere diverge. The document's chosen arena — precision engineering — is where the globe model is not just used but <em>load-bearing</em>.</p>
+    </div>
+  </article>
+
+  <!-- Claim 9 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slides 12–13 · “Legal fiction”</span>
+      <span class="stamp false">False</span>
+    </div>
+    <div class="claim-body">
+      <h2>“g₀ is a bookkeeping tool that mathematically erases real geographic gravity differences.”</h2>
+      <p class="assertion">Claim: trade law mandates a unified calibrator that hides the difference between high- and low-altitude ports; items should be evaluated by volume, weight, and 'molecular category' instead.</p>
+      <span class="lbl t">What's true</span>
+      <p>g₀ is a conventional reference value used in legal metrology. Calling a defined constant a “convention” is correct — and openly stated in every standards document.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Legal metrology does the <em>opposite</em> of erasing geographic differences — it explicitly corrects for them. Commercial weighing instruments are gravity-sensitive, so international guidance (OIML D 28) and national regulations define <strong>gravity zones</strong>: a scale calibrated in one zone must be recalibrated or compensated when moved to another, precisely because local g differs from place to place. High-precision balances ship with per-site gravity adjustment. The regulatory system the document accuses of hiding gravity variation is built around acknowledging and compensating for it. This is checkable in five minutes and is the clearest sign the author never looked at the field being “audited.”</p>
+      <p>“Legal fiction” also equivocates on the word <em>fiction</em>. The meter and the second are conventions too — someone had to pick a reference. A convention chosen to sit inside a measured range of real values isn't a falsehood; it's a unit. The kilogram being defined doesn't make mass imaginary.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="gravimeters">
+  <div class="kicker">05 · The Unmentioned Instrument</div>
+  <h2>The measurement the audit couldn't afford to include</h2>
+  <p>Every slide attacks an indirect method — pendulums, triangulation, formulas — and demands direct, physical, tactile measurement of falling objects. Here is the remarkable thing: <strong>that instrument exists, it is the international standard, and the document never mentions it.</strong></p>
+  <p>An absolute gravimeter (the FG5 family, and newer atom-interferometry instruments) measures local g by the most literal method imaginable: it <em>drops an object and times it</em>. A corner-cube mirror falls freely inside a small evacuated chamber while a laser interferometer tracks its position against an atomic-clock timebase, fringe by fringe, hundreds of times per drop, thousands of drops per day. No pendulum arc, no sightline across terrain, no latitude formula — a falling body, a ruler made of light, and a clock. Precision: about 2 parts per billion.</p>
+  <div class="note">
+    <div class="kicker">What these instruments find</div>
+    <p>Local g varies exactly as the oblate rotating Earth predicts: ~9.78&nbsp;m/s² near the equator, ~9.83 near the poles, decreasing ~3&nbsp;µm/s² per meter of altitude, with local anomalies that map ore bodies, aquifers, and magma chambers — anomalies commercially exploited by mineral exploration companies who would happily use a better model if one existed. Hundreds of these instruments operate worldwide; their inter-comparisons anchor the International Gravity Reference Frame. Their free-fall values agree with two centuries of pendulum data and with the WGS84 formula the document quotes on slide 3.</p>
+  </div>
+  <p>By the document's own stated standard — “direct, unvarnished measurement of an empirical event at a specific location” — this is the decisive evidence. It answers every objection raised: it's a real drop (answers slide 8), in a chamber only to remove the drag confounder the author agrees exists (slide 9), at specific locations worldwide (slide 2), with no reliance on triangulation (slide 7) or a legal constant (slide 12). An audit that demands drop tests while omitting the global network of drop-test instruments isn't an audit. It's a filing with the exculpatory evidence removed.</p>
+</section>
+
+<!-- ============ COUNTERARGUMENTS ============ -->
+<section id="counters">
+  <div class="kicker">06 · Anticipated Responses</div>
+  <h2>Objections I expect, answered in advance</h2>
+  <dl class="qa">
+    <dt>“The gravimeter still uses lasers and vacuum — that's not tactile.”</dt>
+    <dd><p>Then nothing is, including the author's tape measures (thermal-expansion model), plumb bobs (gravity model), and eyes (refracting lenses). A criterion that invalidates every measurement ever made, including your own, isn't rigor — it's an exit from the conversation. Meanwhile the objection concedes the original demand was met: an object was physically dropped and physically timed.</p></dd>
+    <dt>“But G has never been measured directly.”</dt>
+    <dd><p>This conflates two quantities. Big G (the coupling constant) and little g (local acceleration) are different things. Little g is measured directly, every day, by free fall — no G required. Big G is harder, and is nonetheless measured by multiple independent methods (torsion balance, beam balance, atom interferometry) that agree to ~4 significant figures. Difficulty of one measurement doesn't impeach a different one.</p></dd>
+    <dt>“Institutions define the value, so institutions control the result.”</dt>
+    <dd><p>The strongest reply is commercial, not institutional: gravity surveying is a private industry. Oil, mining, and groundwater companies pay for gravimeter campaigns because the globe-model corrections <em>make them money</em> — the anomalies predict where to drill. A conspiracy requires every competing prospector on Earth to keep using a wrong model against their own financial interest, forever.</p></dd>
+    <dt>“You're attacking the author, not the argument.”</dt>
+    <dd><p>Every card above engages the argument on its merits; the provenance section exists because a document formatted as a paper invites evaluation as a paper — and by paper standards, citing no sources, reporting no measurements, and existing only as screenshots are substantive findings, not insults.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">07 · Primary Sources</div>
+  <h2>Check everything</h2>
+  <ol>
+    <li><b>3rd CGPM (1901), Declaration on the unit of mass and standard gravity</b> — BIPM, official resolutions archive. The convention, stated openly, in 1901.</li>
+    <li><b>Defforges, G. (1888–1894)</b> — pendulum determinations of gravity at the Bureau International, published in <em>Comptes Rendus</em> and BIPM <em>Travaux et Mémoires</em>.</li>
+    <li><b>Kater, H. (1818)</b> — “An account of experiments for determining the length of the pendulum vibrating seconds,” <em>Phil. Trans. R. Soc.</em></li>
+    <li><b>Maskelyne, N. (1775)</b> — the Schiehallion plumb-line deflection experiment, <em>Phil. Trans. R. Soc.</em> Mass attracting mass, outdoors, pre-Cavendish.</li>
+    <li><b>Pratt, J. H. (1855) &amp; Airy, G. B. (1855)</b> — the Kalyan–Kaliana deflection papers, <em>Phil. Trans. R. Soc.</em>, origin of isostasy.</li>
+    <li><b>Niebauer, T. M. et al. (1995)</b> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 free-fall design paper.</li>
+    <li><b>Wziontek, H. et al. (2021)</b> — “Status of the International Gravity Reference System and Frame,” <em>Journal of Geodesy</em> 95. The worldwide absolute-gravity network.</li>
+    <li><b>OIML D 28 (2004)</b> — “Conventional value of the result of weighing in air” and associated national gravity-zone regulations for weighing instruments.</li>
+    <li><b>Apollo 15 hammer–feather drop (1971)</b> — NASA footage, public archive.</li>
+    <li><b>Rosi, G. et al. (2014)</b> — “Precision measurement of the Newtonian gravitational constant using cold atoms,” <em>Nature</em> 510. G without a torsion balance.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier
+    <span class="vsep">|</span> Corrections welcome — unlike the document under review, this page has an address.
+  </div>
+</footer>
+
+</body>
+</html>
