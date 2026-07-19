@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Strawman That Changed Shape — the "Historical Earth Shapes" paper, reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 11-slide 'Critical Examination of Earth's Physical Shape' — a paper that correctly proves Earth never physically morphed, then declares victory over a claim no scientist ever made.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="The Strawman That Changed Shape — the 'Historical Earth Shapes' paper, reviewed">
+<meta property="og:description" content="Eleven slides prove Earth never physically changed shape. Correct — and nobody said it did. The 'phase timeline' is a meme, and the satellites in the paper's own references measured Earth's shape by staying in orbit.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/earth-shapes-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/earth-shapes-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Strawman That Changed Shape — reviewed">
+<meta name="twitter:description" content="A paper that proves Earth never physically morphed — correctly — and mistakes that for a discovery. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/earth-shapes-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/earth-shapes-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:56ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* header signature: the orbit trace that measured the shape */
+  .orbitpanel{position:absolute;top:72px;right:24px;width:180px}
+  .orbitpanel svg{width:100%;height:auto;display:block}
+  .orbitpanel .cap{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);text-align:center;margin-top:6px}
+  @media (max-width:780px){.orbitpanel{display:none}}
+  @media (min-width:781px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 215px)}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="orbitpanel" aria-hidden="true">
+      <svg viewBox="0 0 180 130" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="90" cy="68" rx="34" ry="31" fill="none" stroke="#24405E" stroke-width="2.5"/>
+        <ellipse cx="90" cy="68" rx="62" ry="50" fill="none" stroke="#D9DAD3" stroke-width="1.5" stroke-dasharray="3 4" transform="rotate(-14 90 68)"/>
+        <ellipse cx="90" cy="68" rx="62" ry="50" fill="none" stroke="#79212E" stroke-width="1.5" transform="rotate(8 90 68)"/>
+        <circle cx="151" cy="59" r="4" fill="#79212E"/>
+        <text x="90" y="72" font-family="IBM Plex Mono, monospace" font-size="9" fill="#5C6470" text-anchor="middle">oblate</text>
+      </svg>
+      <span class="cap">precession, not decay — Vanguard, 1959</span>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>The Strawman That Changed Shape</h1>
+    <p class="sub">A review of <em>“A Critical Examination of Earth's Physical Shape, Atmospheric Containment, and the Logical Consistency of Mainstream Scientific Claims”</em> — an 11-slide document proving, at length, that Earth never physically morphed between a sphere, spheroid, pear, and geoid.</p>
+    <p class="byline"><b>Verdict up front:</b> the central conclusion is correct — the “phases” are refinements of mathematical models, not planetary deformations. That is also, word for word, the mainstream position. The paper wins a debate no scientist ever entered, and loses the two it actually starts: atmospheric containment and orbital stability — the second refuted by the satellites in its own reference list.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The fourth paper-formatted release from the Azimutha.FE account (reviews <a href="../gravity-audit-review/">one</a>, <a href="../gravimeter-dissection-review/">two</a>, and <a href="../inverse-square-constants-review/">three</a> precede it). Eleven slides, first-person analytical voice, seven numbered parts, an abstract, and — genuine progress — a <strong>references section</strong>, the first in the series. Credit for the gesture; scrutiny for the execution: the entries are names and vague descriptions (“Knittle, E. (modern). Planetary science and gravitational interpretation”) with no titles, volumes, or pages, and the satellite missions are cited with a remarkable caveat — <em>“referenced for their data, not their interpretations.”</em></p>
+  <div class="note warn">
+    <div class="kicker">Hold that caveat</div>
+    <p>The “data” from Vanguard, Explorer, LAGEOS, and GRACE are, before any interpretation whatsoever, <strong>decades of stable, precisely tracked orbits around a non-spherical Earth</strong>. Part 6 of this paper argues such orbits are physically impossible. The reference list refutes the thesis before the interpretations start. We'll return to this — it's the review's centerpiece.</p>
+  </div>
+  <p>As with the first three papers: no named author, no hosted citable copy, and prose consistent with LLM drafting throughout — though this one shows more internal structure and, notably, more internal contradiction, of the kind that accumulates when a document is generated in sections and never read whole.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" style="margin:0 -24px;padding-left:24px;padding-right:24px">
+  <div class="kicker">02 · The Steelman</div>
+  <h2>The strongest version — which is stronger than usual</h2>
+  <p><strong>The core conclusion is true.</strong> Earth did not physically change shape in 1744, 1841, 1959, or 1984. Part 1’s consequence analysis is competently done: a genuine planetary deformation would produce global earthquakes, megatsunamis, day-length changes, and orbital perturbation, and none are recorded. Correct on every count.</p>
+  <p><strong>Sections 2.2 and 2.3 are genuine debunks.</strong> The paper accurately explains that 1958 satellite data confirmed Earth <em>“had always been”</em> an oblate spheroid, correctly notes the 1/297 flattening is invisible in photographs, and dismantles the “school globes are flattened at the poles” meme. These sections could run on this site nearly unedited.</p>
+  <p><strong>The demand for mechanism is legitimate in principle.</strong> “No force = no change; no effects = no force” is sound reasoning about physical deformation, and asking what contains the atmosphere is a fair question with a real answer.</p>
+  <p>If the paper concluded <em>“the shape-change timeline circulating online is a misreading of geodesy's model history, and Earth has been an oblate spheroid all along,”</em> it would be a good debunking essay. Instead it concludes the Earth's shape is “empirically undetermined” and the sky is a dome — positions its own strongest sections contradict.</p>
+</section>
+
+<!-- ============ THE MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>Recording a meme “precisely as presented” — by nobody</h2>
+  <p>Everything downstream depends on the table in Part 2.1: five “phases” with dates — Perfect Sphere until 1744, Oblate to 1841, Triaxial to 1924, Pear 1959–65, Geoid 1984–present — introduced as <em>“the mainstream scientific literature references a specific timeline of Earth's shape… recorded precisely as presented.”</em> Presented <strong>where?</strong> No geodesy textbook, standards document, or paper claims Earth <em>was</em> those shapes on those dates. The dates mark when <em>models</em> were proposed or refined: Maupertuis's expedition results (1744), triaxiality investigations, Vanguard's detection of the J₃ “pear” term (1959), modern geoid solutions (1980s). The timeline-as-physical-history exists in exactly one place: a flat-earth meme that mocks science for “changing Earth's shape.” The paper has taken its own community's joke, attributed it to mainstream science, and spent eleven slides refuting it.</p>
+  <p>The tell is internal: the paper's own table lists Oblate Spheroid as <em>“currently in use”</em> alongside Geoid <em>“1984–present.”</em> Two current shapes at once — which is correct, and dissolves the “phases” framing entirely, because they are concurrent <em>tools</em> (a reference ellipsoid for coordinates, a geoid for heights), not successive worlds. And section 2.2 concedes the whole game in one sentence: satellite data confirmed Earth <em>had always been</em> oblate. A paper cannot contain that sentence and also conclude, five slides later, that Earth's shape “remains empirically undetermined.” One of the two authors of this document should have read the other.</p>
+  <p>And how large are these “phases,” physically? Small enough that they need their own exhibit — <a href="#toscale">see them to scale below</a>, where every model in the table is drawn on one cross-section and the exaggeration required just to tell them apart becomes the argument.</p>
+</section>
+
+<!-- ============ INTERACTIVE: THE PHASES TO SCALE ============ -->
+<section id="toscale">
+  <div class="kicker">04 · Interactive · The “Phases,” To Scale</div>
+  <h2>Every shape in the table, drawn at true scale</h2>
+  <p>Below are all five “phases” rendered on the same cross-section. The left globe can be exaggerated so the differences become visible; the right globe is always at <strong>true scale</strong>, in 3D, with each refinement shaded in its own color across the latitudes where it acts — shading, not geometry, because <strong>every change in the table is thinner than the outline of the globe itself</strong>: the largest is about a pixel at this size, and every refinement after 1744 is thousandths of one.</p>
+
+  <div class="viz" id="phaseviz">
+    <div class="viz-controls">
+      <div class="viz-phases" role="tablist" aria-label="Earth shape models">
+        <button data-p="0" class="on">Sphere<span>~240 BCE</span></button>
+        <button data-p="1">Oblate<span>1744</span></button>
+        <button data-p="2">Triaxial<span>1841</span></button>
+        <button data-p="3">Pear<span>1959</span></button>
+        <button data-p="4">Geoid<span>1984</span></button>
+      </div>
+      <div class="viz-slider">
+        <label for="exag">Exaggeration <b id="exagval">1×</b></label>
+        <input type="range" id="exag" min="0" max="5" step="0.01" value="0">
+        <div class="viz-btns">
+          <button id="truescale">True scale (1×)</button>
+          <button id="visbtn">Make this phase visible</button>
+          <button id="playbtn">▶ Play the “transitions”</button>
+        </div>
+      </div>
+    </div>
+    <div class="viz-canvases">
+      <figure>
+        <canvas id="cvL" width="360" height="360" aria-label="Exaggerated Earth cross-section"></canvas>
+        <figcaption>Adjustable exaggeration</figcaption>
+      </figure>
+      <figure>
+        <canvas id="cvR" width="360" height="360" aria-label="True scale Earth cross-section with deviations color-coded"></canvas>
+        <figcaption>Always true scale · 3D · shaded where each refinement acts</figcaption>
+      </figure>
+    </div>
+    <div class="viz-readout" id="readout"></div>
+  </div>
+
+  <h3 style="font-family:var(--sans);font-weight:600;font-size:17px;margin:26px 0 8px">Better rulers, same mathematics</h3>
+  <p>Here is the point the paper's timeline actually documents, read correctly. Around 240 BCE, Eratosthenes measured Earth's circumference with a stick, a shadow, and the distance to Syene — and got within a few percent. His geometry was flawless; we still teach it. His <em>limit</em> was the shadow: you can only read a gnomon's angle so finely. Every date in the “phase” table marks the arrival of a better ruler, not the funeral of a theory. Wooden survey rods across Lapland resolved the 0.34% flattening a stick could never see (1744). Continental triangulation resolved tens of meters (1800s). A satellite's tracked orbit resolved the ~20-meter pear term (1959). Laser ranging and radar altimetry resolved the ±100-meter geoid ripples (1980s onward), and today resolve centimeters.</p>
+  <p>Across that span, <strong>measurement precision improved by roughly eight orders of magnitude. The model changed by a third of one percent — once — and by parts per million ever after.</strong> No transition falsified the mathematics that preceded it: the ellipsoid contains the sphere as flattening goes to zero; the geoid contains the ellipsoid as its ripples average out. Each earlier model remains the <em>correct answer at its own instrument's precision</em> — which is why Eratosthenes' number was never “proven wrong,” merely sharpened. Mistaking sharpened for overturned is the paper's entire Part 2, and the two globes above are what the mistake looks like at scale: five “phases,” one circle.</p>
+
+  <div class="note">
+    <div class="kicker">The ruler ladder</div>
+    <p><b>Stick &amp; shadow</b> (~240 BCE): angle to ~a few arcminutes → circumference within percent. <b>Wooden rods + zenith sectors</b> (1744): arc lengths to meters over miles → flattening, 1 part in 297. <b>Theodolite triangulation</b> (1800s): arcseconds → axis differences of tens of meters. <b>Orbit tracking</b> (1958–): satellite precession rates → the 20 m pear term. <b>Laser &amp; radar</b> (1976–): centimeters → the full geoid map. The instruments span the ladder; the planet barely moved.</p>
+  </div>
+</section>
+
+<style>
+  .viz{background:var(--card);border:1px solid var(--rule);padding:20px 20px 16px;margin:22px 0}
+  .viz-phases{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .viz-phases button{font-family:var(--mono);font-size:12px;letter-spacing:.04em;padding:7px 12px 6px;background:var(--paper);border:1.5px solid var(--rule);color:var(--ink);cursor:pointer}
+  .viz-phases button span{display:block;font-size:9.5px;color:var(--grey);letter-spacing:.08em}
+  .viz-phases button.on{border-color:var(--navy);color:var(--navy);font-weight:600}
+  .viz-slider label{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:6px}
+  .viz-slider label b{color:var(--burgundy);font-size:13px;letter-spacing:0}
+  .viz-slider input[type=range]{width:100%;accent-color:#24405E}
+  .viz-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .viz-btns button{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;padding:7px 12px 6px;background:var(--paper);border:1.5px solid var(--navy);color:var(--navy);cursor:pointer}
+  .viz-btns button:hover{background:var(--navy);color:#fff}
+  .viz-canvases{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  .viz-canvases figure{margin:0;text-align:center}
+  .viz-canvases canvas{max-width:100%;height:auto;background:var(--paper);border:1px solid var(--rule)}
+  .viz-canvases figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);margin-top:6px}
+  .viz-readout{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);padding:12px 14px;margin-top:16px;line-height:1.7}
+  .viz-readout b{color:var(--burgundy)}
+</style>
+
+<script>
+(function(){
+  var R_KM=6371, PHASES=[
+    {n:"Perfect Sphere",yr:"~240 BCE",inst:"stick, shadow, and pacing — Eratosthenes",dev:0},
+    {n:"Oblate Spheroid",yr:"1744",inst:"wooden rods & zenith sectors — Lapland/Peru arcs",dev:21.4},
+    {n:"Triaxial Ellipsoid",yr:"1841",inst:"continental triangulation — Bessel era",dev:0.035},
+    {n:"Pear (J3 term)",yr:"1959",inst:"orbit precession — Vanguard 1 tracking",dev:0.022},
+    {n:"Geoid",yr:"1984–",inst:"laser ranging & radar altimetry",dev:0.106}
+  ];
+  // deviation-from-sphere components in km as functions of latitude phi (radians), cumulative by phase
+  function comp(phase,phi){
+    var d=0;
+    if(phase>=1) d+=-21.4*Math.pow(Math.sin(phi),2);           // oblateness
+    if(phase>=2) d+= 0.035*Math.pow(Math.cos(phi),2);          // triaxial (worst meridian)
+    if(phase>=3) d+= 0.022*Math.pow(Math.sin(phi),3);          // pear J3
+    if(phase>=4) d+= 0.050*Math.sin(3*phi+1)+0.038*Math.sin(5*phi+2.2)+0.030*Math.sin(7*phi+0.6); // geoid ripple (illustrative harmonics, ±~0.1 km)
+    return d;
+  }
+  // individual terms (km) for the true-scale color rings
+  function term(c,phi){
+    if(c===1) return -21.4*Math.pow(Math.sin(phi),2);
+    if(c===2) return  0.035*Math.pow(Math.cos(phi),2);
+    if(c===3) return  0.022*Math.pow(Math.sin(phi),3);
+    if(c===4) return  0.050*Math.sin(3*phi+1)+0.038*Math.sin(5*phi+2.2)+0.030*Math.sin(7*phi+0.6);
+    return 0;
+  }
+  var TCOL=["","36,64,94","138,102,28","121,33,46","47,107,102"];      // navy, brass, burgundy, teal
+  var TMAX=[0,21.4,0.035,0.022,0.106], TNAME=["","Oblate","Triaxial","Pear","Geoid"];
+  var ringA=[0,0,0,0,0], fadeT=null;                                    // per-term fade alpha
+
+  var cvL=document.getElementById('cvL'),cvR=document.getElementById('cvR');
+  var xL=cvL.getContext('2d'),xR=cvR.getContext('2d');
+  var slider=document.getElementById('exag'),exagval=document.getElementById('exagval');
+  var readout=document.getElementById('readout');
+  var phase=0, playing=false, playT=null;
+  var Rpx=150, PXPERKM=Rpx/R_KM;
+
+  function E(){ return Math.pow(10,parseFloat(slider.value)); }
+  function fmt(x){ return x>=1000?Math.round(x).toLocaleString():(x>=10?''+Math.round(x):x.toFixed(x>=1?1:2)); }
+
+  function drawGlobe(ctx,ex,color){
+    var w=ctx.canvas.width,h=ctx.canvas.height,cx=w/2,cy=h/2;
+    ctx.clearRect(0,0,w,h);
+    // reference sphere (dashed)
+    ctx.beginPath();ctx.setLineDash([3,4]);ctx.strokeStyle="#C9CBC3";ctx.lineWidth=1;
+    ctx.arc(cx,cy,Rpx,0,2*Math.PI);ctx.stroke();ctx.setLineDash([]);
+    if(color){ // true-scale: 3D orthographic globe; each term shaded on the surface where it acts
+      var TILT=0.32, ca=Math.cos(TILT), sa=Math.sin(TILT);
+      function proj(phi,lam){                                           // lat,lon -> screen (front test via z')
+        var x=Math.cos(phi)*Math.sin(lam), y=Math.sin(phi), z=Math.cos(phi)*Math.cos(lam);
+        return {x:cx+Rpx*x, y:cy-Rpx*(y*ca - z*sa), z:(y*sa + z*ca)};
+      }
+      // sphere body with light from upper-left
+      var g=ctx.createRadialGradient(cx-Rpx*0.35,cy-Rpx*0.4,Rpx*0.1,cx,cy,Rpx*1.05);
+      g.addColorStop(0,"#FFFFFF");g.addColorStop(0.55,"#EDEEE8");g.addColorStop(1,"#CFD1C8");
+      ctx.beginPath();ctx.fillStyle=g;ctx.arc(cx,cy,Rpx,0,2*Math.PI);ctx.fill();
+      // term shading: tinted latitude micro-bands on the front hemisphere, alpha = |term| there
+      for(var c=1;c<=4;c++){
+        if(ringA[c]<=0.01) continue;
+        for(var d=-88;d<=88;d+=2){
+          var phi=d*Math.PI/180;
+          var a=Math.abs(term(c,phi))/TMAX[c]*0.5*ringA[c];
+          if(a<0.02) continue;
+          ctx.beginPath();ctx.strokeStyle="rgba("+TCOL[c]+","+a.toFixed(3)+")";ctx.lineWidth=Rpx*0.038;
+          var started=false;
+          for(var L=-90;L<=90;L+=4){
+            var q=proj(phi,L*Math.PI/180);
+            if(q.z<=0){started=false;continue;}
+            started?ctx.lineTo(q.x,q.y):(ctx.moveTo(q.x,q.y),started=true);
+          }
+          ctx.stroke();
+        }
+      }
+      // graticule: latitude circles every 30°, longitude meridians every 30° (front only)
+      ctx.strokeStyle="rgba(92,100,112,0.28)";ctx.lineWidth=0.8;
+      for(var d=-60;d<=60;d+=30){
+        var phi=d*Math.PI/180;ctx.beginPath();var st=false;
+        for(var L=-180;L<=180;L+=3){var q=proj(phi,L*Math.PI/180);if(q.z<=0){st=false;continue;}st?ctx.lineTo(q.x,q.y):(ctx.moveTo(q.x,q.y),st=true);}
+        ctx.stroke();
+      }
+      for(var m=0;m<360;m+=30){
+        ctx.beginPath();var st=false;
+        for(var d=-90;d<=90;d+=3){var q=proj(d*Math.PI/180,m*Math.PI/180);if(q.z<=0){st=false;continue;}st?ctx.lineTo(q.x,q.y):(ctx.moveTo(q.x,q.y),st=true);}
+        ctx.stroke();
+      }
+      // the limb — the "line of the globe"; every deviation in the table is thinner than this stroke
+      ctx.beginPath();ctx.strokeStyle="#1B2433";ctx.lineWidth=3;
+      ctx.arc(cx,cy,Rpx,0,2*Math.PI);ctx.stroke();
+      // pole marks
+      var np=proj(Math.PI/2,0), sp=proj(-Math.PI/2,0);
+      ctx.fillStyle="#5C6470";ctx.font="10px 'IBM Plex Mono',monospace";ctx.textAlign="center";
+      ctx.fillText("N",np.x,np.y-6);ctx.fillText("S",sp.x,sp.y+13);
+    } else {
+      ctx.beginPath();
+      for(var i=0;i<=360;i++){
+        var th=i*Math.PI/180, phi=Math.PI/2-th;         // start at north pole, go clockwise
+        var dev=comp(phase,phi)*PXPERKM*ex;
+        dev=Math.max(-0.45*Rpx,Math.min(0.45*Rpx,dev));
+        var r=Rpx+dev, x=cx+r*Math.sin(th), y=cy-r*Math.cos(th);
+        i?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      ctx.closePath();
+      ctx.strokeStyle="#24405E";ctx.lineWidth=2.5;ctx.stroke();
+      ctx.fillStyle="#5C6470";ctx.font="10px 'IBM Plex Mono',monospace";ctx.textAlign="center";
+      ctx.fillText("N",cx,cy-Rpx-24);ctx.fillText("S",cx,cy+Rpx+22);
+    }
+  }
+
+  function phaseOwnDev(p){ // characteristic size of THIS phase's new term, km
+    return [0,21.4,0.035,0.022,0.106][p];
+  }
+
+  function legend(){
+    var out=[];
+    for(var c=1;c<=4;c++){ if(c<=phase){
+      var mag=TMAX[c]>=1?TMAX[c]+" km":Math.round(TMAX[c]*1000)+" m";
+      out.push('<span style="color:rgb('+TCOL[c]+');font-weight:600">&#9632; '+TNAME[c]+' '+(c===1?'\u2212':'\u00B1')+mag+'</span>');
+    }}
+    return out.length?out.join(' &nbsp; '):'<span style="color:#5C6470">no deviations \u2014 a sphere is a sphere</span>';
+  }
+  function update(){
+    var ex=E();
+    exagval.textContent=fmt(ex)+"×";
+    drawGlobe(xL,ex,false);
+    drawGlobe(xR,1,true);
+    var own=phaseOwnDev(phase), px=own*PXPERKM, need=own>0?Math.ceil(15/px):0;
+    var P=PHASES[phase];
+    readout.innerHTML =
+      "<b>"+P.n+"</b> · "+P.yr+" · measured by "+P.inst+"<br>"+
+      (phase===0
+        ? "Deviation from a sphere: <b>0</b>. Eratosthenes' geometry — still correct; his ruler was a shadow."
+        : "New term this phase: <b>"+(own>=1?fmt(own)+" km":Math.round(own*1000)+" m")+"</b> ("+ (own/R_KM*100).toFixed(own>1?2:5) +"% of Earth's radius)"+
+          " · at this render size: <b>"+(px>=0.05?px.toFixed(1):px.toFixed(4))+" px</b>"+
+          " · exaggeration needed just to see it: <b>×"+need.toLocaleString()+"</b>")
+      + "<br>"+legend();
+  }
+
+  function animFade(){
+    var busy=false;
+    for(var c=1;c<=4;c++){
+      var tgt=c<=phase?1:0, d=tgt-ringA[c];
+      if(Math.abs(d)>0.02){ringA[c]+=d*0.14;busy=true;}else ringA[c]=tgt;
+    }
+    update(true);
+    if(busy) fadeT=requestAnimationFrame(animFade);
+  }
+  function setPhase(p){
+    phase=p;document.querySelectorAll('.viz-phases button').forEach(function(b){b.classList.toggle('on',+b.dataset.p===p);});
+    if(fadeT)cancelAnimationFrame(fadeT);
+    fadeT=requestAnimationFrame(animFade);
+  }
+  document.querySelectorAll('.viz-phases button').forEach(function(b){b.addEventListener('click',function(){stopPlay();setPhase(+b.dataset.p);});});
+  slider.addEventListener('input',function(){stopPlay();update();});
+  document.getElementById('truescale').addEventListener('click',function(){stopPlay();slider.value=0;update();});
+  document.getElementById('visbtn').addEventListener('click',function(){
+    stopPlay();var own=phaseOwnDev(phase);
+    if(own===0){slider.value=0;}else{var need=15/(own*PXPERKM);slider.value=Math.min(5,Math.log10(need));}
+    update();
+  });
+
+  // Play: for each phase, swell to visibility, then settle to true scale — the "bulge and settle" loop
+  var playBtn=document.getElementById('playbtn');
+  function stopPlay(){playing=false;playBtn.textContent="▶ Play the “transitions”";if(playT)cancelAnimationFrame(playT);}
+  playBtn.addEventListener('click',function(){
+    if(playing){stopPlay();return;}
+    playing=true;playBtn.textContent="⏸ Stop";
+    var p=1,t0=null,DUR=3000;
+    setPhase(0);slider.value=0;update();
+    function step(ts){
+      if(!playing)return;
+      if(t0===null){t0=ts;setPhase(p);}
+      var u=(ts-t0)/DUR;
+      if(u>=1){t0=null;p=p+1>4?1:p+1;playT=requestAnimationFrame(step);return;}
+      var own=phaseOwnDev(phase),needLog=own?Math.min(5,Math.log10(15/(own*PXPERKM))):0;
+      // swell (0→0.35), hold (→0.6), settle to true scale (→1)
+      var g = u<0.35 ? u/0.35 : (u<0.6 ? 1 : Math.max(0,1-(u-0.6)/0.4));
+      slider.value=needLog*g;update();
+      playT=requestAnimationFrame(step);
+    }
+    playT=requestAnimationFrame(step);
+  });
+
+  setPhase(0);
+})();
+</script>
+
+<!-- ============ CLAIM BY CLAIM ============ -->
+<section id="claims">
+  <div class="kicker">05 · Claim by Claim</div>
+  <h2>The parts, audited</h2>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 1 · Consequences of a shape change</span>
+      <span class="stamp true">Standard Model Explains</span>
+    </div>
+    <div class="claim-body">
+      <h2>“A planetary shape change would produce unavoidable catastrophic effects; none are recorded; therefore no change occurred.”</h2>
+      <p class="assertion">Claim: crustal fracturing, megatsunamis, rotation changes, and orbital perturbation would accompany any real deformation, and history records none at the transition dates.</p>
+      <span class="lbl t">What's true</span>
+      <p>All of it. This is a sound modus tollens executed with genuine care — the geophysical consequences are well chosen and correctly described.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Only the target. The argument decisively refutes “Earth physically morphed on schedule,” a claim advanced by no scientist, no textbook, and no standards body — only by the meme the paper mistook for literature. Mainstream geodesy reads this section and nods. Proving your opponent's position with eleven slides of effort is not a victory; it's a filing error.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">§2.2 vs §7.3 · The contradiction</span>
+      <span class="stamp false">Self-Contradicted</span>
+    </div>
+    <div class="claim-body">
+      <h2>“1958 satellite data confirmed Earth had always been oblate” … “Earth's global shape is unknown by direct physical measurement.”</h2>
+      <p class="assertion">Both sentences appear in this document, five slides apart.</p>
+      <span class="lbl t">What's true</span>
+      <p>The first sentence. Section 2.2 is the paper's best physics: oblateness comes from orbit perturbations, gravimetry, laser ranging, and altimetry, and photographs rightly show an imperceptibly flattened sphere.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The coexistence. If satellite data <em>confirmed</em> Earth had always been oblate — the paper's word, “confirm” — then the shape is not “empirically undetermined,” the sky is not plausibly a dome over a bounded plane, and Part 7's conclusion is contradicted by Part 2's finding. There is no reading on which both stand. This is what assembling a document section-by-section with a language model and never auditing the whole produces: locally fluent, globally inconsistent — the precise failure mode the paper attributes to institutional science.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Parts 3–4 · Atmospheric containment</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Every pressure measurement used a solid container; gravity holding an open atmosphere has never been isolated; a dome is equally consistent.”</h2>
+      <p class="assertion">Claim: Torricelli through Chapman all used solid apparatus; the barometer proves air has weight but not how air is contained; dome containment plus “density and buoyancy” explains observations without gravity.</p>
+      <span class="lbl t">What's true</span>
+      <p>Barometers do use solid tubes, and the barometer alone doesn't specify the containment mechanism. Fair, as far as one instrument goes.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The two models make opposite predictions, and the deciding measurement has been running continuously since 1648. A gas confined by walls alone fills its container at uniform pressure. A gas held down by gravity stratifies — pressure falling exponentially with height, P = P₀e^(−mgh/kT). Périer's climb of the Puy de Dôme, at Pascal's request, found the mercury column dropping with altitude; today, hundreds of radiosonde balloons repeat the measurement twice daily worldwide, tracing the exponential profile from 14.7 psi at sea level to a third of that atop Everest to near-vacuum at 30 km, in the open air, no walls anywhere. The gradient <em>is</em> the isolation experiment. A dome with no downward force predicts no gradient; and the paper's proposed substitute — “density and buoyancy” — is circular, because buoyancy is <em>caused by</em> the pressure gradient it's being asked to explain. No downward force, no stratification, no buoyancy, no “down.”</p>
+      <p>And the dome makes one more testable promise: a sealed container doesn't leak. The atmosphere leaks — measurably, selectively, exactly as gravitational containment predicts. Hydrogen escapes at kilograms per second and helium follows, which is why helium is scarce at the surface despite continuous radiogenic production; the escaping hydrogen forms a glowing geocorona extending tens of thousands of kilometers, photographed in ultraviolet from the lunar surface by Apollo 16's Far UV Camera in 1972. Light gases over the wall, heavy gases held: that's a gravitational sieve, and no dome does it.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">§2.4, §7.1 · Continuous measurement</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>“No human has ever traversed 360° while continuously measuring elevation, so all shape claims are extrapolation.”</h2>
+      <p class="assertion">Claim: without a continuous, unbroken 360° physical measurement, any claim about Earth's global shape is unverifiable extrapolation from scattered data.</p>
+      <span class="lbl t">What's true</span>
+      <p>No one has walked the planet with a ruler without stopping. Granted.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>First the criterion: it proves too much. By this standard nobody knows the shape of anything they haven't ant-walked in an unbroken line — no astronomer knows the Moon is round, no surveyor knows a lake's outline from its shore. Shape determination has never required continuous traversal; it requires measurements that over-constrain a model, which scattered data does perfectly well (three points determine a circle; billions determine a geoid).</p>
+      <p>Second, the fact: the continuous measurement <em>exists anyway</em>. Satellite radar altimeters — Seasat, then TOPEX/Poseidon, then the Jason series — have measured sea-surface height <em>continuously along their ground tracks</em>, orbit after orbit, girdling the planet every ~100 minutes and repeating global coverage every ten days, since before 1984 — which is to say, through the paper's entire final “phase.” Sailors in the Vendée Globe circumnavigate solo with continuous GNSS logging. The unbroken 360° elevation record the paper declares nonexistent is one of the most-repeated measurements in Earth science, and it traces an oblate spheroid every single lap.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 5 · Transition consequences</span>
+      <span class="stamp true">Standard Model Explains</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Each shape change would have broken navigation, aviation, and celestial alignments; no such failures occurred at the transition dates.”</h2>
+      <p class="assertion">Claim: sea levels shifting 21 km, sextants off by miles, the Saros cycle breaking, Stonehenge misaligning — none of which happened.</p>
+      <span class="lbl t">What's true</span>
+      <p>Essentially all of it — the counterfactual physics is elaborate and mostly right. If Earth had morphed, navigation would have collapsed.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Nothing except the punchline, which the reader is invited to complete: no navigation failures occurred at the transition dates <em>because no transitions occurred</em> — the exact conclusion of the mainstream model the paper thinks it's refuting. Part 5 is thousands of words of prosecution evidence submitted on behalf of the defense.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 6 · Orbital stability</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Only a perfect sphere sustains stable orbits; oblate, triaxial, pear, and geoid shapes cause catastrophic decay or ejection.”</h2>
+      <p class="assertion">Claim: raw unsmoothed mechanics show latitude- and longitude-dependent gravity would drain the Moon's orbit chaotically; perturbation theory is “corrective calculations applied to the model, not physical mechanisms.”</p>
+      <span class="lbl t">What's true</span>
+      <p>Non-spherical mass distributions genuinely perturb orbits — the physical intuition that asymmetric pulls do <em>something</em> is right. And low lunar orbits really are destabilized by the Moon's mascons, so the concept isn't fantasy.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>What asymmetric pulls do is <em>precess</em> orbits, not destroy them — bounded, periodic, exquisitely predictable drift of the orbital plane and perigee. This isn't theory papering over instability; it is the most directly observed fact in spaceflight. Vanguard 1's orbit did not decay chaotically in 1958; it precessed, and the precise <em>rate</em> of that precession is how O'Keefe and colleagues measured the pear-shaped J₃ term in 1959 — the very “phase” in the paper's table was discovered by an orbit remaining stable around it. LAGEOS has orbited the full “geoid-phase” Earth since 1976, laser-tracked to centimeters, and is expected to stay up for millions of years. Sun-synchronous satellites — hundreds of them — are deliberately <em>engineered</em> to harvest the oblateness-driven precession the paper says would eject them, using J₂ to swing their orbital plane exactly 360° per year. The “catastrophic instability” has been the workhorse of mission design for sixty years.</p>
+      <p>As for the Moon: gravitational fine structure falls off steeply with distance — each harmonic is suppressed by powers of (R⊕/r). At the Moon's distance that puts the geoid's lumps at parts in ten million of the main pull, far too small to do anything but contribute tiny, fully modeled terms to lunar motion (whose dominant perturber is the Sun, not Earth's shape). And “perturbation theory is correction applied to the model, not the system” inverts what mathematics is: perturbation methods are a technique for <em>solving the actual equations of motion</em> — nature doesn't apply the math; the math describes nature, which is under no obligation to be solvable in closed form. The paper's reference list — Vanguard, Explorer, LAGEOS, GRACE, “for their data” — contains, as data, sixty years of stable orbits around every shape in the table. The interpretations were never needed. The tracking files alone end Part 6.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 3, §7.3 · The dome</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>“The domed sky is directly observable; ancient records and rainbows are consistent with a bounded system; the globe is extrapolation.”</h2>
+      <p class="assertion">Claim: records from 6000–500 BCE describe a firmament; the horizon looks flat; rainbows require no curvature; a 14.7 psi surface with a “visually domed sky” fits a contained Earth.</p>
+      <span class="lbl t">What's true</span>
+      <p>Ancient cosmologies did describe firmaments; the horizon does look locally flat; and the rainbow analysis is correct — rainbows genuinely don't evidence curvature either way. The paper argues that last point rather well.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>“Visually domed” is a statement about perception, not structure: a sky with no distance cues necessarily <em>looks</em> like a surface at some indeterminate distance — so would infinite space, and does. The ancient-consistency argument runs backwards: pre-instrumental observers describing what the sky looks like is evidence about human vision, not about lids. And the dome inherits every falsification already banked in this review — it predicts a uniform-pressure atmosphere (measured: exponential), zero atmospheric escape (measured: continuous, mass-selective, photographed from the Moon), and no explanation for why every orbit, eclipse, and GNSS fix computes on a spheroid. The paper's own §2.2 — oblateness <em>confirmed</em>, always — was the last word on this before the paper stopped listening to itself.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="experiments">
+  <div class="kicker">06 · The Standing Experiments</div>
+  <h2>Three measurements running right now</h2>
+  <p>The paper's refrain is that the decisive experiments were never done. All three are in progress as you read this, no lab required:</p>
+  <p><strong>1 — The gradient.</strong> Twice a day, at hundreds of stations, weather balloons rise through open air logging pressure against altitude. Every ascent retraces the exponential curve that gravity predicts and a wall-contained gas forbids. This measurement is 377 years old, wall-free by construction, and repeated more often than any experiment in physics.</p>
+  <p><strong>2 — The leak.</strong> Hydrogen and helium escape the top of the atmosphere continuously — a mass-selective leak, light gases out, heavy gases retained, visible as the ultraviolet geocorona Apollo 16 photographed from the lunar surface. Sealed containers don't leak selectively. Gravity wells do, at exactly the Jeans rates gravitational theory computes.</p>
+  <p><strong>3 — The orbits.</strong> Thousands of satellites, tracked to meters or centimeters, precessing at rates set by Earth's oblateness and harvested by mission designers on purpose — around the very shapes Part 6 declares un-orbitable. The shape of the Earth is not inferred despite the orbits; it is read <em>from</em> them, continuously, since 1958. The paper cites these missions' data. The data is the refutation.</p>
+  <div class="note">
+    <div class="kicker">The pattern, four papers in</div>
+    <p>Paper one said local gravity was never measured; the gravimeters existed. Paper two said the EM alternative was never excluded; the exclusion tests existed. Paper three found deep structure in a unit convention; the other unit systems existed. Paper four says the decisive experiments were never run; three of them run daily — and this time, the sources that refute the thesis are printed in the paper's own reference list. The series' one consistent method is declaring the checkable unchecked.</p>
+  </div>
+</section>
+
+<!-- ============ COUNTERARGUMENTS ============ -->
+<section id="counters">
+  <div class="kicker">07 · Anticipated Responses</div>
+  <h2>Objections I expect, answered in advance</h2>
+  <dl class="qa">
+    <dt>“The timeline table came from mainstream sources — the dates are real.”</dt>
+    <dd><p>The dates are real; the framing isn't. 1744, 1841, 1959, 1984 mark model refinements, and every mainstream source presenting them says so — including, remarkably, this paper's own §2.2. The challenge is simple and standing: produce one scientific source claiming Earth <em>physically</em> changed shape on any of those dates. It will be linked here verbatim.</p></dd>
+    <dt>“Radiosondes and satellites are still instruments built on assumptions.”</dt>
+    <dd><p>A pressure gauge on a balloon assumes nothing about Earth's shape or gravity's mechanism — it reports force per area, and the exponential profile emerges from the raw numbers. The regress objection was answered in review two and hasn't improved with repetition: a standard no measurement can meet, including the paper's own barometer readings and PSI figures, is an exit, not an argument.</p></dd>
+    <dt>“Orbital precession is still the math ‘smoothing’ the instability away.”</dt>
+    <dd><p>Precession is not a calculation applied to orbits; it is what tracking stations <em>photograph orbits doing</em>. Vanguard 1 is still up there, sixty-eight years on, its motion archived in raw tracking data — the paper's preferred kind, “data, not interpretations.” If unsmoothed non-spherical mechanics ejected satellites, the sky would be empty and GPS would not exist. Phone in hand, the reader can settle this one personally.</p></dd>
+    <dt>“At least this paper cites references.”</dt>
+    <dd><p>Agreed, and noted in provenance as genuine progress. The next step is the hard one: entries with titles, volumes, and pages, so readers can check them — at which point the author will discover what we did: that Vanguard's tracking data, Pascal's mountain, and the radiosonde archive are the strongest witnesses against the paper citing them. Real references cut both ways. That's what makes them references.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">08 · Primary Sources</div>
+  <h2>Check everything</h2>
+  <ol>
+    <li><b>Pascal, B. / Périer, F. (1648)</b> — the Puy de Dôme experiment: barometric pressure falling with altitude in open air. Recounted in Pascal's <em>Traitez de l'équilibre des liqueurs et de la pesanteur de la masse de l'air</em> (1663).</li>
+    <li><b>U.S. Standard Atmosphere (1976)</b> — NOAA/NASA/USAF. The measured exponential pressure–altitude profile, built from decades of radiosonde and rocket data.</li>
+    <li><b>WMO Integrated Global Radiosonde Archive</b> — NOAA NCEI. The twice-daily worldwide balloon soundings: the gradient, measured continuously.</li>
+    <li><b>O'Keefe, J. A., Eckels, A. &amp; Squires, R. K. (1959)</b> — “Vanguard measurements give pear-shaped component of Earth's figure,” <em>Science</em> 129. The “pear phase,” discovered from a stable, precessing orbit.</li>
+    <li><b>Kaula, W. M. (1966)</b> — <em>Theory of Satellite Geodesy</em>. The standard treatment of orbits about a non-spherical Earth: precession, not decay.</li>
+    <li><b>Pearlman, M. R. et al. (2019)</b> — “The ILRS: approaching 20 years and planning for the future,” <em>J. Geodesy</em> 93 — LAGEOS satellite laser ranging: centimeter tracking around a “geoid-phase” Earth since 1976.</li>
+    <li><b>Fu, L.-L. &amp; Cazenave, A., eds. (2001)</b> — <em>Satellite Altimetry and Earth Sciences</em>. Continuous along-track sea-surface elevation, global coverage every ~10 days, since before 1984.</li>
+    <li><b>Catling, D. C. &amp; Zahnle, K. J. (2009)</b> — “The planetary air leak,” <em>Scientific American</em> 300(5). Hydrogen and helium escape rates: the mass-selective leak.</li>
+    <li><b>Carruthers, G. R. &amp; Page, T. (1972)</b> — Apollo 16 Far Ultraviolet Camera/Spectrograph: the hydrogen geocorona, photographed from the lunar surface.</li>
+    <li><b>NASA NSSDC / CelesTrak orbital archives</b> — Vanguard 1 (1958-002B): still in orbit, tracking data public. “Data, not interpretations,” as requested.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier
+  </div>
+</footer>
+
+</body>
+</html>
