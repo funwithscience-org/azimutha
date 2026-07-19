@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Universal Solvent — the "Gravimeter Dissection" paper, reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 20-slide 'Gravimeter Analysis' carousel claiming every gravimeter might really be measuring electromagnetism. That claim is testable. It fails.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="The Universal Solvent — the 'Gravimeter Dissection' paper, reviewed">
+<meta property="og:description" content="Every gravimeter 'could equally be' measuring electromagnetism, says the paper. That's testable: charge it, shield it, swap the material. Physics did. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/gravimeter-dissection-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/gravimeter-dissection-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Universal Solvent — the 'Gravimeter Dissection' paper, reviewed">
+<meta name="twitter:description" content="'Could equally be electromagnetic' is a testable claim. Physics tested it. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/gravimeter-dissection-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/gravimeter-dissection-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:56ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* header signature: three-switch test panel */
+  .testpanel{position:absolute;top:64px;right:24px;width:150px;display:flex;flex-direction:column;gap:10px}
+  .testpanel .t{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  .testpanel .sw{width:30px;height:16px;border:2px solid var(--navy);border-radius:9px;position:relative;flex-shrink:0}
+  .testpanel .sw::after{content:"";position:absolute;top:1px;left:1px;width:10px;height:10px;background:var(--navy);border-radius:50%}
+  .testpanel .res{color:var(--burgundy);font-weight:600}
+  @media (max-width:700px){.testpanel{display:none}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="testpanel" aria-hidden="true">
+      <div class="t"><span class="sw"></span><span>Charge it</span></div>
+      <div class="t"><span class="res">→ no change</span></div>
+      <div class="t"><span class="sw"></span><span>Shield it</span></div>
+      <div class="t"><span class="res">→ no change</span></div>
+      <div class="t"><span class="sw"></span><span>Swap material</span></div>
+      <div class="t"><span class="res">→ no change</span></div>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>The Universal Solvent</h1>
+    <p class="sub">A review of <em>“Gravimeter Analysis: Complete Methodological Breakdown of All Known Gravimeter Types”</em> — a 20-slide TikTok carousel arguing that every gravity-measuring instrument on Earth might really be measuring electromagnetism.</p>
+    <p class="byline"><b>Verdict up front:</b> the instrument descriptions are surprisingly good. The single argument applied to all of them — “it could equally be electromagnetic” — is not an open question. It is a hypothesis physics has tested to fifteen decimal places, and excluded.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The second paper-formatted carousel from the Azimutha.FE account (our review of the first, on standard gravity, is <a href="../gravity-audit-review/">here</a>). Twenty slides, styled as a formal report: title page, glossary, a BUILD / DESCRIPTION / INSTITUTIONAL CLAIM / METHODOLOGICAL FAILURE table for each of eight instrument types, cross-cutting failures, and a conclusion with a boxed FINAL STATEMENT. As with the first paper: no author, no citations, no data, no hosted copy — it exists only as images, soundtracked, without apparent irony, by <em>U Can't Touch This</em>.</p>
+  <div class="note warn">
+    <div class="kicker">The missing failures</div>
+    <p>The cross-cutting section runs Failure 1, then Failures 4 and 5. <strong>Failures 2 and 3 do not appear anywhere in the carousel.</strong> The slides are also uploaded out of order — the preface arrives at slide 13, and three instrument types come after the conclusion. Either two failures were deleted without renumbering, or the count was padded. Both readings sit awkwardly under a FINAL STATEMENT accusing an entire scientific field of never acknowledging or correcting its errors. If the author corrects the numbering, we'll note it here — publicly acknowledging and fixing mistakes being rather the point.</p>
+  </div>
+  <p>Credit where due, twice. First, the glossary and BUILD rows are largely accurate — the descriptions of SQUIDs, the Meissner effect, laser cooling, and interferometry are better than most textbook-adjacent social content. Second, unlike the first paper, this one does not dodge the strongest opposing instrument: the absolute gravimeter gets its own table. The engagement is real. What fails is the argument brought to it.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" style="margin:0 -24px;padding-left:24px;padding-right:24px">
+  <div class="kicker">02 · The Steelman</div>
+  <h2>The strongest version of the argument</h2>
+  <p><strong>Displacement is not its own cause.</strong> The document's foundational principle — an instrument measuring displacement does not, by itself, demonstrate what caused the displacement — is correct, and important. Attributing effects to mechanisms requires more than reading a dial.</p>
+  <p><strong>Repeatability is not mechanism.</strong> Slide 18's observation that a repeatable measurement confirms a consistent phenomenon, not the assumed cause of it, is the most philosophically respectable sentence in either of this author's papers. Philosophers of science have made the same point seriously.</p>
+  <p><strong>Instruments really do live in electromagnetic environments,</strong> vacuums really are imperfect, calibration chains really do propagate reference errors, and spring gravimeters really do drift. None of this is invented.</p>
+  <p>If the document concluded <em>“therefore gravimetry must demonstrate that electromagnetic effects cannot mimic its signal,”</em> it would be describing a genuine scientific obligation. The problem is that it treats this obligation as unmet — asserting, on every slide, that the electromagnetic environment is “never characterized” and the alternative “never excluded.” That is a factual claim about what experiments exist. It is checkable. It is wrong.</p>
+</section>
+
+<!-- ============ THE MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>One escape hatch, eight doors</h2>
+  <p>Strip away the tables and the entire twenty-slide document is a single sentence applied eight times: <strong>“the displacement could equally be electromagnetic, and nobody checked.”</strong> The spring's tension — could be EM. The falling mirror's interference shift — could be the imperfect vacuum's EM medium. The levitated sphere — EM by construction. The atoms — EM-manipulated. The satellites — flying through EM. It is a universal solvent: an unfalsifiable-sounding doubt that dissolves any instrument you pour it on.</p>
+  <p>But here is the document's structural mistake: electromagnetism is not a mystery force onto which doubt can be safely offloaded. <strong>It is the best-characterized interaction in physics, and it makes distinctive, testable predictions.</strong> EM forces couple to charge, to material composition, to magnetic susceptibility — and they can be shielded. Gravity, as measured, does none of these things. So “gravity or EM?” is not a philosophical stalemate. It is an experiment. Several, in fact — all performed, most of them repeatedly, over decades. The document does not engage a single one of them, because engaging any of them ends the paper.</p>
+</section>
+
+<!-- ============ SLIDE BY SLIDE ============ -->
+<section id="slides">
+  <div class="kicker">04 · Claim by Claim</div>
+  <h2>The tables, audited</h2>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 14 · Key Standard</span>
+      <span class="stamp false">Backfires</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Gravity has never been isolated, contained, redirected, or switched off — so gravitational attribution is assumption.”</h2>
+      <p class="assertion">Claim: every instrument attributes test-mass displacement to gravity through an interpretive framework adopted before measurement begins.</p>
+      <span class="lbl t">What's true</span>
+      <p>Gravity genuinely cannot be shielded or switched off. That is a measured property of gravity — the equivalence principle — not an admission.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The author doesn't notice that this standard is a loaded gun pointed at his own thesis. Electromagnetism <em>can</em> be shielded, redirected, and switched off — trivially, with a Faraday cage and a mu-metal can. So the two hypotheses on the table make opposite predictions: if gravimeter displacement were electromagnetic, wrapping the instrument in serious EM shielding would change or kill the signal. Superconducting gravimeters operate inside exactly that shielding — mu-metal enclosures around a SQUID, the most EM-sensitive device ever built, precisely because their designers quantified EM sensitivity. The downward signal persists, unshielded and unswitched. By the document's own KEY STANDARD, the EM hypothesis is the one that fails.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 4 · Spring Gravimeter</span>
+      <span class="stamp misleading">False standard</span>
+    </div>
+    <div class="claim-body">
+      <h2>“An instrument that drifts and needs calibration has admitted its data is unreliable.”</h2>
+      <p class="assertion">Claim: mathematical correction of an unstable instrument cannot produce reliable data; the spring only measures its own tension.</p>
+      <span class="lbl t">What's true</span>
+      <p>Spring gravimeters drift, and yes — a spring measures spring tension. Every sensor measures its own proximate physical state; that is what a sensor is.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>“Drifts, therefore unreliable” would invalidate every clock, thermometer, and scale on Earth — all of which drift and are calibrated. Reliability doesn't mean drift-free; it means drift that is <em>measured, bounded, and small compared to the signal</em>, which is exactly what gravimeter drift characterization does (it's why relative meters are looped back to base stations). And the “only measures its own tension” framing is answered by convergence: the spring's inferred g agrees with instruments that contain no spring at all — falling mirrors, swinging pendulums, interfering atoms. Independent proximate mechanisms, one consistent quantity. A tension artifact would not survive that comparison.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 5 · Absolute Gravimeter</span>
+      <span class="stamp false">False — and load-bearing</span>
+    </div>
+    <div class="claim-body">
+      <h2>“The interference shift could be partially or wholly attributable to medium variance the instrument never measures.”</h2>
+      <p class="assertion">Claim: residual gas, outgassing, residual EM fields, and cosmic radiation are present during every drop, and conditions are “never simultaneously characterized” — contaminating the reference all other gravimeters calibrate against.</p>
+      <span class="lbl t">What's true</span>
+      <p>No vacuum is perfect, and the FG5 is indeed the calibration reference for relative instruments. If this table's claim held, the contamination really would propagate. Everything downstream depends on this slide — which is presumably why it exists.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The claim is not a matter of interpretation; it's a claim about what's in the instrument's published error budget, and the error budget is public. The FG5's founding paper characterizes, line by line, precisely the effects listed here: residual gas drag at operating pressure (sub-microgal at ~10⁻⁴ Pa), magnetic gradients (measured; the dropped corner cube is deliberately non-magnetic), electrostatic forces (the cube falls inside a grounded, co-falling drag-free chamber that also removes residual-gas effects), laser and clock systematics, even the changing gravity gradient along the drop path. These are not assumptions — they are <em>varied experimentally</em>: change the chamber pressure by an order of magnitude and the measured g does not move outside its stated uncertainty. And the reference itself is audited: international comparisons of absolute gravimeters — dozens of independent instruments, different labs, different countries — agree at the few-microgal level. Those comparisons are hosted at Sèvres, the same site where Defforges swung his pendulum in 1888. The field did not skip the author's homework. The author skipped the field's.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 17 · Superconducting Gravimeter</span>
+      <span class="stamp false">Non sequitur</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Levitation and interference are the same force — a logical contradiction at the design level.”</h2>
+      <p class="assertion">Claim: an EM-levitated sphere monitored by an EM sensor cannot distinguish gravitational displacement from EM variance; the instrument is “functioning as an electromagnetic detector.”</p>
+      <span class="lbl t">What's true</span>
+      <p>Every component of the suspension and detection is electromagnetic. The BUILD description is accurate and well-written.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>“Uses EM” and “confounded by EM” are different claims, and the design closes the gap the author thinks is open. The levitation field is generated by a <em>persistent current in a superconducting coil</em> — a current that, by the defining property of superconductivity, does not decay or fluctuate. The suspension isn't merely electromagnetic; it is the most stable electromagnetic field human beings know how to make, which is the entire reason the design works. External EM variance is what the mu-metal and superconducting shielding is for — and the shielding's residual leakage is quantified in the instrument papers, not assumed away. Then comes the cross-check the document never performs: the superconducting gravimeter's output is calibrated against, and agrees with, the free-falling mirror of an absolute gravimeter — a device sharing none of its electromagnetic architecture. Two unrelated EM implementations, one identical signal, tracking Earth tides to a nanogal. A “contradiction at the design level” does not produce that.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 7 · Cold Atom Gravimeter</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>“The atom is electromagnetically manipulated before and during measurement, so its fall reflects the manipulation.”</h2>
+      <p class="assertion">Claim: laser cooling alters the test subject from its natural state; manipulation and measurement are inseparable.</p>
+      <span class="lbl t">What's true</span>
+      <p>Laser cooling is electromagnetic manipulation, well described here — the LASER ENERGY NOTE on photon momentum transfer is genuinely correct physics.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The manipulation and the measurement are not simultaneous — that's the design. The lasers cool and trap; then the trap is <em>switched off</em> and the atoms fall freely, interrogated only by brief, characterized pulses whose systematic effects (light shifts, magnetic Zeeman shifts — managed by selecting field-insensitive states and mapping the residual field) are published, quantified, and corrected. And again the convergence check the document never runs: cold-atom gravimeters agree with falling-corner-cube instruments at the parts-per-billion level. A rubidium atom prepared by lasers and a machined lump of glass in a drag-free cart share no preparation, no scale, and almost no physics of implementation. They report the same g. “The manipulation contaminated the result” predicts they wouldn't.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slides 6, 18, 19 · MEMS, Relative, Gradiometer</span>
+      <span class="stamp misleading">Inherited error</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Miniaturization concentrates the flaws; relative meters inherit contamination; the gradient is a calculation, not an observation.”</h2>
+      <p class="assertion">Claim: every derivative instrument inherits the uncharacterized contamination of the reference chain, and computed quantities are “precisely calculated assumptions.”</p>
+      <span class="lbl t">What's true</span>
+      <p>The inheritance logic is internally valid: if the absolute reference were contaminated, the chain would propagate it. And a spatial derivative is indeed a calculation on two measurements.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The premise was falsified two cards up — the reference's “contamination” is characterized, bounded, and internationally audited — so the inheritance argument inherits the refutation. The gradiometer point adds a genuinely odd standard: “a calculation performed on two measurements is not an observation” would abolish velocity, density, voltage, and every rate ever reported. By that rule the document's own KEY STANDARD phrase “unsupported objects accelerate downward” is inadmissible, since acceleration is a calculation on position measurements. One useful concession worth preserving from slide 18: the author admits relative gravimetry's subsurface-density results are <em>“real and repeatable.”</em> Hold that thought for the drilling section below.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 12 · GRACE</span>
+      <span class="stamp false">False</span>
+    </div>
+    <div class="claim-body">
+      <h2>“GRACE requires accepting the heliocentric orbital model before a single reading is interpreted.”</h2>
+      <p class="assertion">Claim: remove the assumed framework and the raw data is satellite separation variance with no demonstrated causal attribution.</p>
+      <span class="lbl t">What's true</span>
+      <p>The BUILD description of microwave ranging between two co-orbiting satellites is accurate, and yes — interpreting any orbit uses orbital mechanics.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Heliocentrism is irrelevant to GRACE — the measurement is Earth-orbit geometry; the Sun could be made of cheese and the inter-satellite range would read the same. More importantly, the “no causal attribution” claim ignores that GRACE's outputs are ground-truthed against instruments that share none of its assumptions: groundwater depletion signals checked against well networks in India and California's Central Valley, ice-mass loss against on-ice GPS and altimetry, ocean mass against tide gauges and bottom-pressure sensors. When a satellite pair 400&nbsp;km up says an aquifer is draining and the wells on the ground agree, “separation variance with no demonstrated cause” is no longer an available description. The framework made predictions; the ground confirmed them.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 11 · Failure 1</span>
+      <span class="stamp false">Excluded, not uncharacterized</span>
+    </div>
+    <div class="claim-body">
+      <h2>“No gravimeter simultaneously measures the electromagnetic environment and eliminates its contribution.”</h2>
+      <p class="assertion">Claim: EM force is stronger than the downward pull, varies everywhere, and has been “assumed negligible without demonstration.”</p>
+      <span class="lbl t">What's true</span>
+      <p>EM coupling is indeed enormously stronger than gravitational coupling, per unit charge. That asymmetry is real — and it's exactly what makes the exclusion tests below so decisive.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>This is the document's thesis, so it gets the full answer in the next section. The short version: because EM is so strong and so well understood, even microscopic EM contamination of a gravity signal would betray itself instantly — by responding to charge, to material, and to shielding. It responds to none of them. That's not an assumption of negligibility. It's a demonstration of absence, made to fifteen decimal places.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Slide 9 · Conclusion</span>
+      <span class="stamp false">Conspiracy without evidence</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Uniform methodological oversight across all institutions and generations exceeds reasonable coincidence.”</h2>
+      <p class="assertion">Claim: institutional dependency, funding structures, and career consequences maintain the error without requiring explicit coordination.</p>
+      <span class="lbl t">What's true</span>
+      <p>Publication gatekeeping and career incentives are real phenomena, honestly studied — mostly by scientists, in journals.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The “uniform oversight” being explained doesn't exist — the preceding sections show the checks were done — so the sociology is explaining a fiction. But grant the frame for a moment and it still fails on incentives: gravimetry's biggest customers are not institutions defending a paradigm but <strong>mining, oil, and groundwater companies who pay for gravity surveys because the gravitational interpretation tells them where to drill — and the drill bit reports back.</strong> Slide 18 concedes the survey results are “real and repeatable.” The EM-variance hypothesis predicts nothing about what's underground; the mass-density hypothesis predicts ore bodies, voids, and aquifers, and gets audited by excavation, for money, thousands of times a year, by competitors who would abandon a broken model in a quarter. That is the least coordinable peer review on Earth.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="exclusion">
+  <div class="kicker">05 · The Decisive Tests</div>
+  <h2>“Could equally be electromagnetic” is a hypothesis. Here is its scorecard.</h2>
+  <p>The document's universal solvent works only if the EM alternative is untested. It is among the most-tested hypotheses in experimental physics, because distinguishing gravity from EM contamination is the daily business of precision measurement. EM forces have signatures. Check for the signatures:</p>
+  <p><strong>Test 1 — Charge it.</strong> EM forces scale with charge. Deliberately charge a test mass and the “downward pull” should change dramatically if it's electromagnetic. It doesn't — which is why electrostatic patch effects, when they do appear at the edge of precision, are identifiable, sub-microgal, and removable by grounding. A force that ignores charge is not electrostatic.</p>
+  <p><strong>Test 2 — Swap the material.</strong> EM coupling depends on composition — conductivity, susceptibility, dielectric constant, all wildly different between substances. So drop different materials: torsion-balance experiments (Eöt-Wash) and the MICROSCOPE satellite compared titanium, platinum, beryllium, copper in free fall and found identical acceleration to parts in 10¹⁴–10¹⁵. No electromagnetic force can be material-blind at that level; copper and platinum share almost no EM properties. The downward pull is material-blind. This single result excludes the document's thesis for every instrument simultaneously.</p>
+  <p><strong>Test 3 — Shield it.</strong> EM fields stop at conductors and mu-metal. Put the measurement inside serious shielding — superconducting gravimeters live there; torsion balances are Faraday-caged as a matter of routine — and the signal persists unchanged. An effect that passes through a Faraday cage untouched is not electromagnetic. (This is the document's own KEY STANDARD, running in reverse.)</p>
+  <div class="note">
+    <div class="kicker">And then the convergence</div>
+    <p>A steel spring, a swinging pendulum, a falling glass mirror, a levitated niobium sphere, an interfering rubidium atom, and a microwave link between satellites share almost no electromagnetic implementation — different fields, frequencies, materials, geometries, and error mechanisms. They agree on g to their stated precisions, everywhere on Earth, tracking the same tides. A confounder that perfectly mimics gravity across six unrelated EM architectures, while also ignoring charge, material, and shielding, has a simpler name: gravity.</p>
+  </div>
+  <p>None of these tests appears anywhere in the twenty slides. The document demands that the EM environment be characterized and its contribution eliminated — states this was “assumed negligible without demonstration” — and omits the entire literature that demonstrated it. That is the same omission pattern as the first paper, executed against a better-researched backdrop, which makes it harder to read as accidental.</p>
+</section>
+
+<!-- ============ COUNTERARGUMENTS ============ -->
+<section id="counters">
+  <div class="kicker">06 · Anticipated Responses</div>
+  <h2>Objections I expect, answered in advance</h2>
+  <dl class="qa">
+    <dt>“The exclusion experiments are themselves instruments with EM assumptions.”</dt>
+    <dd><p>This retreats from a factual claim (“never characterized”) to an infinite regress (“no characterization can ever count”). The first is false; the second is unfalsifiable by construction and dissolves the author's own evidence too — including the “directly demonstrated” downward acceleration of slide 16, observed with photons refracting through eyeballs. A standard that no possible experiment could meet isn't rigor. It's an exit.</p></dd>
+    <dt>“Agreement between instruments could mean they share a hidden systematic.”</dt>
+    <dd><p>A shared systematic across a steel spring, a laser interferometer, a SQUID, and an atom interferometer would need to act identically on incompatible physical mechanisms — and also vary with latitude, altitude, tide, and local geology in exactly the pattern an oblate rotating mass predicts, while ignoring charge, material, and shielding. Specify a mechanism with those properties and it will be the discovery of the century. “Something, somehow” is not a mechanism.</p></dd>
+    <dt>“Drilling success could be coincidence or survivorship bias.”</dt>
+    <dd><p>Exploration companies publish hit rates and audit survey methods against outcomes, because dry holes cost tens of millions. Gravity surveying has survived a century of that audit in a market that ruthlessly kills techniques that stop paying. If the gravitational interpretation were noise, the industry that bets on it would have noticed before the physicists did.</p></dd>
+    <dt>“The missing Failures 2–3 were just an upload mistake.”</dt>
+    <dd><p>Probably! Mistakes happen — the difference between science and this document is what happens next. Correct it, renumber it, note the correction. This page will link the fix. The FINAL STATEMENT says the circle is “never acknowledged, corrected, or broken”; here's a small, free opportunity to model the behavior.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">07 · Primary Sources</div>
+  <h2>Check everything</h2>
+  <ol>
+    <li><b>Niebauer, T. M. et al. (1995)</b> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 design paper, including the error budget characterizing residual gas, magnetic, and electrostatic effects.</li>
+    <li><b>International Comparisons of Absolute Gravimeters (ICAG)</b> — BIPM key comparison reports, Sèvres. Dozens of independent absolute instruments agreeing at the few-µGal level.</li>
+    <li><b>Touboul, P. et al. (2022)</b> — “MICROSCOPE mission: final results of the test of the equivalence principle,” <em>Phys. Rev. Lett.</em> 129, 121102. Titanium vs. platinum in free fall: identical to ~10⁻¹⁵.</li>
+    <li><b>Wagner, T. A. et al. (2012)</b> — “Torsion-balance tests of the weak equivalence principle,” <em>Class. Quantum Grav.</em> 29, 184002. The Eöt-Wash material-dependence program.</li>
+    <li><b>Goodkind, J. M. (1999)</b> — “The superconducting gravimeter,” <em>Rev. Sci. Instrum.</em> 70, 4131. Design, shielding, and noise characterization of the levitated-sphere instrument.</li>
+    <li><b>Peters, A., Chung, K. Y. &amp; Chu, S. (2001)</b> — “High-precision gravity measurements using atom interferometry,” <em>Metrologia</em> 38, 25. Cold-atom g agreeing with a falling-corner-cube FG5 at parts-per-billion.</li>
+    <li><b>Tapley, B. D. et al. (2019)</b> — “Contributions of GRACE to understanding climate change,” <em>Nature Climate Change</em> 9, 358. Includes ground-truth comparisons for groundwater and ice mass.</li>
+    <li><b>Rodell, M. et al. (2009)</b> — “Satellite-based estimates of groundwater depletion in India,” <em>Nature</em> 460, 999. GRACE vs. well observations.</li>
+    <li><b>Nabighian, M. N. et al. (2005)</b> — “Historical development of the gravity method in exploration,” <em>Geophysics</em> 70, 63ND. The commercial audit trail: gravity surveys against drilling outcomes.</li>
+    <li><b>Van Camp, M. et al. (2017)</b> — “Geophysics from terrestrial time-variable gravity measurements,” <em>Rev. Geophys.</em> 55, 938. Cross-instrument convergence: superconducting vs. absolute gravimeters on the same signals.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">Review #1: the gravity “audit”</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier
+  </div>
+</footer>
+
+</body>
+</html>
