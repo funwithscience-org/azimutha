@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookkeeping, Not Bookends — the kₑ and G "Comparative Analysis," reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 'Inverse-Square Scaling Constants' video paper claiming Coulomb's constant and G are mirrored opposites. The mirror is a unit convention — it vanishes in Gaussian units.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="Bookkeeping, Not Bookends — the kₑ and G 'Comparative Analysis,' reviewed">
+<meta property="og:description" content="The 'profound structural inversion' between Coulomb's constant and G vanishes when you switch unit systems. In Gaussian units, kₑ = 1. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/inverse-square-constants-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/inverse-square-constants-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bookkeeping, Not Bookends — the kₑ and G 'Comparative Analysis,' reviewed">
+<meta name="twitter:description" content="The 'deep inversion' between kₑ and G is a unit convention. In Gaussian units, kₑ = 1. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/inverse-square-constants-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/inverse-square-constants-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:56ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  .unitswitch{position:absolute;top:70px;right:24px;width:230px;display:flex;flex-direction:column;gap:8px}
+  .unitswitch .u{font-family:var(--mono);font-size:11px;background:var(--card);border:1px solid var(--rule);padding:8px 10px;color:var(--grey)}
+  .unitswitch .u b{color:var(--navy);font-weight:600}
+  .unitswitch .u.gone b{color:var(--burgundy)}
+  .unitswitch .cap{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);text-align:center}
+  @media (max-width:820px){.unitswitch{display:none}}
+  @media (min-width:821px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 265px)}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+  .eq{font-family:var(--mono);font-size:14.5px;background:var(--paper);border:1px solid var(--rule);padding:10px 14px;margin:10px 0;display:inline-block}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="unitswitch" aria-hidden="true">
+      <div class="u">SI units:&nbsp; F = <b>kₑ</b> q₁q₂ / r²</div>
+      <div class="u gone">Gaussian units:&nbsp; F = q₁q₂ / r² &nbsp;<b>(kₑ = 1)</b></div>
+      <div class="cap">the “deep inversion,” switched off</div>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>Bookkeeping, Not Bookends</h1>
+    <p class="sub">A review of <em>“A Comparative Analysis of Inverse-Square Scaling Constants”</em> (PPC&nbsp;v5.0) — a video paper arguing that Coulomb's constant and the gravitational constant are “perfectly mirrored bookends of field mechanics,” with gravity's direction supplied by the atmosphere's electric field.</p>
+    <p class="byline"><b>Verdict up front:</b> the formulas are right, the dimensional analysis is right, and the conclusion drawn from them is a property of the SI unit system, not of nature. Switch to Gaussian units and kₑ equals exactly 1 — the “profound structural inversion” is switched off with it.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The third paper-formatted release from the Azimutha.FE account (reviews of the <a href="../gravity-audit-review/">gravity “audit”</a> and the <a href="../gravimeter-dissection-review/">gravimeter “dissection”</a> precede this one). Unlike the first two, this is a video of scrolling pages rather than a photo carousel — same justified-text paper styling, same <em>“Independent Research”</em> attribution, still no author, citations, data, or hosted copy.</p>
+  <p>New this time: a version number. The framework is credited as <em>“Principle of Physical Consistency (PPC v5.0),”</em> which tells us the doctrine is being iterated like software — and, given the prose style (“a logical thought process confirms,” “the data indicate,” flawless dimensional formulas wrapped in steered interpretation), very plausibly iterated in collaboration with a language model. The math is exactly what an LLM reliably gets right; the “perfectly mirrored bookends” conclusion is exactly what one produces when the user supplies the destination. Release notes for a worldview.</p>
+  <p>Credit up front, because there's real credit to give: the dimensional formulas for both constants are correct, the 10³⁹ electron–proton force ratio is correct, and the Kaluza–Klein summary is honest and accurate. This is the best-researched of the three papers. It is also the one whose central claim can be deleted by changing measurement conventions, which is a thing physical claims are not allowed to do.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" style="margin:0 -24px;padding-left:24px;padding-right:24px">
+  <div class="kicker">02 · The Steelman</div>
+  <h2>The strongest version of the argument</h2>
+  <p><strong>The structural parallel is real.</strong> Coulomb's law and Newton's gravitation law share the same form: a proportionality constant times a product of two source strengths over r². Physicists noticed immediately and have taken the resemblance seriously for two centuries.</p>
+  <p><strong>The numbers are right.</strong> kₑ ≈ 8.99 × 10⁹ N·m²/C² with dimensions [M¹ L³ T⁻⁴ I⁻²]; G ≈ 6.67 × 10⁻¹¹ N·m²/kg² with dimensions [M⁻¹ L³ T⁻²]. Both check out. The ~10³⁹ ratio of electrostatic to gravitational attraction between an electron and a proton is a famous, real number — Dirac built his large-numbers hypothesis on it in 1937, and its modern descendant is the hierarchy problem, an open question physicists discuss constantly and in public.</p>
+  <p><strong>Unification is a legitimate research program.</strong> Kaluza and Klein really did show that five-dimensional general relativity yields both Einstein's equations and Maxwell's equations — the paper describes this correctly — and the pursuit of a unified framework has driven theoretical physics for a century.</p>
+  <p>If the paper concluded <em>“these parallels motivated a century of rigorous unification attempts, none yet confirmed,”</em> it would be a fair pop-science summary. Instead it concludes that the constants' dimensional formulas reveal a hidden physical inversion — and that conclusion dissolves under the one test any claim about constants must pass.</p>
+</section>
+
+<!-- ============ THE MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>Reading the filing system as if it were the world</h2>
+  <p>Every substantive claim in this paper is built by treating properties of <strong>SI unit bookkeeping</strong> as properties of <strong>physical reality</strong>. The dimensional formula of a proportionality constant is not a description of a force's nature — it is the list of conversion factors needed to make the equation's units balance <em>in a particular measurement system</em>. Change the system and the “deep structure” rearranges or disappears entirely, which is how you know it was never structure at all.</p>
+  <p>The cleanest demonstration: in Gaussian-CGS units — used in electrodynamics texts for a century, standard in Jackson — the unit of charge is <em>defined</em> so that Coulomb's law reads F = q₁q₂/r². The constant kₑ equals exactly 1, dimensionless. No mass dimension, no [M¹], no mirror, no bookend. Relativists do the same to G with geometrized units (G = c = 1). Two constants that can each be independently defined out of existence by choosing sensible units cannot be “dimensional opposites” encoding a hidden inversion of nature. The ampere is a base unit in SI for historical and practical reasons; the paper has mistaken that committee decision for field mechanics.</p>
+</section>
+
+<!-- ============ CLAIM BY CLAIM ============ -->
+<section id="claims">
+  <div class="kicker">04 · Claim by Claim</div>
+  <h2>The sections, audited</h2>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Dimensional Analysis section</span>
+      <span class="stamp true">Formulas accurate</span>
+    </div>
+    <div class="claim-body">
+      <h2>“kₑ is [M¹ L³ T⁻⁴ I⁻²]; G is [M⁻¹ L³ T⁻²].”</h2>
+      <p class="assertion">Claim: the values and dimensional formulas of both constants, and the 10³⁹ electron–proton force ratio.</p>
+      <span class="lbl t">What's true</span>
+      <p>All of it. This is correct dimensional analysis, correctly executed. Worth stating plainly because our critique of the next step should not be mistaken for a critique of the arithmetic.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Nothing here — the errors begin when these formulas are read as physics rather than unit conversion. Note one framing slip already visible, though: the 10³⁹ ratio is presented as a fixed fact about the two forces, but it's a fact about <em>one specific pair of particles</em>. Compare two 1&nbsp;kg spheres instead of an electron and proton and gravity wins easily. The ratio of the forces depends entirely on how much charge and mass you put in; only dimensionless constants like the fine-structure constant carry unit-free meaning.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Dimensional Analysis, cont.</span>
+      <span class="stamp false">The thesis — and false</span>
+    </div>
+    <div class="claim-body">
+      <h2>“G inherently requires the inverse of mass — the constants function as precise dimensional opposites.”</h2>
+      <p class="assertion">Claim: M¹ in kₑ versus M⁻¹ in G reveals a structural inversion in how the two forces relate to mass.</p>
+      <span class="lbl t">What's true</span>
+      <p>The exponents are as stated. M appears with power +1 in kₑ's formula and −1 in G's.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Gravity does not scale inversely with mass — it scales as the <em>product of two masses</em>, positively and famously. The M⁻¹ lives in the constant precisely <em>because</em> the force law multiplies by two mass factors: solve F = G·m₁m₂/r² for G and you get</p>
+      <p class="eq">G = F·r² / (m₁m₂) → [M L T⁻²][L²] / [M²] = [M⁻¹ L³ T⁻²]</p>
+      <p>The inverse mass is an accounting residue of dividing a force by mass-squared — the same way unit price carries “per item” without implying that cost falls as you buy more. Run the identical algebra on kₑ and its M¹ appears because charge, not mass, sits in the denominator, leaving the force's single mass dimension uncancelled. The two exponents differ because <em>the source terms differ</em>, which everyone already knew. And the decisive check from section 03: in Gaussian units kₑ has no dimensions at all. A “precise dimensional opposite” that a unit convention can delete was never a physical opposite. This is the paper's thesis, and it rests on misreading a ledger.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Geometric Symmetry section</span>
+      <span class="stamp misleading">It's geometry</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Identical inverse-square behavior makes the fields' unity undeniable.”</h2>
+      <p class="assertion">Claim: because both laws fall off as 1/r², the fields are mathematically identical in geometric structure, evidencing a single underlying system.</p>
+      <span class="lbl t">What's true</span>
+      <p>The 1/r² forms are identical, and static field lines, flux, and potentials really are mathematically parallel between the two theories.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Inverse-square isn't a shared fingerprint of two conspiring forces — it's what <em>any</em> conserved influence spreading from a point through three-dimensional space must do, because the area of a sphere grows as r². Light intensity is inverse-square. Sound intensity is inverse-square. Paint from a spray can is inverse-square. The exponent is telling you about the dimensionality of space, not about kinship between sources — which is why physicists test for extra dimensions by looking for <em>deviations</em> from 1/r² at short range (torsion-balance experiments have confirmed it down to tens of microns). Meanwhile the deep <em>differences</em> go unmentioned: charge comes in two signs and gravity in one, so EM can attract and repel while gravity only attracts; EM can be screened, gravity can't — the very facts the author's own gravimeter paper leaned on. The similarity is real, shallow, and shared with a spray can.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Vector Inversion section</span>
+      <span class="stamp misleading">Half-right</span>
+    </div>
+    <div class="claim-body">
+      <h2>“G dictates contractive accumulation; kₑ governs repulsive spatial resistance — matter is stabilized by electron-cloud repulsion.”</h2>
+      <p class="assertion">Claim: the forces act as vectorial counter-balances, one pulling inward and one pushing outward, establishing the boundaries of matter.</p>
+      <span class="lbl t">What's true</span>
+      <p>Gravity is universally attractive, and it is genuinely true that matter's solidity is not gravity's doing. There's a kernel of real physics in “things don't collapse because of electron behavior.”</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Electrostatic force is not “fundamentally repulsive” — it attracts as often as it repels, which is why atoms exist at all: electrons are <em>attracted</em> to nuclei. Casting kₑ as the outward bookend requires forgetting half of Coulomb's law, the half currently holding the author's molecules together. And the true source of matter's incompressibility is mostly not classical charge repulsion but the Pauli exclusion principle — electron degeneracy pressure, a quantum effect with no classical analogue and no place in either “bookend.” The tidy inward/outward duality is achieved by rounding both forces to caricatures.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Permittivity section</span>
+      <span class="stamp misleading">Metaphor as mechanism</span>
+    </div>
+    <div class="claim-body">
+      <h2>“kₑ = 1/(4πε₀) makes it the stiffness of space; G is the medium's compliance or breakdown.”</h2>
+      <p class="assertion">Claim: mapping permittivity to mechanical resistance yields an alternative unified framework of a dielectric or fluid medium.</p>
+      <span class="lbl t">What's true</span>
+      <p>The relation kₑ = 1/(4πε₀) is correct, and “permittivity as the vacuum's response to field formation” is a reasonable gloss of standard electrodynamics.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>“kₑ is stiffness, therefore G is compliance” is an analogy asserted, not a framework derived. A physical model of space as a dielectric fluid would have to produce equations — predict the value of G from ε₀, or the deflection of starlight, or the perihelion of Mercury, or <em>anything</em>. This one predicts nothing; it renames. (Ironically, the author's beloved dimensional analysis convicts it instantly: ε₀ and G don't combine into each other without smuggling in new constants.) Nineteenth-century physicists pursued mechanical-aether models of exactly this flavor with vastly more mathematical skill; the program died because the models kept contradicting measurement, ultimately at Michelson–Morley. Reviving it as a paragraph of vibes doesn't reopen the case.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Unified Models section</span>
+      <span class="stamp true">Accurate — and backfires</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Kaluza–Klein showed Maxwell's and Einstein's equations emerging from one geometric source.”</h2>
+      <p class="assertion">Claim: the historical pursuit of unified field theory validates treating kₑ and G as projections of a single multi-dimensional force.</p>
+      <span class="lbl t">What's true</span>
+      <p>The Kaluza–Klein summary is accurate and honestly told — genuinely the best physics writing in any of the three papers. Five-dimensional GR really does yield both field equation sets.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>The example cuts against the paper's method. Kaluza–Klein is a <em>precise mathematical theory</em>: it derives the field equations, predicts charge quantization, specifies a compactified dimension's radius — and, in its original form, makes wrong predictions (an unobserved scalar field with the wrong couplings, no place for the weak and strong forces), which is why it was superseded rather than adopted. That's the full lesson: unification claims are earned by equations that survive contact with data, and abandoned when they don't. Citing a rigorous, falsifiable, ultimately falsified theory as license for an unfalsifiable prose framework is like citing a failed drug trial as proof you don't need trials. If kₑ and G really are one force's two projections, the move that would honor Kaluza and Klein is to write the model down and let it predict something.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Density &amp; Gradient section</span>
+      <span class="stamp false">False — testable at home</span>
+    </div>
+    <div class="claim-body">
+      <h2>“Which way is ‘down’ is provided by the Earth's atmospheric electrostatic gradient.”</h2>
+      <p class="assertion">Claim: objects rise or sink by relative density and buoyancy, with the directional vector supplied by the measurable atmospheric potential gradient, in which kₑ plays the foundational role.</p>
+      <span class="lbl t">What's true</span>
+      <p>The fair-weather atmospheric electric field is real: roughly 100&nbsp;V/m near the surface, pointing downward, described in every atmospheric-physics text (Feynman devotes a lovely chapter to it). Credit for invoking a real, measurable phenomenon.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Invoking it as the source of “down” fails four tests, three of which fit in a kitchen. <strong>Magnitude:</strong> electric force is F = qE, so a <em>neutral</em> object — most objects — feels essentially nothing; for 100&nbsp;V/m to produce one g on a single kilogram would require about 0.1&nbsp;coulombs, a physically absurd charge for household matter (sparks fly from microcoulombs). <strong>Sign:</strong> charge a balloon negative on your hair and, in a downward-pointing E field, the electric force on it points <em>up</em> — the model predicts charged balloons fall slower or rise; they don't, measurably. <strong>Weather:</strong> the atmospheric field <em>reverses</em> under thunderstorms; nothing starts falling upward in the rain. <strong>Shielding:</strong> the field is excluded from Faraday cages — meaning every car, airliner, and steel-framed building — inside which objects continue falling at 9.8&nbsp;m/s² with tedious consistency. This last one is fratricide: the author's own <a href="../gravimeter-dissection-review/">gravimeter paper</a> insists EM effects can be shielded and gravity can't. Correct! Which is how we know the thing pulling objects down inside a Faraday cage is not the atmospheric electric field.</p>
+    </div>
+  </article>
+
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Conclusion</span>
+      <span class="stamp false">False</span>
+    </div>
+    <div class="claim-body">
+      <h2>“kₑ and G are not unrelated constants, but perfectly mirrored bookends of field mechanics.”</h2>
+      <p class="assertion">Claim: mathematically identical geometry plus vectorial counter-balance plus dimensional inversion equals a synchronized, inverted relationship.</p>
+      <span class="lbl t">What's true</span>
+      <p>The constants are indeed “not unrelated” in one banal sense: both are proportionality factors in inverse-square laws written in SI units.</p>
+      <span class="lbl w">What's wrong</span>
+      <p>Each strut has now failed independently: the shared geometry is the geometry of space itself (shared with flashlights); the vector duality requires misdescribing Coulomb attraction and ignoring quantum mechanics; and the dimensional inversion is SI bookkeeping that Gaussian units delete. Three non-clues do not sum to a revelation. The honest version of this paper's observation — “these resemblances are striking; a century of rigorous unification work has tried and so far failed to cash them in” — is standard physics, freely available, and much more interesting than the bookends.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="tests">
+  <div class="kicker">05 · The Decisive Tests</div>
+  <h2>Two switches that turn the thesis off</h2>
+  <p><strong>Switch 1 — change the units.</strong> Rewrite Coulomb's law in Gaussian-CGS, the system used throughout classical electrodynamics for a century: F = q₁q₂/r², with kₑ ≡ 1, dimensionless. The [M¹] evaporates. Write general relativity in geometrized units and G ≡ 1 too. Every claim in this paper about what the constants' dimensions <em>reveal</em> — the inversion, the mirroring, the opposition — refers to something that does not exist in perfectly standard alternative unit systems describing identical physics. Physical truths survive a change of units. This one doesn't.</p>
+  <p><strong>Switch 2 — charge a balloon.</strong> The atmospheric-gradient theory of “down” makes an immediate prediction: force depends on charge (F = qE), so changing an object's charge should change its fall. Rub a balloon on your hair, giving it negative charge in a downward-pointing field — the electric force now points up. Weigh it; drop it; nothing changes beyond the femtonewtons. Then walk into a steel-framed building — a Faraday cage that excludes the atmospheric field entirely — and drop it again: 9.8&nbsp;m/s². Then wait for a thunderstorm, when the field reverses sign outdoors, and observe the stubborn refusal of the world to fall upward. Three household falsifications of the mechanism, plus the author's own shielding principle from the gravimeter paper testifying for the prosecution.</p>
+  <div class="note">
+    <div class="kicker">The pattern across three papers</div>
+    <p>Paper one declared local gravity unmeasured; the instruments existed. Paper two declared the EM alternative unexcluded; the exclusion tests existed. Paper three declares a dimensional inversion; the unit systems that dissolve it existed. Each paper's central claim is a factual assertion about what physics has or hasn't done — checkable in an afternoon in a library the author formats his documents to resemble.</p>
+  </div>
+</section>
+
+<!-- ============ COUNTERARGUMENTS ============ -->
+<section id="counters">
+  <div class="kicker">06 · Anticipated Responses</div>
+  <h2>Objections I expect, answered in advance</h2>
+  <dl class="qa">
+    <dt>“Gaussian units just hide the constant inside the definition of charge.”</dt>
+    <dd><p>Exactly — which proves the point. If the constant can be relocated into a unit definition, its dimensional formula is a statement about unit definitions. The physics that survives the move — forces, trajectories, measurable ratios — is the physics; the ledger entries that don't survive were never physics. The meaningful constants are the dimensionless ones, like the fine-structure constant α ≈ 1/137, which has the same value in every unit system ever devised. Notice the paper never mentions it.</p></dd>
+    <dt>“The 10³⁹ ratio is still telling us something deep.”</dt>
+    <dd><p>It may well be — that's the hierarchy problem, and physicists would love to know why gravity is so comparatively weak. But “open question under active rigorous study since Dirac 1937” and “evidence the constants are mirrored bookends” are different claims. The first is in the literature; the second is in neither the literature nor this paper's own mathematics.</p></dd>
+    <dt>“Kaluza–Klein shows unification is real, so the paper's instinct is sound.”</dt>
+    <dd><p>The instinct is fine; instincts are free. Kaluza–Klein shows what cashing in the instinct costs: field equations, predictions, and the risk of being wrong — a risk the theory duly realized. A framework versioned like software but never once committed to a number has paid nothing and therefore purchased nothing.</p></dd>
+    <dt>“You're reviewing a TikTok video like it's a journal submission.”</dt>
+    <dd><p>We're reviewing it exactly as seriously as its own formatting requests. A document styled as a research paper, titled “A Comparative Analysis,” claiming a “rigorous audit” of physical constants, has asked for this. It receives what real submissions receive: credit for what's correct — there's more here than in the previous two — and rejection where the thesis fails. The standing invitation from the <a href="../">hub page</a> applies: responses, corrections, and hosted citable copies will be linked.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">07 · Primary Sources</div>
+  <h2>Check everything</h2>
+  <ol>
+    <li><b>CODATA Recommended Values of the Fundamental Physical Constants</b> — NIST. The values and uncertainties for kₑ (via ε₀), G, and α.</li>
+    <li><b>Jackson, J. D.</b> — <em>Classical Electrodynamics</em>, 3rd ed., Appendix on units and dimensions. The definitive treatment of SI vs. Gaussian systems and why constants migrate between them.</li>
+    <li><b>Purcell, E. M. &amp; Morin, D.</b> — <em>Electricity and Magnetism</em>, 3rd ed. Coulomb's law in both unit systems; attraction and repulsion on equal footing.</li>
+    <li><b>Feynman, R. P.</b> — <em>Lectures on Physics</em>, Vol. II, Ch. 9, “Electricity in the Atmosphere.” The ~100 V/m fair-weather field, its thunderstorm reversal, and the global circuit.</li>
+    <li><b>Rycroft, M. J. &amp; Harrison, R. G. (2012)</b> — “Electromagnetic atmosphere–plasma coupling: the global atmospheric electric circuit,” <em>Space Sci. Rev.</em> 168. Modern measurements of the atmospheric potential gradient.</li>
+    <li><b>Kaluza, T. (1921) &amp; Klein, O. (1926)</b> — the original five-dimensional unification papers; see <b>Overduin, J. M. &amp; Wesson, P. S. (1997)</b>, “Kaluza–Klein gravity,” <em>Phys. Rep.</em> 283, for the full history including why the original theory failed.</li>
+    <li><b>Dirac, P. A. M. (1937)</b> — “The cosmological constants,” <em>Nature</em> 139, 323. The origin of large-numbers reasoning about the 10³⁹ ratio.</li>
+    <li><b>Lee, J. G. et al. (2020)</b> — “New test of the gravitational 1/r² law at separations down to 52 μm,” <em>Phys. Rev. Lett.</em> 124, 101101. Inverse-square as a probed hypothesis, not an assumed kinship.</li>
+    <li><b>Mohr, P. J. &amp; Phillips, W. D. (2015)</b> — “Dimensionless units in the SI,” <em>Metrologia</em> 52. What is and isn't physically meaningful in dimensional assignments.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">Review #1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">Review #2</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier
+  </div>
+</footer>
+
+</body>
+</html>
