@@ -50,6 +50,7 @@
   .testpanel .sw::after{content:"";position:absolute;top:1px;left:1px;width:10px;height:10px;background:var(--navy);border-radius:50%}
   .testpanel .res{color:var(--burgundy);font-weight:600}
   @media (max-width:980px){.testpanel{display:none}}
+  @media (min-width:981px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 205px)}}
 
   main{padding:8px 0 40px}
   section{padding:40px 0;border-bottom:1px solid var(--rule)}
@@ -196,7 +197,7 @@
       <span class="lbl t">What's true</span>
       <p>No vacuum is perfect, and the FG5 is indeed the calibration reference for relative instruments. If this table's claim held, the contamination really would propagate. Everything downstream depends on this slide — which is presumably why it exists.</p>
       <span class="lbl w">What's wrong</span>
-      <p>The claim is not a matter of interpretation; it's a claim about what's in the instrument's published error budget, and the error budget is public. The FG5's founding paper characterizes, line by line, precisely the effects listed here: residual gas drag at operating pressure (sub-microgal at ~10⁻⁴ Pa), magnetic gradients (measured; the dropped corner cube is deliberately non-magnetic), electrostatic forces (the cube falls inside a grounded, co-falling drag-free chamber that also removes residual-gas effects), laser and clock systematics, even the changing gravity gradient along the drop path. These are not assumptions — they are <em>varied experimentally</em>: change the chamber pressure by an order of magnitude and the measured g does not move outside its stated uncertainty. And the reference itself is audited: international comparisons of absolute gravimeters — dozens of independent instruments, different labs, different countries — agree at the few-microgal level. Those comparisons are hosted at Sèvres, the same site where Defforges swung his pendulum in 1888. The field did not skip the author's homework. The author skipped the field's.</p>
+      <p>The claim is not a matter of interpretation; it's a claim about what's in the instrument's published error budget, and the error budget is public. The FG5's founding paper characterizes, line by line, precisely the effects listed here: residual gas drag at operating pressure (sub-microgal at ~10⁻⁴ Pa), magnetic gradients (measured; the dropped corner cube is deliberately non-magnetic), electrostatic forces (the cube falls inside a grounded, co-falling drag-free chamber that also removes residual-gas effects), laser and clock systematics, even the changing gravity gradient along the drop path. These are not assumptions — they are <em>varied experimentally</em>: change the chamber pressure by an order of magnitude and the measured g does not move outside its stated uncertainty. And the reference itself is audited: international comparisons of absolute gravimeters — dozens of independent instruments, different labs, different countries — agree at the few-microgal level, in a comparison series begun at Sèvres in 1981, the same site where Defforges swung his pendulum in 1888. The field did not skip the author's homework. The author skipped the field's.</p>
     </div>
   </article>
 
@@ -328,7 +329,7 @@
   <h2>Check everything</h2>
   <ol>
     <li><b>Niebauer, T. M. et al. (1995)</b> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 design paper, including the error budget characterizing residual gas, magnetic, and electrostatic effects.</li>
-    <li><b>International Comparisons of Absolute Gravimeters (ICAG)</b> — BIPM key comparison reports, Sèvres. Dozens of independent absolute instruments agreeing at the few-µGal level.</li>
+    <li><b>International Comparisons of Absolute Gravimeters (ICAG)</b> — begun at BIPM, Sèvres (1981) and continued as CIPM key comparisons at sites worldwide. Dozens of independent absolute instruments agreeing at the few-µGal level.</li>
     <li><b>Touboul, P. et al. (2022)</b> — “MICROSCOPE mission: final results of the test of the equivalence principle,” <em>Phys. Rev. Lett.</em> 129, 121102. Titanium vs. platinum in free fall: identical to ~10⁻¹⁵.</li>
     <li><b>Wagner, T. A. et al. (2012)</b> — “Torsion-balance tests of the weak equivalence principle,” <em>Class. Quantum Grav.</em> 29, 184002. The Eöt-Wash material-dependence program.</li>
     <li><b>Goodkind, J. M. (1999)</b> — “The superconducting gravimeter,” <em>Rev. Sci. Instrum.</em> 70, 4131. Design, shielding, and noise characterization of the levitated-sphere instrument.</li>
