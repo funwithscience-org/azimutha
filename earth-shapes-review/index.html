@@ -225,7 +225,7 @@
     {n:"Perfect Sphere",yr:"~240 BCE",inst:"stick, shadow, and pacing — Eratosthenes",dev:0},
     {n:"Oblate Spheroid",yr:"1744",inst:"wooden rods & zenith sectors — Lapland/Peru arcs",dev:21.4},
     {n:"Triaxial Ellipsoid",yr:"1841",inst:"continental triangulation — Bessel era",dev:0.035},
-    {n:"Pear (J3 term)",yr:"1959",inst:"orbit precession — Vanguard 1 tracking",dev:0.022},
+    {n:"Pear (J3 term)",yr:"1959",inst:"orbit precession — Vanguard 1 tracking",dev:0.020},
     {n:"Geoid",yr:"1984–",inst:"laser ranging & radar altimetry",dev:0.106}
   ];
   // deviation-from-sphere components in km as functions of latitude phi (radians), cumulative by phase
@@ -233,7 +233,7 @@
     var d=0;
     if(phase>=1) d+=-21.4*Math.pow(Math.sin(phi),2);           // oblateness
     if(phase>=2) d+= 0.035*Math.pow(Math.cos(phi),2);          // triaxial (worst meridian)
-    if(phase>=3) d+= 0.022*Math.pow(Math.sin(phi),3);          // pear J3
+    if(phase>=3) d+= 0.020*Math.pow(Math.sin(phi),3);          // pear J3
     if(phase>=4) d+= 0.050*Math.sin(3*phi+1)+0.038*Math.sin(5*phi+2.2)+0.030*Math.sin(7*phi+0.6); // geoid ripple (illustrative harmonics, ±~0.1 km)
     return d;
   }
@@ -241,12 +241,12 @@
   function term(c,phi){
     if(c===1) return -21.4*Math.pow(Math.sin(phi),2);
     if(c===2) return  0.035*Math.pow(Math.cos(phi),2);
-    if(c===3) return  0.022*Math.pow(Math.sin(phi),3);
+    if(c===3) return  0.020*Math.pow(Math.sin(phi),3);
     if(c===4) return  0.050*Math.sin(3*phi+1)+0.038*Math.sin(5*phi+2.2)+0.030*Math.sin(7*phi+0.6);
     return 0;
   }
   var TCOL=["","36,64,94","138,102,28","121,33,46","47,107,102"];      // navy, brass, burgundy, teal
-  var TMAX=[0,21.4,0.035,0.022,0.106], TNAME=["","Oblate","Triaxial","Pear","Geoid"];
+  var TMAX=[0,21.4,0.035,0.020,0.106], TNAME=["","Oblate","Triaxial","Pear","Geoid"];
   var ringA=[0,0,0,0,0], fadeT=null;                                    // per-term fade alpha
 
   var cvL=document.getElementById('cvL'),cvR=document.getElementById('cvR');
@@ -328,7 +328,7 @@
   }
 
   function phaseOwnDev(p){ // characteristic size of THIS phase's new term, km
-    return [0,21.4,0.035,0.022,0.106][p];
+    return [0,21.4,0.035,0.020,0.106][p];
   }
 
   function legend(){
@@ -468,7 +468,7 @@
       <p>No one has walked the planet with a ruler without stopping. Granted.</p>
       <span class="lbl w">What's wrong</span>
       <p>First the criterion: it proves too much. By this standard nobody knows the shape of anything they haven't ant-walked in an unbroken line — no astronomer knows the Moon is round, no surveyor knows a lake's outline from its shore. Shape determination has never required continuous traversal; it requires measurements that over-constrain a model, which scattered data does perfectly well (three points determine a circle; billions determine a geoid).</p>
-      <p>Second, the fact: the continuous measurement <em>exists anyway</em>. Satellite radar altimeters — Seasat, then TOPEX/Poseidon, then the Jason series — have measured sea-surface height <em>continuously along their ground tracks</em>, orbit after orbit, girdling the planet every ~100 minutes and repeating global coverage every ten days, since before 1984 — which is to say, through the paper's entire final “phase.” Sailors in the Vendée Globe circumnavigate solo with continuous GNSS logging. The unbroken 360° elevation record the paper declares nonexistent is one of the most-repeated measurements in Earth science, and it traces an oblate spheroid every single lap.</p>
+      <p>Second, the fact: the continuous measurement <em>exists anyway</em>. Satellite radar altimeters — Seasat, then TOPEX/Poseidon, then the Jason series — have measured sea-surface height <em>continuously along their ground tracks</em>, orbit after orbit, girdling the planet roughly every couple of hours and repeating global coverage every ten days — Seasat in 1978, then an unbroken series since the early 1990s: tens of thousands of complete laps across the paper's final “phase.” Sailors in the Vendée Globe circumnavigate solo with continuous GNSS logging. The unbroken 360° elevation record the paper declares nonexistent is one of the most-repeated measurements in Earth science, and it traces an oblate spheroid every single lap.</p>
     </div>
   </article>
 
@@ -525,7 +525,7 @@
   <h2>Three measurements running right now</h2>
   <p>The paper's refrain is that the decisive experiments were never done. All three are in progress as you read this, no lab required:</p>
   <p><strong>1 — The gradient.</strong> Twice a day, at hundreds of stations, weather balloons rise through open air logging pressure against altitude. Every ascent retraces the exponential curve that gravity predicts and a wall-contained gas forbids. This measurement is 377 years old, wall-free by construction, and repeated more often than any experiment in physics.</p>
-  <p><strong>2 — The leak.</strong> Hydrogen and helium escape the top of the atmosphere continuously — a mass-selective leak, light gases out, heavy gases retained, visible as the ultraviolet geocorona Apollo 16 photographed from the lunar surface. Sealed containers don't leak selectively. Gravity wells do, at exactly the Jeans rates gravitational theory computes.</p>
+  <p><strong>2 — The leak.</strong> Hydrogen and helium escape the top of the atmosphere continuously — a mass-selective leak, light gases out, heavy gases retained, visible as the ultraviolet geocorona Apollo 16 photographed from the lunar surface. Sealed containers don't leak selectively. Gravity wells do, at the mass-selective rates escape physics computes — thermal Jeans escape, charge exchange, the polar wind, every channel gated by gravity.</p>
   <p><strong>3 — The orbits.</strong> Thousands of satellites, tracked to meters or centimeters, precessing at rates set by Earth's oblateness and harvested by mission designers on purpose — around the very shapes Part 6 declares un-orbitable. The shape of the Earth is not inferred despite the orbits; it is read <em>from</em> them, continuously, since 1958. The paper cites these missions' data. The data is the refutation.</p>
   <div class="note">
     <div class="kicker">The pattern, four papers in</div>
@@ -560,7 +560,7 @@
     <li><b>O'Keefe, J. A., Eckels, A. &amp; Squires, R. K. (1959)</b> — “Vanguard measurements give pear-shaped component of Earth's figure,” <em>Science</em> 129. The “pear phase,” discovered from a stable, precessing orbit.</li>
     <li><b>Kaula, W. M. (1966)</b> — <em>Theory of Satellite Geodesy</em>. The standard treatment of orbits about a non-spherical Earth: precession, not decay.</li>
     <li><b>Pearlman, M. R. et al. (2019)</b> — “The ILRS: approaching 20 years and planning for the future,” <em>J. Geodesy</em> 93 — LAGEOS satellite laser ranging: centimeter tracking around a “geoid-phase” Earth since 1976.</li>
-    <li><b>Fu, L.-L. &amp; Cazenave, A., eds. (2001)</b> — <em>Satellite Altimetry and Earth Sciences</em>. Continuous along-track sea-surface elevation, global coverage every ~10 days, since before 1984.</li>
+    <li><b>Fu, L.-L. &amp; Cazenave, A., eds. (2001)</b> — <em>Satellite Altimetry and Earth Sciences</em>. Continuous along-track sea-surface elevation, global coverage every ~10 days; Seasat 1978, unbroken series since the early 1990s.</li>
     <li><b>Catling, D. C. &amp; Zahnle, K. J. (2009)</b> — “The planetary air leak,” <em>Scientific American</em> 300(5). Hydrogen and helium escape rates: the mass-selective leak.</li>
     <li><b>Carruthers, G. R. &amp; Page, T. (1972)</b> — Apollo 16 Far Ultraviolet Camera/Spectrograph: the hydrogen geocorona, photographed from the lunar surface.</li>
     <li><b>NASA NSSDC / CelesTrak orbital archives</b> — Vanguard 1 (1958-002B): still in orbit, tracking data public. “Data, not interpretations,” as requested.</li>
@@ -572,7 +572,7 @@
 
 <footer>
   <div class="wrap">
-    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier <span class="vsep">|</span> <a href="/method-objections/">Objections to the method, answered</a>
   </div>
 </footer>
 
