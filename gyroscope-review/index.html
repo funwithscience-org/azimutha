@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turn the Box Around — the "Gyroscope Dissection" paper, reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 17-slide 'Gyroscope Manufacturing' carousel claiming no gyroscope detects Earth's rotation. The separating test — turn the box around — is run daily on oil rigs, in tunnels, and at every airport gate. The paper never runs it.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="Turn the Box Around — the 'Gyroscope Dissection' paper, reviewed">
+<meta property="og:description" content="Drift doesn't flip when you turn the instrument around. The planet does. Seventeen slides never turn the box. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/gyroscope-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/gyroscope-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Turn the Box Around — the 'Gyroscope Dissection' paper, reviewed">
+<meta name="twitter:description" content="The Earth signal flips with the box, scales with latitude, and points at true north. Drift does none of these. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/gyroscope-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/gyroscope-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:52ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* header signature: the two-position test */
+  .flippanel{position:absolute;top:70px;right:24px;width:172px;background:var(--paper);padding:14px 14px 12px 16px;border-left:2px solid var(--rule);font-family:var(--mono)}
+  .flippanel .box{width:44px;height:44px;border:2.5px solid var(--navy);margin:0 auto 10px;position:relative;transition:transform 1.2s ease}
+  .flippanel .box::after{content:"▲";position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--navy)}
+  .flippanel.flip .box{transform:rotate(180deg)}
+  .flippanel .row{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-top:5px}
+  .flippanel .row b{font-weight:600}
+  .flippanel .row .bias{color:var(--grey)}
+  .flippanel .row .earth{color:var(--burgundy)}
+  .flippanel .cap{display:block;margin-top:9px;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);text-align:center}
+  @media (max-width:980px){.flippanel{display:none}}
+  @media (min-width:981px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 205px)}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+  .lbl.x{color:var(--brass)}
+  .lbl.p{color:var(--ink)}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="flippanel" id="flippanel" aria-hidden="true">
+      <div class="box"></div>
+      <div class="row"><span class="bias">bias</span><b class="bias" id="fpbias">+0.02°/h</b></div>
+      <div class="row"><span class="earth">earth</span><b class="earth" id="fpearth">+10.64°/h</b></div>
+      <span class="cap">turn the box · the bias stays</span>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>Turn the Box Around</h1>
+    <p class="sub">A review of <em>"A Critical Examination of Gyroscope Manufacturing and the Claim of Earth Rotation Detection"</em> — a 17-slide carousel arguing that every gyroscope ever built measures its own defects and calls them a planet.</p>
+    <p class="byline"><b>Verdict up front:</b> the error budgets are real — and the engineers who wrote them solved them, which is why the paper's own preferred witnesses, drillers and tunnel surveyors, have been finding true north by Earth's spin since 1929. The one measurement that separates a drifting instrument from a turning planet — turn the box around and watch which reading flips — appears nowhere in seventeen slides. And accept the paper's own closing sentence — gyro output is defects and environment, "nothing more" — and no airliner has ever known which way it was pointing. They land anyway.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The fifth paper-formatted release from the Azimutha.FE TikTok account: seventeen slides, formal running head, twelve numbered parts, a summary table, and a closing demand that any challenge "address all sections in their entirety." Like its four predecessors it exists only as images in a carousel — no hosted text, no named author, no searchable copy. The caption calls the ~15°/h signal "a manufacturing issue not openly acknowledged to the public."</p>
+  <p>One genuine first deserves notice: this paper contains a checkable citation — a Honeywell patent, US 9,551,578 B1, on electrically isolating a ring laser gyro's dither motor. We checked it. It's real, and it says what the paper says it says. What it demonstrates is the opposite of what the paper needs: an error source being identified, engineered out, and published — the routine that the paper's whole thesis says never happens. We credit the citation below, in its card.</p>
+  <p>The document's twelve device sections follow one template: an accurate manufacturing description, a genuine list of error mechanisms, and then a conclusion that does not follow from either. This review takes each card apart the same way each time: what's real, the premise doing the illegitimate work, the measurement that would settle it, and the public record of that measurement being made — usually by people in coveralls.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" id="steelman">
+  <div class="kicker">02 · Steelman</div>
+  <h2>The strongest version of the paper's case</h2>
+  <p><strong>Much of the engineering content is right, and we say so plainly.</strong> Gyroscopes drift. Springs fatigue, flexures detune with temperature, epoxy creeps, helium diffuses through seals, charge traps on electrostatic rotors, thermal gradients produce torques, and dither motors need electrical isolation — every mechanism named in the paper's error lists is in the instrument literature, because the instrument builders put it there. This is the most technically grounded of the account's five papers.</p>
+  <p><strong>The consumer-grade concession is also right.</strong> The gyroscope in a phone has bias instability of tens to hundreds of degrees per hour. It genuinely cannot see a 15°/h signal. If the paper's claim were "cheap MEMS gyros cannot detect Earth's rotation," it would be correct, unremarkable, and printed in every datasheet.</p>
+  <p><strong>And the demand behind the paper is legitimate.</strong> If an instrument's calibration presupposed the phenomenon it claims to detect, that would be a real circularity — worth exposing. A reviewer should take that worry seriously, and then check whether it is true. The paper asserts it. We checked it.</p>
+</section>
+
+<!-- ============ CENTRAL MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>An artifact could mimic the signal — so nothing counts</h2>
+  <p>Every device card runs the same argument: here is an error source; it could produce output of roughly the right size; therefore the Earth reading is the error source. The step from <em>could</em> to <em>is</em> is carried by a hidden premise — that a drifting instrument and a rotating planet are indistinguishable, so the naming rights go to whichever story you prefer.</p>
+  <p>And notice what that premise needs every instrument to be: <strong>selectively blind</strong>. Each card asks you to believe the device is fatally compromised for exactly one input — the planet's 15.041°/h — while remaining trustworthy for every other rotation it reports, since these same instruments steer aircraft, ships, drillstrings, and tunnel-boring machines without controversy. But a gyroscope has no way of knowing which rotation it has been handed. Earth's spin arrives at the sensing element as angular rate, identical in kind to a ship's yaw or a drillstring's slow twist; there is no physics by which bearing friction eats precisely the planet and passes everything else. The paper's own conclusion accepts this and commits to the full version: gyroscope output is "a function of manufacturing defects and immediate environment—nothing more." Take that sentence seriously and it proves far more than the paper wants. If gyro output were defects and environment, nothing more, inertial navigation would not exist: no INS could hold a heading across an ocean, no tunnel bored from both ends would meet, no survey tool would find the same north twice, and the sky would be a debris field. That prediction is tested thousands of times a day with passengers aboard. An argument whose premise entails disasters that do not happen has already run its decisive experiment, and lost.</p>
+  <p>The premise is false, because the Earth signal has a signature that no internal artifact shares. It is a <strong>vector fixed in the ground, not in the instrument</strong>. Three consequences, each measurable with the paper's own instruments: <strong>turn the box around</strong> and the Earth reading flips sign while instrument bias, which rides inside the box, does not — average the two readings and you have the bias, difference them and you have the planet. <strong>Drive the box down the highway</strong> and the horizontal component follows 15.041 × cos(latitude) °/h — thermal gradients don't consult your latitude. And the horizontal component <strong>points at true north</strong> — the same direction, from any manufacturer's instrument, on any continent. Bearing friction has no opinion about north.</p>
+  <p>The second load-bearing premise is that calibration smuggles the conclusion in: rate tables are "calibrated against Earth's assumed rotation," so the loop is closed. Also false, three separate ways. Angle standards are self-calibrating by <em>circle closure</em> — the constraint that angles around a point sum to 360°, "known since the time of Euclid" as the NIST reference puts it, requiring no planet at all. A ring laser's scale factor isn't calibrated against anything — it is computed from cavity geometry and wavelength (4A/λP). And the founding instruments needed no calibration infrastructure whatsoever: a pendulum in 1851, a flipped ring of water in 1913, a mile of evacuated pipe in 1925 — all read the rotation directly, before the first rate table existed.</p>
+  <p>What remains is the paper's habit of ending each section with a "contradiction from nature" — sundials, spiders, migratory birds, undersea cables, non-quantized oceans. Each fails on its own physics, and each is examined in its card below. The pattern to notice: the paper demands a decisive test, and there is one. Seventeen slides never turn the box around.</p>
+</section>
+
+<!-- ============ CLAIM BY CLAIM ============ -->
+<section id="claims">
+  <div class="kicker">04 · Claim by Claim</div>
+  <h2>The parts, audited</h2>
+  <p>Each card: what's real in the paper's mechanics, the premise doing the work, the test that would tell, and the public record of that test being run.</p>
+
+  <!-- C1 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 1 · The calibration loop</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The gyro proves Earth rotation using a standard that assumes Earth rotation"</h2>
+      <p class="assertion">The paper's foundation: rate tables and the 15.041°/h expected value pre-load the conclusion, so no gyroscope output can independently verify it.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Factory calibration does use known references, and Earth's rate genuinely appears in test procedures — the fiber-optic gyro standard (IEEE 952) explicitly instructs correcting scale-factor data for Earth's rate, and even suggests <em>orienting the gyro to measure components of Earth's rate</em> as a low-rate input. The paper read real procedures.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That an angle or rate standard must get its authority from Earth's rotation. It doesn't. Plane angle is the one quantity in metrology that calibrates itself: the circle closes. NIST's angle-calibration method rests on the constraint that angles around a point sum to 360° — "a natural conservation law for plane angle, known since the time of Euclid" — which lets a rotary table be fully calibrated "without reference to separately calibrated reference artifacts." A rate table is that self-checked circle plus a clock. No planet enters.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Remove calibration from the argument entirely: use an instrument whose scale factor is computed, not calibrated — a ring laser's beat frequency is (4A/λP)·Ω, set by cavity area, perimeter, and wavelength — or an instrument with no scale factor at all, like a pendulum. If they still read 15°/h with the right latitude dependence, the loop was never closed.</p>
+      <span class="lbl p">The public record</span>
+      <p>They do. Foucault's pendulum (1851) precessed at 360°·sin(latitude) per sidereal day with no calibration infrastructure on Earth. Michelson and Gale (1925) laid a 2010 × 1113-foot rectangle of evacuated pipe outside Chicago, computed the fringe shift Earth's rotation should produce — 0.236 ± 0.002 — and measured 0.230 ± 0.005 over 269 runs, using a small internal loop as their only reference. And Compton (1913) did it with a ring of water flipped over on a bench: rate, latitude, <em>and</em> the direction of north, from a garden hose of physics. Three independent instruments, no shared calibration chain, one answer.</p>
+    </div>
+  </article>
+
+  <!-- C2 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 2 · MEMS</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>"A 0.1°C gradient produces drift indistinguishable from 15°/h"</h2>
+      <p class="assertion">Thermal, pressure, and vibration artifacts swamp the Earth's-rate test, so the MEMS "Earth signal" is environmental.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>For the MEMS gyro in your phone, this is true — consumer-grade bias instability runs 30–1000°/h in the standard industry taxonomy, larger than the signal. Your phone cannot see the planet turn. Nothing in this review disputes it.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That "MEMS" is one thing, and that a drift of the right <em>size</em> is a drift of the right <em>shape</em>. A thermal gradient produces a bias that rides in the instrument's frame; it doesn't flip sign when the package is turned 180°, doesn't scale as cos(latitude), and doesn't point anywhere. "Indistinguishable" is precisely the property the two readings don't share.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>The two-position test: measure, rotate the case 180° about the vertical, measure again. Bias = the average; Earth rate = half the difference. Then repeat at a different latitude and check the cosine.</p>
+      <span class="lbl p">The public record</span>
+      <p>The oil patch runs this test in a steel tube under drilling vibration. North-seeking MEMS gyro tools survey wellbores while drilling — commercial services advertise operation "at any inclination, at any depth," through shock and vibration that make a factory rate table look like a spa — precisely because carouseling the sensor separates the Earth vector from its own bias. The device class this card says can't distinguish a planet from a temperature gradient is sold, by the hour, to find true north where a compass is blind inside steel casing.</p>
+    </div>
+  </article>
+
+  <!-- C3 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Parts 3–4 · Spinning mass &amp; DTG</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The 15°/h Earth signal lies within the drift range caused by bearing friction"</h2>
+      <p class="assertion">Mechanical gyros are dominated by bearing and fluid artifacts; no isolation experiment distinguishes Earth's rotation from these defects.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Bearing friction, fluid damping, and flexure detuning are real, temperature-dependent, and documented — in the manufacturers' own error budgets, which is where the paper found them.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>"No isolation experiment distinguishes" — stated as fact about a century in which the isolation experiment became a shipping product. A marine gyrocompass is nothing but that experiment run continuously: a spinning-mass gyro plus gravity sensing settles on the direction where the Earth-rate vector's horizontal component lives — true north — because drift is random and the planet is not. If bearing artifacts dominated, every gyrocompass would settle somewhere different. They all point the same way.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Put a spinning-mass gyro on a ship, steam in circles for a week, and see whether the instrument keeps finding the same north as the stars. Then require it by law and see if anyone drowns.</p>
+      <span class="lbl p">The public record</span>
+      <p>Anschütz built the first practical marine gyrocompass in 1908; Sperry's went to sea in 1911. SOLAS Chapter V, Regulation 19 — the international convention that exists because ships sank — requires every ship of 500 gross tonnes and up to carry a gyrocompass or equivalent "non-magnetic means" of finding heading. For over a century, every large vessel on Earth has steered by an instrument whose only working principle is the rotation this paper says has never been detected. The insurance industry has opinions about instruments that don't work.</p>
+    </div>
+  </article>
+
+  <!-- C4 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 5 · Electrostatic suspension</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Charge trapping creates torques that mimic Coriolis precession"</h2>
+      <p class="assertion">The ESG's suspension is the contaminant; its Earth-rotation detection is circular calibration plus electrostatic artifact.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Charge trapping on electrostatically suspended rotors is a genuine, named problem in the ESG literature. Again: the paper is quoting the builders' own error budget back at them.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That a characterized error is an uncharacterized one. The claim isn't that torque sources exist — it's that nobody bounded them. The bounding is the published part.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Fly an ESG where the expected rotation signal is not 15°/h but a few <em>arcseconds per year</em>, predict that number in advance from theory, and see whether the instrument resolves it despite every artifact on the paper's list.</p>
+      <span class="lbl p">The public record</span>
+      <p>That experiment is called Gravity Probe B. Four electrostatically suspended fused-quartz spheres, machined round to better than 33 nanometres, flew for a year and measured the geodetic precession at −6602 ± 18 milliarcseconds/year against a predicted −6606, and frame-dragging at −37 ± 7 against a predicted −39. An instrument family that could not tell a planet's rotation from its own trapped charge does not resolve relativistic effects seven to ten orders of magnitude below Earth's rate.</p>
+    </div>
+  </article>
+
+  <!-- C5 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 6 · Ring laser</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The RLG cannot be calibrated without assuming Earth's rotation"</h2>
+      <p class="assertion">The Sagnac effect "assumes a rotating reference frame"; dither interference and gas drift produce the signal; a Honeywell patent proves the contamination.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Lock-in, helium diffusion, thermal gradients, dither coupling: all real, all in the ring-laser literature. And the patent is real — US 9,551,578 B1, Honeywell, granted 2017, electrically isolating the dither motor. The paper's first checkable citation checks out, and we log that with genuine approval.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>Two of them. First, that a patent documenting an error source's <em>solution</em> is evidence the error was never handled — the patent is the paper's thesis refuting itself in the public record, since identifying, isolating, and publishing error mechanisms is what "characterized" means. Second, that the Sagnac effect is "a mathematical derivation that assumes a rotating frame." The Sagnac scale factor is geometry: beat frequency = (4A/λP)·Ω. Area, perimeter, wavelength. You can machine the cavity, measure those three numbers with a ruler and a spectrometer, and know what one degree per hour will read — before the instrument has ever been turned on, on any planet, rotating or not.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Build a ring laser so large and stable that it should see not just the 15°/h average but the milliseconds-scale <em>variations</em> in the length of day — and check them against a completely independent technique that shares no hardware, no physics, and no calibration: radio telescopes watching quasars.</p>
+      <span class="lbl p">The public record</span>
+      <p>The 4 m × 4 m ring laser "G" at Wettzell has done exactly this for two decades: it detects the Chandler wobble and annual wobble of Earth's axis, verified against the IERS reference series derived from VLBI quasar geodesy, and by 2023 was tracking Earth-rotation-rate variations at parts-per-billion resolution. A drifting gas tube does not agree with a network of radio telescopes about the planet's day length to nine digits. Michelson's mile of pipe read the same rotation in 1925.</p>
+    </div>
+  </article>
+
+  <!-- C6 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Part 7 · Fiber optic &amp; the undersea cable</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Undersea cables, far longer than any FOG coil, show no 15°/h shift — proving Sagnac undetectable"</h2>
+      <p class="assertion">The paper's "decisive empirical contradiction": if the effect were real, the longest fibers on Earth would show it.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Shupe-effect thermal gradients, epoxy creep, and Faraday polarization errors are genuine FOG error sources — from, once more, the builders' error budgets. And undersea cables indeed show no rotation signal. That part is true.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That the Sagnac effect scales with <em>length</em>. It scales with <em>enclosed area</em>: the phase shift is 8πAΩ/λc for a closed loop of area A, which is why a FOG winds its fiber into thousands of turns — sensitivity goes as turns × area. A point-to-point cable is an open path. Its enclosed area is zero. Zero area, zero Sagnac — for a cable of any length, on any planet, at any rotation rate. The paper's decisive contradiction is a prediction the standard physics makes too. An observation both models predict identically is evidence for neither.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Close the loop. Take fiber, or pipe, or water, and enclose actual area with it; the effect should appear, scaled by A. Open the loop; it should vanish. That's a clean discriminating experiment, and it has been run at every scale from tabletop fiber spools to Michelson's 0.2 km² of Chicago suburb.</p>
+      <span class="lbl p">The public record</span>
+      <p>Fiber-optic gyrocompasses are standard marine equipment — closed coils finding true north at sea daily. And the cable physics the paper gestures at is itself a working field: in 2018, ultrastable laser interferometry over ordinary telecom fibers — 75 to 535 km links, terrestrial and submarine — detected earthquakes and matched the seismometer networks. The technique the paper calls "an electronic artifact" measures real events that independent instruments confirm. Followed one citation deep, the cable argument testifies for the other side.</p>
+    </div>
+  </article>
+
+  <!-- C7 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Parts 8–9 · HRG &amp; tuning fork</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The Coriolis effect is not a physical source of vibration — it has no location, no energy"</h2>
+      <p class="assertion">Since Coriolis is an apparent force in a rotating frame, attributing pattern precession to it is "a linguistic illusion," and vibratory gyros measure only their own defects.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>The frame-mechanics point is correct, and stated almost properly: the Coriolis force is indeed the rotating-frame description, not an extra push. In the inertial frame the story is plain Newton — the resonator's mass elements move in straight lines while the case rotates around them, and the vibration pattern lags the case by a fixed geometric fraction.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That a phenomenon described two equivalent ways therefore doesn't exist. Both descriptions — Coriolis term in the rotating frame, straight-line inertia in the fixed frame — predict the <em>identical, measurable</em> pattern lag. The mathematics of a vibrating shell precessing under rotation was published by G. H. Bryan in 1890, worked out on a ringing bell, with an angular gain of about 0.3 for a hemisphere — sixty years before anyone could have "prompted" a rate table into circularity. Renaming the frame does not un-ring the bell.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Rotate the case a known angle; the standing-wave pattern should lag by ~0.3 of it, per Bryan's geometry — no 15°/h assumption anywhere. Then leave the device on a bench for years and see whether its output tracks the planet or its own temperature log.</p>
+      <span class="lbl p">The public record</span>
+      <p>The hemispherical resonator gyro is the quiet workhorse of spaceflight — Northrop Grumman's HRG line has accumulated tens of millions of operating hours on orbit, with demonstrated drift performance down to 0.00008°/h on the Hubble-class units: five orders of magnitude below the Earth rate the paper says such instruments can't separate from thermal noise. Spacecraft point telescopes with the physics this card calls a linguistic illusion.</p>
+    </div>
+  </article>
+
+  <!-- C8 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Parts 10–12 · The laboratory trio</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Laboratory curiosities, not demonstrations of planetary motion"</h2>
+      <p class="assertion">NMR, cold-atom, and superfluid gyros need shielding, cryogenics, and vibration isolation; birds aren't disoriented; oceans show no quantized circulation — so these devices prove nothing.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Fair in part: these are frontier instruments. Cold-atom and superfluid gyros mostly live in laboratories, magnetic shielding is imperfect, and nobody navigates an airliner with a Bose–Einstein condensate. Conceded without argument.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>Two category errors carry the conclusion. First, that the fragility of frontier instruments impugns the fielded ones — the boring, ruggedized gyros in cards 2–7 that work on drill strings. Second, the nature tests misapply the physics they invoke: quantized circulation is a property of <em>quantum superfluids</em>, not of seawater — the ocean not being a superfluid is not news about rotation. And migratory birds sense the direction of the magnetic <em>field</em>, not rotation; a constant 15°/h about a fixed axis produces no disorientation signal for a bird to miss, and the accelerations involved are of order a hundred-thousandth of gravity.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Ask whether the rotating-Earth prediction shows up in large-scale fluids in the form the physics actually predicts: not quantization, but rotation-dependent circulation — cyclones spinning opposite ways in opposite hemispheres, inertial currents, trade winds.</p>
+      <span class="lbl p">The public record</span>
+      <p>Open any satellite weather image ever taken: northern-hemisphere storms rotate counterclockwise, southern clockwise, exactly as the Coriolis terms in the standard dynamics texts require. The atmosphere is the planet-sized fluid experiment, it runs continuously, and its photographs are public. The paper asked nature; nature had already answered on the evening news.</p>
+    </div>
+  </article>
+
+  <!-- C9 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Cross-cutting · Sundials, spiders, and 1,000 km/h</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Spiders detect 0.00001 nm, yet no animal shows disequilibrium at 1,000 km/h"</h2>
+      <p class="assertion">Sundials show one consistent motion, constellations are fixed, and exquisitely sensitive animals feel nothing — contradicting a rotating Earth.</p>
+      <span class="lbl t">The real mechanics</span>
+      <p>Spiders do have extraordinary vibration sensors, sundial shadows do move consistently, and nobody feels the equator. All true.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That speed is something you feel. Uniform motion is undetectable from inside the moving system — demonstrated by Galileo's ship-cabin argument in 1632, two full centuries before anyone built a gyroscope. What's detectable is acceleration, and the numbers are on the page: the centrifugal effect at the equator is 0.034 m/s², a third of a percent of gravity (it's <em>in</em> the standard gravity formula — see below), and the Coriolis acceleration on a walking human is about 0.0015% of g. The spider number, meanwhile, is off by five orders of magnitude: the measured best-case threshold of the spider's metatarsal lyriform organ is about one nanometre; 0.00001 nm is ten femtometres — smaller than an atomic nucleus. And the "Earth's natural vibration (~7.32 Hz)" is a garbled Schumann resonance, which is 7.83 Hz and electromagnetic, not mechanical.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Take the sundial seriously. Time the shadow: it sweeps 15°/h — the same number, from the same rotation, that every gyrocompass reads. The paper's chosen counter-example is a working Earth-rate instrument with four thousand years of uptime.</p>
+      <span class="lbl p">The public record</span>
+      <p>The paper's first two papers already conceded this card. The gravity "audit" approvingly quoted the WGS84 formula whose sin²(latitude) term is roughly two-thirds <em>centrifugal</em> — Earth's rotation, endorsed as a term in the author's own citation. And the gravimeter paper granted that survey-gravimeter results are "real and repeatable": marine and airborne gravity surveys only reduce correctly after the Eötvös correction — about 7.5 mGal per knot of east-west speed at mid-latitudes — which exists because the survey ship is moving over a rotating planet. The author's accepted data requires the rotation this paper denies.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="killshot">
+  <div class="kicker">05 · The Decisive Test</div>
+  <h2>Turn the box around</h2>
+  <p>The paper's summary of recurring flaws declares that "no gyroscope has ever been tested against a truly stationary reference," so all Earth-rate claims are self-referential. But the separating measurement doesn't need a stationary reference. It needs a swivel chair.</p>
+  <p>Point a gyro's sensitive axis north and read it: you get bias + 15.041·cos(latitude). Turn the box 180° and read again: bias − 15.041·cos(latitude). The bias lives in the box and turned with it; the planet didn't. Average the readings — that's your instrument, drift and all. Difference them — that's the Earth, cleanly separated from every thermal gradient, bearing rumble, and trapped charge on the paper's lists, because none of those know which way the box is facing. This is not our proposal; it is how gyrocompassing has worked for a century, it is in the IEEE test standards' procedures, and it is run, without ceremony, thousands of times a day: by every inertial-nav airliner finding true north at the gate before departure — stationary, no GPS, no external reference, just the planet turning under the wings — and by every north-seeking survey tool carouseling in a wellbore.</p>
+  <p>Then there is the number itself. Navigation-grade ring lasers hold bias stability around 0.0035°/h — some four thousand times smaller than the 15.041°/h signal the paper says hides in the drift. And the signal wears a uniform: Foucault's pendulum reads the <em>vertical</em> component, 15.041·sin(latitude), in 1851; the gyrocompass reads the <em>horizontal</em> component, 15.041·cos(latitude), since 1908; the Wettzell ring laser reads the full vector well enough to watch the day's length flutter by milliseconds, in agreement with radio telescopes timing quasars. One planet, one rate, three centuries of instruments that share no parts, no vendors, and no assumptions — differing exactly as the sine and cosine of where they're standing says they must. (The paper's Failure 4 objects that configurations aren't standardized across experiments. Unstandardized instruments agreeing is not a weakness of the evidence; it is the strongest form evidence takes.)</p>
+  <div class="note warn">
+    <div class="kicker">The asymmetry, stated once</div>
+    <p>The paper closes by demanding that any challenge "address all sections in their entirety, as the arguments are interlocking and mutually reinforcing." This review addresses all twelve device sections, both cross-cutting failure lists, the summary table, and the conclusion. The standing invitation on this site runs the other way too and remains unanswered: pick any single specific claim in any review, and the response will be published verbatim.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT THE PAPER NEVER MENTIONS ============ -->
+<section id="omissions">
+  <div class="kicker">06 · The Omissions</div>
+  <h2>What seventeen slides about detecting Earth's rotation never mention</h2>
+  <p>A document surveying "all known" rotation-sensing devices and their history manages not to contain any of the following. Each is the sort of thing a survey exists to surface; several are the founding events of the field. All are checkable from a library card.</p>
+  <dl class="ledger">
+    <dt>The word "gyroscope" itself</dt>
+    <dd><p>Foucault built the instrument in 1852 to make Earth's rotation visible at any latitude, and named it for that job: <em>gyros</em> + <em>skopein</em>, "rotation-viewer." The paper dissects eleven kinds of gyroscope without mentioning that the name of the device is a claim about what it shows — made good in the Comptes Rendus a hundred and seventy years ago.</p></dd>
+    <dt>The Foucault pendulum (1851)</dt>
+    <dd><p>Still swinging in museums on every continent, precessing at 360°·sin(latitude) per sidereal day — a latitude law anyone can verify by visiting two museums. No electronics, no calibration, no vendor.</p></dd>
+    <dt>The gyrocompass and a century of shipping (1908– )</dt>
+    <dd><p>Mandatory equipment under SOLAS V/19 for every ship of 500 gross tonnes and up: true-north-finding by Earth-rate sensing, in daily commercial use since before the First World War. The paper's survey of gyro applications omits the single most common one on Earth.</p></dd>
+    <dt>The gyrotheodolite — the tunnel surveyor's plumb line (1970s– )</dt>
+    <dd><p>The gravity "audit" praised surveyors' plumb bobs and tape measures. Those same surveyors carry gyrotheodolites — ±3 arcsecond north-finders — wherever the sky is unavailable: over 100 km of the Channel Tunnel was azimuth-controlled with them across seven campaigns before the 1990 breakthrough, and the manufacturer's project list runs from the Gotthard Base Tunnel to Qatar's World Cup tunnelling. Tunnels meet under mountains, to centimetres, because Earth's rotation tells the boring machines which way is north.</p></dd>
+    <dt>Wellbore gyro surveying (1929– )</dt>
+    <dd><p>The first gyroscopic borehole survey ran on 9 October 1929, by Sperry-Sun, for Sun Oil. Directional drillers have steered by Earth-rate sensing for nearly a century — inside steel casing, where magnetics fail — with an SPE industry committee (ISCWSA) maintaining the formal error model. Working people bet eight-figure wells on the signal this paper says is a manufacturing defect.</p></dd>
+    <dt>Airliner alignment at the gate (early 1970s– )</dt>
+    <dd><p>Before departure, an inertial navigation system finds true north by sensing Earth's rotation while parked — "independent of any external data," as the aviation references put it — a procedure performed since the Delco Carousel era of the early 747s, thousands of times daily.</p></dd>
+    <dt>Michelson–Gale (1925) and Compton's water ring (1913)</dt>
+    <dd><p>The two calibration-free classics: a mile of pipe predicting its own fringe shift from first principles, and a flipped ring of water yielding rotation, latitude, and north on a bench top.</p></dd>
+    <dt>Ring-laser observatories (ongoing)</dt>
+    <dd><p>Wettzell's G ring and Munich's four-ring ROMY observatory measure Earth's rotation continuously — wobble, length-of-day, rotational earthquake motion — cross-checked against quasar geodesy. The data are published; the disagreement the paper's thesis requires does not exist.</p></dd>
+    <dt>Artillery firing tables</dt>
+    <dd><p>US Army manual FM 6-40's tabular firing tables carry two corrections for "the rotation of the earth" (Tables H and I, by latitude, azimuth, and range); the Navy's 1941 range tables for the 16-inch guns did the same. Gunners have dialed in the planet's spin for as long as shells have flown far enough to care.</p></dd>
+    <dt>The Eötvös correction and GPS's rotating frame</dt>
+    <dd><p>Survey gravimetry corrects ~7.5 mGal per knot of east-west speed because the platform moves over a rotating Earth; GPS time transfer carries a Sagnac correction of hundreds of nanoseconds for the same reason. Both corrections are routine, published, and load-bearing in industries the author's other papers cite approvingly.</p></dd>
+  </dl>
+  <p>A survey that misses one of these missed a fact. A survey that misses all of them has selected its universe so the conclusion can survive, which is the failure mode this site's reviews exist to name.</p>
+</section>
+
+<!-- ============ ANTICIPATED RESPONSES ============ -->
+<section id="responses">
+  <div class="kicker">07 · Anticipated Responses</div>
+  <h2>Objections, answered in advance</h2>
+  <dl class="qa">
+    <dt>"Those instruments are all calibrated by the same institutions."</dt>
+    <dd><p>Angle standards self-calibrate by circle closure; ring-laser scale factors are computed from geometry; and the pendulum, the water ring, and the Chicago pipe loop had no calibration chain at all. Separately: the two-position test needs no calibration whatsoever — it differences an instrument against itself.</p></dd>
+    <dt>"Institutional sources can't be trusted, so the citations don't count."</dt>
+    <dd><p>Most of the record above isn't institutional testimony; it's commercial self-interest. Drillers pay for gyro surveys because wrong azimuths cost millions. Tunnels bored from both ends met within centimetres. Shipowners' insurers require the gyrocompass. These parties profit from the instruments <em>working</em>, and they would profit more from cheaper instruments that didn't need to. A century of paying customers is the hardest audit there is.</p></dd>
+    <dt>"My phone's gyroscope shows no 15°/h. Checkmate."</dt>
+    <dd><p>Correct, and conceded above: consumer MEMS drift is 30–1000°/h — the signal is buried. That is a statement about a $2 sensor's noise floor, not about the planet; the same physics in a navigation-grade package reads the Earth rate with a 4000× margin. The paper itself relies on this distinction in reverse, and loses it both ways.</p></dd>
+    <dt>"Navigation gyros measure aircraft turns — nobody needs them to see a tiny planetary rate."</dt>
+    <dd><p>Backwards on the numbers. A navigation-grade INS holds course by accounting for rates a thousand times <em>smaller</em> than Earth's — 15°/h is one of the largest steady inputs in its error budget, which is exactly why alignment uses it to find north before every flight. An instrument blind at 15°/h could not navigate at all; and if it could not be trusted about the planet's rotation, there is no principled reason to trust it about any other rotation. The paper needs gyroscopes to be wrong about exactly one axis of physics and right about the rest. Instruments don't take sides.</p></dd>
+    <dt>"The review didn't address every section in its entirety."</dt>
+    <dd><p>Every device part (1–12), the surviving cross-cutting failures (1, 4, and 5), the summary table, and the conclusion are addressed above; the paper's Failures 2 and 3 could not be addressed, because they do not appear in the document. The reciprocal invitation stands, as it has since the first review: name one specific error on this page and it will be corrected, visibly.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">08 · Primary Sources</div>
+  <h2>Check us</h2>
+  <ol>
+    <li><b>Foucault, L. (1851)</b> — "Démonstration physique du mouvement de rotation de la Terre au moyen du pendule," <em>C. R. Acad. Sci.</em> 32, 135–138; <b>(1852)</b> the gyroscope notes, <em>C. R.</em> 35, 421–427 — where the instrument is named for showing rotation.</li>
+    <li><b>Michelson, A. A. &amp; Gale, H. G., assisted by F. Pearson (1925)</b> — "The Effect of the Earth's Rotation on the Velocity of Light, II," <em>Astrophys. J.</em> 61, 140. Predicted 0.236 ± 0.002 fringe; observed 0.230 ± 0.005.</li>
+    <li><b>Compton, A. H. (1913)</b> — "A Laboratory Method of Demonstrating the Earth's Rotation," <em>Science</em> 37 (960), 803–806.</li>
+    <li><b>Bryan, G. H. (1890)</b> — "On the Beats in the Vibrations of a Revolving Cylinder or Bell," <em>Proc. Camb. Phil. Soc.</em> 7, 101–111. The vibratory-gyro precession, on a bell, in 1890.</li>
+    <li><b>Galilei, G. (1632)</b> — <em>Dialogue Concerning the Two Chief World Systems</em>, Second Day: the ship's-cabin argument — uniform motion is undetectable from inside.</li>
+    <li><b>Estler, W. T. (1998)</b> — "Uncertainty Analysis for Angle Calibrations Using Circle Closure," <em>J. Res. NIST</em> 103 (2), 141. Angle calibrates itself; no planet required.</li>
+    <li><b>Post, E. J. (1967)</b> — "Sagnac Effect," <em>Rev. Mod. Phys.</em> 39, 475–493 (fringe shift 4AΩ/cλ — area, not length). <b>Chow, W. W. et al. (1985)</b> — "The ring laser gyro," <em>Rev. Mod. Phys.</em> 57, 61–104 (scale factor 4A/λP from geometry).</li>
+    <li><b>Schreiber, K. U. &amp; Wells, J.-P. R. (2013)</b> — "Invited Review Article: Large ring lasers for rotation sensing," <em>Rev. Sci. Instrum.</em> 84, 041101. <b>Schreiber, K. U. et al. (2011)</b> — <em>Phys. Rev. Lett.</em> 107, 173904 (Chandler wobble vs. IERS/VLBI). <b>Schreiber, K. U. et al. (2023)</b> — <em>Nat. Photonics</em> 17, 1054–1058 (length-of-day at ~5 ppb). <b>Igel, H. et al. (2021)</b> — "ROMY: a multicomponent ring laser for geodesy and geophysics," <em>Geophys. J. Int.</em> 225, 684–698.</li>
+    <li><b>Everitt, C. W. F. et al. (2011)</b> — "Gravity Probe B: Final Results…," <em>Phys. Rev. Lett.</em> 106, 221101. Electrostatically suspended gyros resolving milliarcsecond/yr precessions.</li>
+    <li><b>IEEE Std 952</b> (fiber-optic gyros), <b>IEEE Std 1431</b> (Coriolis vibratory gyros), <b>IEEE Std 647</b> (ring laser gyros) — specification and test procedures, including Earth-rate handling and multi-position tests. <b>Titterton, D. H. &amp; Weston, J. L. (2004)</b> — <em>Strapdown Inertial Navigation Technology</em>, 2nd ed., IEE/AIAA: gyrocompassing and alignment.</li>
+    <li><b>US Patent 9,551,578 B1 (2017)</b> — Honeywell, "Systems and methods for a ring laser gyroscope with electrically isolated dither motor." The paper's citation; verified; a solved error source, published.</li>
+    <li><b>Honeywell GG1320AN datasheet</b> — ring laser gyro, bias stability 0.0035°/h. <b>Passaro, V. M. N. et al. (2017)</b> — "Gyroscope Technology and Applications," <em>Sensors</em> 17, 2284: the grade taxonomy (consumer 30–1000°/h; navigation 0.01–0.1°/h). <b>Rozelle, D. M.</b> — "The Hemispherical Resonator Gyro: From Wineglass to the Planets" (Northrop Grumman): HRG performance to 0.00008°/h.</li>
+    <li><b>SOLAS Ch. V, Reg. 19.2.5.1</b> — gyrocompass carriage requirement, ships ≥ 500 GT. <b>Sperry Marine company timeline</b> (1911 sea trials); Anschütz gyrocompass, 1908.</li>
+    <li><b>Velasco, J. et al. (2016)</b> — gyrotheodolite azimuth control in long rail tunnels, <em>Survey Review</em> 48 (350) (Gyromat precision ±3″; "mandatory for tunnels longer than 15 km"). <b>Korittke, N. (1993)</b> — "Control Surveys During the Construction of the Channel Tunnel," in <em>Applications of Geodesy to Engineering</em>, Springer.</li>
+    <li><b>ISCWSA / SPE-90408 (Torkildsen, T. et al., 2004)</b> — the industry gyro wellbore-survey error model; first gyro borehole survey: Sperry-Sun, 9 October 1929.</li>
+    <li><b>SKYbrary, "Inertial Reference System"</b> — gate alignment: "by detecting the Earth's rotation the system is able to align with True North… independent of any external data."</li>
+    <li><b>FM 6-40</b>, Ch. 7 — firing-table corrections for "the rotation of the earth" (Tables H, I); <b>US Navy OP 770 (1941)</b> — 16″/50 range tables, Earth-rotation adjustments. <b>McCoy, R. (2012)</b> — <em>Modern Exterior Ballistics</em>, 2nd ed.</li>
+    <li><b>Harlan, R. B. (1968)</b> — "Eotvos corrections for airborne gravimetry," <em>J. Geophys. Res.</em> 73 (14): ~7.5 mGal per knot east-west at mid-latitudes. <b>Ashby, N. (2003)</b> — "Relativity in the Global Positioning System," <em>Living Rev. Relativity</em> 6, 1: the GPS Sagnac correction, hundreds of nanoseconds.</li>
+    <li><b>Marra, G. et al. (2018)</b> — "Ultrastable laser interferometry for earthquake detection with terrestrial and submarine cables," <em>Science</em> 361, 486–490.</li>
+    <li><b>Schumann, W. O. (1952)</b> — <em>Z. Naturforsch. A</em> 7, 149–154; <b>Balser, M. &amp; Wagner, C. A. (1960)</b> — <em>Nature</em> 188, 638–641: the 7.83 Hz resonance. <b>Barth, F. G. &amp; Geethabali (1982)</b> — spider slit-sensilla thresholds (~1 nm best case), <em>J. Comp. Physiol. A</em> 148, 175–185.</li>
+    <li><b>Holton, J. R. &amp; Hakim, G. J. (2013)</b> — <em>An Introduction to Dynamic Meteorology</em>, 5th ed.: Coriolis dynamics of cyclones, trade winds, jet streams; NOAA satellite imagery, continuously.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> <a href="../earth-shapes-review/">#4</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier <span class="vsep">|</span> <a href="/method-objections/">Objections to the method, answered</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var p=document.getElementById('flippanel'),e=document.getElementById('fpearth');
+  if(!p)return;
+  var flipped=false;
+  setInterval(function(){
+    flipped=!flipped;
+    p.classList.toggle('flip',flipped);
+    e.textContent=(flipped?'−10.64':'+10.64')+'°/h';
+  },2600);
+})();
+</script>
+
+</body>
+</html>
