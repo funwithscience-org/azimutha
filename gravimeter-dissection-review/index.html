@@ -94,6 +94,11 @@
   .sources li{margin-bottom:9px;color:var(--grey)}
   .sources li b{color:var(--ink);font-weight:600}
 
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
   footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
   footer a{color:var(--navy)}
   .vsep{color:var(--rule);margin:0 8px}
@@ -309,8 +314,23 @@
 </section>
 
 <!-- ============ COUNTERARGUMENTS ============ -->
+<section id="omissions">
+  <div class="kicker">06 · What The Paper Never Mentions</div>
+  <h2>What a full audit of gravimeters would have to include</h2>
+  <p>Beyond the charge/material/shield tests above, a “complete methodological breakdown” of gravimetry omits the results that close the case.</p>
+  <dl class="ledger">
+    <dt>Six unrelated instruments that agree</dt>
+    <dd><p>A spring, a pendulum, a <a href="https://iopscience.iop.org/article/10.1088/0026-1394/38/1/4">falling mirror, an interfering cold atom</a>, a superconducting sphere, and a <a href="https://doi.org/10.1002/2017RG000566">satellite pair</a> share almost no electromagnetic implementation — different fields, materials, geometries — and report the same g. A shared EM artifact cannot survive that comparison.</p></dd>
+    <dt>GRACE, confirmed on the ground</dt>
+    <dd><p>The claim that satellite gravimetry is framework-bound ignores that its outputs are <a href="https://www.nature.com/articles/nature08238">ground-truthed against wells</a>: when a satellite pair says an aquifer is draining and the boreholes below agree, “separation variance with no cause” is no longer available.</p></dd>
+    <dt>Gravimetry that is sold for money</dt>
+    <dd><p>Oil, water, and ore are found by <a href="https://doi.org/10.1190/1.2133785">mapping variations in g</a> — a paid, century-old industry that would have gone bankrupt long ago if the instruments were quietly reading electromagnetic noise.</p></dd>
+    <dt>The international comparisons</dt>
+    <dd><p>Dozens of absolute gravimeters from different national labs are cross-checked against one another at Sèvres, a series begun in 1981, and agree to a few microgal. The field did not skip the author’s homework; the audit skipped the field’s.</p></dd>
+  </dl>
+</section>
 <section id="counters">
-  <div class="kicker">06 · Anticipated Responses</div>
+  <div class="kicker">07 · Anticipated Responses</div>
   <h2>Objections I expect, answered in advance</h2>
   <dl class="qa">
     <dt>“The exclusion experiments are themselves instruments with EM assumptions.”</dt>
@@ -326,20 +346,20 @@
 
 <!-- ============ SOURCES ============ -->
 <section class="sources" id="sources">
-  <div class="kicker">07 · Primary Sources</div>
+  <div class="kicker">08 · Primary Sources</div>
   <h2>Check everything</h2>
   <ol>
-    <li><b>Niebauer, T. M. et al. (1995)</b> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 design paper, including the error budget characterizing residual gas, magnetic, and electrostatic effects.</li>
+    <li><a href="https://iopscience.iop.org/article/10.1088/0026-1394/32/3/004"><b>Niebauer, T. M. et al. (1995)</b></a> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 design paper, including the error budget characterizing residual gas, magnetic, and electrostatic effects.</li>
     <li><b>International Comparisons of Absolute Gravimeters (ICAG)</b> — begun at BIPM, Sèvres (1981) and continued as CIPM key comparisons at sites worldwide. Dozens of independent absolute instruments agreeing at the few-µGal level.</li>
-    <li><b>Touboul, P. et al. (2022)</b> — “MICROSCOPE mission: final results of the test of the equivalence principle,” <em>Phys. Rev. Lett.</em> 129, 121102. Titanium vs. platinum in free fall: identical to ~10⁻¹⁵.</li>
-    <li><b>Wagner, T. A. et al. (2012)</b> — “Torsion-balance tests of the weak equivalence principle,” <em>Class. Quantum Grav.</em> 29, 184002. The Eöt-Wash material-dependence program.</li>
+    <li><a href="https://doi.org/10.1103/PhysRevLett.129.121102"><b>Touboul, P. et al. (2022)</b></a> — “MICROSCOPE mission: final results of the test of the equivalence principle,” <em>Phys. Rev. Lett.</em> 129, 121102. Titanium vs. platinum in free fall: identical to ~10⁻¹⁵.</li>
+    <li><a href="https://arxiv.org/abs/1207.2442"><b>Wagner, T. A. et al. (2012)</b></a> — “Torsion-balance tests of the weak equivalence principle,” <em>Class. Quantum Grav.</em> 29, 184002. The Eöt-Wash material-dependence program.</li>
     <li><b>Goodkind, J. M. (1999)</b> — “The superconducting gravimeter,” <em>Rev. Sci. Instrum.</em> 70, 4131. Design, shielding, and noise characterization of the levitated-sphere instrument.</li>
-    <li><b>Peters, A., Chung, K. Y. &amp; Chu, S. (2001)</b> — “High-precision gravity measurements using atom interferometry,” <em>Metrologia</em> 38, 25. Cold-atom g agreeing with a falling-corner-cube FG5 at parts-per-billion.</li>
-    <li><b>Tapley, B. D. et al. (2019)</b> — “Contributions of GRACE to understanding climate change,” <em>Nature Climate Change</em> 9, 358. Includes ground-truth comparisons for groundwater and ice mass.</li>
-    <li><b>Rodell, M. et al. (2009)</b> — “Satellite-based estimates of groundwater depletion in India,” <em>Nature</em> 460, 999. GRACE-derived depletion in NW India.</li>
+    <li><a href="https://iopscience.iop.org/article/10.1088/0026-1394/38/1/4"><b>Peters, A., Chung, K. Y. &amp; Chu, S. (2001)</b></a> — “High-precision gravity measurements using atom interferometry,” <em>Metrologia</em> 38, 25. Cold-atom g agreeing with a falling-corner-cube FG5 at parts-per-billion.</li>
+    <li><a href="https://www.nature.com/articles/s41558-019-0456-2"><b>Tapley, B. D. et al. (2019)</b></a> — “Contributions of GRACE to understanding climate change,” <em>Nature Climate Change</em> 9, 358. Includes ground-truth comparisons for groundwater and ice mass.</li>
+    <li><a href="https://www.nature.com/articles/nature08238"><b>Rodell, M. et al. (2009)</b></a> — “Satellite-based estimates of groundwater depletion in India,” <em>Nature</em> 460, 999. GRACE-derived depletion in NW India.</li>
     <li><b>Bhanja, S. N. et al. (2016)</b> — “Validation of GRACE based groundwater storage anomaly using in-situ groundwater level measurements in India,” <em>J. Hydrol.</em>; and <b>Scanlon, B. R. et al. (2012)</b>, <em>PNAS</em> 109, 9320 — GRACE checked against well networks (India; US High Plains &amp; Central Valley).</li>
-    <li><b>Nabighian, M. N. et al. (2005)</b> — “Historical development of the gravity method in exploration,” <em>Geophysics</em> 70, 63ND. The commercial audit trail: gravity surveys against drilling outcomes.</li>
-    <li><b>Van Camp, M. et al. (2017)</b> — “Geophysics from terrestrial time-variable gravity measurements,” <em>Rev. Geophys.</em> 55, 938. Cross-instrument convergence: superconducting vs. absolute gravimeters on the same signals.</li>
+    <li><a href="https://doi.org/10.1190/1.2133785"><b>Nabighian, M. N. et al. (2005)</b></a> — “Historical development of the gravity method in exploration,” <em>Geophysics</em> 70, 63ND. The commercial audit trail: gravity surveys against drilling outcomes.</li>
+    <li><a href="https://doi.org/10.1002/2017RG000566"><b>Van Camp, M. et al. (2017)</b></a> — “Geophysics from terrestrial time-variable gravity measurements,” <em>Rev. Geophys.</em> 55, 938. Cross-instrument convergence: superconducting vs. absolute gravimeters on the same signals.</li>
   </ol>
 </section>
 

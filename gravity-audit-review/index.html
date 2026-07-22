@@ -108,6 +108,11 @@
   .sources li{margin-bottom:9px;color:var(--grey)}
   .sources li b{color:var(--ink);font-weight:600}
 
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
   footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
   footer a{color:var(--navy)}
   .vsep{color:var(--rule);margin:0 8px}
@@ -344,8 +349,23 @@
 </section>
 
 <!-- ============ COUNTERARGUMENTS ============ -->
+<section id="omissions">
+  <div class="kicker">06 · What The Paper Never Mentions</div>
+  <h2>The measurements a “gravity audit” leaves out</h2>
+  <p>Beyond the absolute gravimeter above, a document auditing terrestrial gravity manages to omit every everyday place the quantity is measured and used.</p>
+  <dl class="ledger">
+    <dt>The tides</dt>
+    <dd><p>Twice a day, every coastline on Earth measures the gravity of the Moon and Sun, and the <a href="https://tidesandcurrents.noaa.gov/">tide tables are published years in advance</a>. An audit of gravity that never mentions the largest gravitational signal anyone can watch from a pier has chosen its scope carefully.</p></dd>
+    <dt>Gravity weighed from orbit</dt>
+    <dd><p>The GRACE satellite pair maps Earth’s gravity field from space and <a href="https://www.nature.com/articles/s41558-019-0456-2">watches aquifers and ice sheets lose mass</a>, checked against wells and altimeters on the ground. The “legal fiction” is measured, to the microgal, from 500&nbsp;km up.</p></dd>
+    <dt>Unlike instruments that agree</dt>
+    <dd><p>A swung pendulum, a <a href="https://iopscience.iop.org/article/10.1088/0026-1394/32/3/004">dropped mirror in vacuum</a>, and a levitated superconducting sphere share almost no physics of implementation, yet return the same g at the same place to a few parts per billion. Independent methods converging is what a real quantity looks like.</p></dd>
+    <dt>Weight that really does vary by place</dt>
+    <dd><p>An object weighs about half a percent less at the equator than at the poles — exactly what the WGS84 formula the paper quotes approvingly on Slide 3 predicts. The geographic variation the document says legal metrology “erases” is printed inside its own equation, and legal metrology corrects for it by name.</p></dd>
+  </dl>
+</section>
 <section id="counters">
-  <div class="kicker">06 · Anticipated Responses</div>
+  <div class="kicker">07 · Anticipated Responses</div>
   <h2>Objections I expect, answered in advance</h2>
   <dl class="qa">
     <dt>“The gravimeter still uses lasers and vacuum — that's not tactile.”</dt>
@@ -361,19 +381,19 @@
 
 <!-- ============ SOURCES ============ -->
 <section class="sources" id="sources">
-  <div class="kicker">07 · Primary Sources</div>
+  <div class="kicker">08 · Primary Sources</div>
   <h2>Check everything</h2>
   <ol>
-    <li><b>3rd CGPM (1901), Declaration on the unit of mass and standard gravity</b> — BIPM, official resolutions archive. The convention, stated openly, in 1901.</li>
+    <li><a href="https://www.bipm.org/en/committees/cg/cgpm/3-1901/resolution-2"><b>3rd CGPM (1901), Declaration on the unit of mass and standard gravity</b></a> — BIPM, official resolutions archive. The convention, stated openly, in 1901.</li>
     <li><b>Defforges, G.</b> — “Sur l'intensité absolue de la pesanteur,” <em>J. Phys. Théor. Appl.</em> 7, 347–364 (1888); definitive Breteuil result in <em>C.R.</em> 115, 104–106 (1892): g = 9.80991 m/s² — the very value the paper under review quotes. Latitude coefficient 1.0003322 computed by O. J. Broch (1881).</li>
     <li><b>Kater, H. (1818)</b> — “An account of experiments for determining the length of the pendulum vibrating seconds,” <em>Phil. Trans. R. Soc.</em></li>
-    <li><b>Maskelyne, N. (1775)</b> — the Schiehallion plumb-line deflection experiment, <em>Phil. Trans. R. Soc.</em> Mass attracting mass, outdoors, pre-Cavendish.</li>
+    <li><a href="https://royalsocietypublishing.org/doi/10.1098/rstl.1775.0050"><b>Maskelyne, N. (1775)</b></a> — the Schiehallion plumb-line deflection experiment, <em>Phil. Trans. R. Soc.</em> Mass attracting mass, outdoors, pre-Cavendish.</li>
     <li><b>Pratt, J. H. (1855) &amp; Airy, G. B. (1855)</b> — the Kaliana–Kalianpur deflection papers, <em>Phil. Trans. R. Soc.</em>, origin of isostasy.</li>
-    <li><b>Niebauer, T. M. et al. (1995)</b> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 free-fall design paper.</li>
+    <li><a href="https://iopscience.iop.org/article/10.1088/0026-1394/32/3/004"><b>Niebauer, T. M. et al. (1995)</b></a> — “A new generation of absolute gravimeters,” <em>Metrologia</em> 32, 159. The FG5 free-fall design paper.</li>
     <li><b>Wziontek, H. et al. (2021)</b> — “Status of the International Gravity Reference System and Frame,” <em>Journal of Geodesy</em> 95. The worldwide absolute-gravity network.</li>
     <li><b>OIML R 76-1 (2006)</b> — <em>Non-automatic weighing instruments</em>: measurement must account for gravity at the location of use (cl. T.2.2.1); <b>WELMEC</b> publishes the European gravity-zone tables national regulators apply.</li>
     <li><b>Apollo 15 hammer–feather drop (1971)</b> — NASA footage, public archive.</li>
-    <li><b>Rosi, G. et al. (2014)</b> — “Precision measurement of the Newtonian gravitational constant using cold atoms,” <em>Nature</em> 510. G without a torsion balance.</li>
+    <li><a href="https://www.nature.com/articles/nature13433"><b>Rosi, G. et al. (2014)</b></a> — “Precision measurement of the Newtonian gravitational constant using cold atoms,” <em>Nature</em> 510. G without a torsion balance.</li>
   </ol>
 </section>
 

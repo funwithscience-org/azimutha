@@ -91,6 +91,11 @@
   .sources li{margin-bottom:9px;color:var(--grey)}
   .sources li b{color:var(--ink);font-weight:600}
 
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
   footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
   footer a{color:var(--navy)}
   .vsep{color:var(--rule);margin:0 8px}
@@ -539,8 +544,21 @@
 </section>
 
 <!-- ============ COUNTERARGUMENTS ============ -->
+<section id="omissions">
+  <div class="kicker">07 · What The Paper Never Mentions</div>
+  <h2>The shape that engineers use every day</h2>
+  <p>A paper calling Earth’s shape “empirically undetermined” omits the places that shape is not debated but relied upon.</p>
+  <dl class="ledger">
+    <dt>The oblate spheroid in your pocket</dt>
+    <dd><p>GPS positions are computed on the <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS84 oblate-spheroid model</a>. The shape the paper says no one can determine is the one your phone used to place you on a map this morning — flattening and all.</p></dd>
+    <dt>Orbits designed around the bulge</dt>
+    <dd><p>Sun-synchronous satellites exploit the equatorial bulge on purpose: the oblateness (the J₂ term) precesses their orbits at exactly the rate needed to hold a fixed sun angle. Engineers don’t defend the flattening — they steer with it, on thousands of active missions.</p></dd>
+    <dt>The geoid measured by its own references</dt>
+    <dd><p>The ±100-metre geoid undulations the paper lists in its table are mapped continuously by the radar-altimetry missions in its own reference list. It cites the instruments that measure the thing it says is unmeasured.</p></dd>
+  </dl>
+</section>
 <section id="counters">
-  <div class="kicker">07 · Anticipated Responses</div>
+  <div class="kicker">08 · Anticipated Responses</div>
   <h2>Objections I expect, answered in advance</h2>
   <dl class="qa">
     <dt>“The timeline table came from mainstream sources — the dates are real.”</dt>
@@ -556,18 +574,18 @@
 
 <!-- ============ SOURCES ============ -->
 <section class="sources" id="sources">
-  <div class="kicker">08 · Primary Sources</div>
+  <div class="kicker">09 · Primary Sources</div>
   <h2>Check everything</h2>
   <ol>
     <li><b>Pascal, B. / Périer, F. (1648)</b> — the Puy de Dôme experiment: barometric pressure falling with altitude in open air. Périer's account published within weeks as the <em>Récit de la grande expérience de l'équilibre des liqueurs</em> (1648); reprinted in Pascal's <em>Traitez de l'équilibre des liqueurs et de la pesanteur de la masse de l'air</em> (1663).</li>
     <li><b>U.S. Standard Atmosphere (1976)</b> — NOAA/NASA/USAF. The measured exponential pressure–altitude profile, built from decades of radiosonde and rocket data.</li>
     <li><b>Integrated Global Radiosonde Archive (IGRA)</b> — NOAA NCEI; soundings from the WMO-coordinated global network. The twice-daily worldwide balloon soundings: the gradient, measured continuously.</li>
-    <li><b>O'Keefe, J. A., Eckels, A. &amp; Squires, R. K. (1959)</b> — “Vanguard measurements give pear-shaped component of Earth's figure,” <em>Science</em> 129. The “pear phase,” discovered from a stable, precessing orbit.</li>
+    <li><a href="https://www.science.org/doi/10.1126/science.129.3348.565"><b>O'Keefe, J. A., Eckels, A. &amp; Squires, R. K. (1959)</b></a> — “Vanguard measurements give pear-shaped component of Earth's figure,” <em>Science</em> 129. The “pear phase,” discovered from a stable, precessing orbit.</li>
     <li><b>Kaula, W. M. (1966)</b> — <em>Theory of Satellite Geodesy</em>. The standard treatment of orbits about a non-spherical Earth: precession, not decay.</li>
-    <li><b>Pearlman, M. R. et al. (2019)</b> — “The ILRS: approaching 20 years and planning for the future,” <em>J. Geodesy</em> 93 — LAGEOS satellite laser ranging: centimeter tracking around a “geoid-phase” Earth since 1976.</li>
+    <li><a href="https://link.springer.com/article/10.1007/s00190-019-01241-1"><b>Pearlman, M. R. et al. (2019)</b></a> — “The ILRS: approaching 20 years and planning for the future,” <em>J. Geodesy</em> 93 — LAGEOS satellite laser ranging: centimeter tracking around a “geoid-phase” Earth since 1976.</li>
     <li><b>Fu, L.-L. &amp; Cazenave, A., eds. (2001)</b> — <em>Satellite Altimetry and Earth Sciences</em>. Continuous along-track sea-surface elevation, global coverage every ~10 days; Seasat 1978, unbroken series since the early 1990s.</li>
-    <li><b>Catling, D. C. &amp; Zahnle, K. J. (2009)</b> — “The planetary air leak,” <em>Scientific American</em> 300(5). Hydrogen and helium escape rates: the mass-selective leak.</li>
-    <li><b>Carruthers, G. R. &amp; Page, T. (1972)</b> — Apollo 16 Far Ultraviolet Camera/Spectrograph, <em>Science</em> 177, 788–791: the hydrogen geocorona, photographed from the lunar surface.</li>
+    <li><a href="https://sseh.uchicago.edu/doc/Catling2009.pdf"><b>Catling, D. C. &amp; Zahnle, K. J. (2009)</b></a> — “The planetary air leak,” <em>Scientific American</em> 300(5). Hydrogen and helium escape rates: the mass-selective leak.</li>
+    <li><a href="https://www.science.org/doi/10.1126/science.177.4051.788"><b>Carruthers, G. R. &amp; Page, T. (1972)</b></a> — Apollo 16 Far Ultraviolet Camera/Spectrograph, <em>Science</em> 177, 788–791: the hydrogen geocorona, photographed from the lunar surface.</li>
     <li><b>NASA NSSDC / CelesTrak orbital archives</b> — Vanguard 1 (1958-002B): still in orbit, tracking data public. “Data, not interpretations,” as requested.</li>
   </ol>
 </section>
