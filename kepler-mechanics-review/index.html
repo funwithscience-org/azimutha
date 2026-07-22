@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Path Is the Path — the "Keplerian Mechanics Audit" paper, reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 'Critical Audit of Keplerian Mechanics and Foundational Optics' paper, which calls the elliptical orbit a 'geometric abstraction.' The ellipse is the observation: eight arcminutes of Tycho's data forced it. The paper endorses the inverse-square law for light on one slide and denies it for gravity on another.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="The Path Is the Path — the 'Keplerian Mechanics Audit' paper, reviewed">
+<meta property="og:description" content="The ellipse isn't laid over the data — it is the data. And the paper grants the inverse-square law for light while denying it for gravity, eight paragraphs apart. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/kepler-mechanics-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/kepler-mechanics-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Path Is the Path — the 'Keplerian Mechanics Audit' paper, reviewed">
+<meta name="twitter:description" content="The ellipse is the observation, not an overlay. And the paper endorses 1/r² for light while denying it for gravity. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/kepler-mechanics-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/kepler-mechanics-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:52ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* header signature: the observed orbit — Tycho's points, Kepler's curve */
+  .orbitpanel{position:absolute;top:66px;right:24px;width:178px;text-align:center;font-family:var(--mono)}
+  .orbitstage{position:relative;width:150px;height:132px;margin:0 auto}
+  .orbitring{position:absolute;left:9px;top:6px;width:132px;height:120px;border:1px solid var(--rule);border-radius:50%}
+  .sun{position:absolute;left:60px;top:60px;width:9px;height:9px;border-radius:50%;background:var(--brass)}
+  .obs{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--grey)}
+  .arm{position:absolute;left:66px;top:60px;width:0;height:0;animation:orbit 9s linear infinite}
+  .planet{position:absolute;left:56px;top:-6px;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+  @keyframes orbit{to{transform:rotate(360deg)}}
+  .orbitpanel .cap{display:block;margin-top:8px;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--grey);line-height:1.5}
+  @media (max-width:980px){.orbitpanel{display:none}}
+  @media (min-width:981px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 205px)}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+  .lbl.x{color:var(--brass)}
+  .lbl.p{color:var(--ink)}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="orbitpanel" aria-hidden="true">
+      <div class="orbitstage">
+        <div class="orbitring"></div>
+        <div class="sun"></div>
+        <div class="obs" style="left:135px;top:58px"></div>
+        <div class="obs" style="left:118px;top:16px"></div>
+        <div class="obs" style="left:72px;top:2px"></div>
+        <div class="obs" style="left:20px;top:34px"></div>
+        <div class="obs" style="left:22px;top:88px"></div>
+        <div class="obs" style="left:86px;top:118px"></div>
+        <div class="arm"><div class="planet"></div></div>
+      </div>
+      <span class="cap">Tycho's points · Kepler's curve · the path is observed</span>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>The Path Is the Path</h1>
+    <p class="sub">A review of <em>"A Critical Audit of Keplerian Mechanics and Foundational Optics"</em> — a paper arguing that the elliptical orbit is "geometric abstraction" imposed on raw observation.</p>
+    <p class="byline"><b>Verdict up front:</b> the ellipse is not laid on top of the observations — it <em>is</em> the observations. Eight arcminutes of Tycho Brahe's data, which the paper itself calls hardware-grade, are what forced Kepler off the circle; the circle was the abstraction. And the paper's own text convicts it twice: it endorses the inverse-square law for light as "a verified, measurable fact" three slides after treating the identical law for gravity as chalkboard fiction, and its whole project is to undo the one advance — the fall of epicycles — that the author elsewhere holds up as science's model correction.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The seventh paper-formatted release from the Azimutha.FE TikTok account: nine slides, an "Introduction," six numbered sections, a "Conclusion," and the running byline "Principle of Physical Consistency (PPC v5.0) — Independent Research." It exists only as screenshots — no hosted text, no named author, no checkable copy. The caption frames the thesis: Kepler's work was "hijacked, misinterpreted, or manipulated," and "science is not absolute."</p>
+  <p>The argument is that Kepler substituted geometry for reality — that the ellipse is a fabrication forced onto Tycho Brahe's ground-based observations, that elliptical orbits are mechanically impossible "in a vacuum," and that Kepler's optics "falsify" what the eye sees. In their place the paper offers "a localized, frequency-driven fluid medium" with "plasma nodes" and "mercury vortex" devices, over a "stationary foundation."</p>
+  <p><strong>One fact holds for every paper in this series and is worth stating plainly:</strong> the author reports no physical test of their own — no measurement, no apparatus, no data, no experiment they performed — only argument about other people's work. It is a document that demands physical proof from its targets while presenting none.</p>
+  <p style="font-family:var(--mono);font-size:13px"><a href="source/">▸ Read the original paper in full, transcribed verbatim</a> — his words, so you can check ours against them.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" id="steelman">
+  <div class="kicker">02 · Steelman</div>
+  <h2>The strongest version of the paper's case</h2>
+  <p><strong>Several of its facts are simply correct, and stated well.</strong> Tycho Brahe's naked-eye positions really were the best data of the age, good to a couple of arcminutes. Kepler really did fight Brahe's Mars data for years, really did encounter an unyielding ~8-arcminute discrepancy against a circular orbit, and really did abandon the circle for the ellipse in consequence — the paper narrates this history accurately, down to the ≈0.133°. His three laws really are interdependent. His 1604 optics really did explain the eye and the camera obscura. And the inverse-square law of light really is a verified, measurable fact. None of that is in dispute.</p>
+  <p><strong>And one philosophical instinct is fair.</strong> "The Sun sits at the focus" is, strictly, a choice of reference frame; the truly raw datum is a set of angles on the sky, and it took later evidence — stellar aberration, parallax, dynamics — to justify the heliocentric frame over Tycho's own geo-heliocentric one. A reviewer should grant all of that, and then ask the only question that decides the matter: is the ellipse a shape someone imposed, or the shape the observations actually trace? The paper never asks it. The eight arcminutes it cites already answered it.</p>
+</section>
+
+<!-- ============ CENTRAL MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>The ellipse is the observation, not an overlay</h2>
+  <p>The whole paper turns on one reversal: that Kepler took raw observations and forced them into an idealized geometric loop. The history runs the other way, and the paper supplies the refutation itself. Tycho logged where Mars actually was, night after night, to about an arcminute. Those logged positions trace a curve. The <em>circle</em> was the a-priori ideal — "heavenly perfection" — and it missed the observations by eight arcminutes, four times Tycho's error bar, a gap Kepler could not explain away. He adopted the ellipse because the observed points fell on an ellipse. The abstraction was the circle he discarded; the ellipse is what the data does. The paper states this sequence accurately and then calls the empirical winner "geometric abstraction." It has the labels backwards.</p>
+  <p>Now the deeper point, and it holds in <em>any</em> cosmology the author prefers. A planet's position on a given night is an observed event. It does not care whether you are a heliocentrist, a geocentrist, a dome believer, or a "stratified fluid medium with plasma nodes" believer — the object is where it is measured to be, on the nights it is measured there. So <strong>whatever framework the Sun, Moon, and planets operate in, the path is the path.</strong> The author's own preferred cosmology inherits it. "Plasma nodes navigating a stratified medium" must still put Mars where Mars is seen, or it is wrong. Changing the mechanism changes the story, not the positions — the kinematics are nailed down by observation.</p>
+  <p>And the positions are not merely recorded; they are <strong>predicted</strong>, which is the strongest form of observed. Kepler's Rudolphine Tables forecast a transit of Mercury for 7 November 1631; Pierre <a href="https://www-n.oca.eu/Mignard/venus2004/HTML/mercury_1631.htm">Gassendi pointed an instrument where Kepler said and watched the first transit of Mercury ever seen</a> — his tables landing far closer than the Ptolemaic and Copernican predecessors, which were off by degrees. Today we publish eclipse tracks to the second, and we fly machines to these ellipses: Perseverance <a href="https://www.jpl.nasa.gov/news/press_kits/mars_2020/landing/mission/">coasted engine-off across 471 million kilometres over seven months</a> and set down inside a target ellipse a few kilometres wide in Jezero Crater. You cannot navigate a spacecraft to an abstraction. A model that "smooths reality to fit a narrative," as the paper charges, can only fit data it already has; it cannot tell you where an object will be before anyone has looked. Kepler's geometry did, and does. The frequency-driven fluid medium has never output a single position — which, by the paper's own hardware-over-chalkboard standard, makes it the abstraction in the room.</p>
+</section>
+
+<!-- ============ CLAIM BY CLAIM ============ -->
+<section id="claims">
+  <div class="kicker">04 · Claim by Claim</div>
+  <h2>The sections, audited</h2>
+  <p>Each card: what's real in the paper's reasoning, the premise doing the work, the test that would tell, and the public record.</p>
+
+  <!-- C1 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 1 · The "fabricated" ellipse</span>
+      <span class="stamp false">Self-Contradicted</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The ellipse functions primarily as a geometric abstraction forced onto raw observation"</h2>
+      <p class="assertion">Kepler bent straight-line, ground-based observations into closed elliptical loops to satisfy a pre-assumed heliocentric model.</p>
+      <span class="lbl t">What's true</span>
+      <p>The section's history is accurate. Tycho's data was ground-based and superb; Kepler did try for years to fit it to circles; the ~8-arcminute Mars residual was real and unyielding; and, as the paper says, adopting the ellipse "eliminated the ancient system of epicycles." Every step is correctly told.</p>
+      <span class="lbl w">The contradiction</span>
+      <p>Those accurate steps are the case <em>for</em> the ellipse being empirical, and the paper draws the opposite conclusion from its own premises. If Tycho's positions are the gold standard, and the circle missed them by eight arcminutes, and the ellipse matched them — then the ellipse is what the observations do and the circle was the imposed ideal. The paper narrates the empirical victory of the ellipse and then labels the ellipse non-empirical. It cannot have Tycho's data be hardware-grade truth on one line and treat the curve that fits that data as fiction on the next.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Plot Tycho's Mars longitudes and ask which curve threads them: the circle leaves eight arcminutes unaccounted; the ellipse closes the gap. The data selects the shape; no heliocentric assumption is needed to see that the points are not on a circle.</p>
+      <span class="lbl p">The public record</span>
+      <p>Kepler, <em>Astronomia Nova</em> (1609), on the eight arcminutes: "these eight minutes alone will have <a href="https://en.wikipedia.org/wiki/Astronomia_nova">led the way to the reformation of all of astronomy</a>." The residual was the observation refusing to be a circle — the opposite of geometry imposed on data.</p>
+    </div>
+  </article>
+
+  <!-- C2 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 2 · The Harmonic Law</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Without the first two laws the Third Law collapses into disconnected, arbitrary numbers"</h2>
+      <p class="assertion">Since T² ∝ a³ depends on the semi-major axis and the equal-areas velocity, it is not a universal harmonic constant but a bookkeeping artifact requiring continuous recalculation per object.</p>
+      <span class="lbl t">What's true</span>
+      <p>The three laws really are interdependent — and more deeply than the paper means. They are not three separate rules propped against each other; they are three faces of a single dynamics, all derivable from one inverse-square force. The interdependence the paper treats as a weakness is the signature of a unified cause.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That interdependence implies non-universality. It implies the reverse. T²/a³ is not "arbitrary numbers requiring recalculation for every node" — it is the <em>same constant</em> for every planet in the solar system, and a <a href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion">different single constant for every moon of Jupiter</a>, and for the moons of Saturn, and it is exactly how astronomers weigh stars they will never visit and detect planets around other suns. A relation that holds unchanged across thousands of independent systems is the antithesis of arbitrary; it is one of the most universal quantitative laws known.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Compute T²/a³ for Mercury through Neptune. If the law were arbitrary bookkeeping, the ratios would scatter. They land on one number. Do it for the Galilean moons: one number again, a different one, set by Jupiter's mass — which is how that mass is measured.</p>
+      <span class="lbl p">The public record</span>
+      <p>The generalized third law (Newton's form) is the working tool of stellar and exoplanet astronomy: binary-star masses and the thousands of confirmed exoplanets are found by applying it. It is not a per-object fudge; it is a scale that reads masses off periods and distances, everywhere it is pointed.</p>
+    </div>
+  </article>
+
+  <!-- C3 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 3 · The "centrifugal paradox"</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"An asymmetrical oval spin in a vacuum requires an impossible hairpin turn and active steering"</h2>
+      <p class="assertion">The planet must "accelerate to absolute maximum velocity at the sharpest curve" and would "fly off the path at the apex"; only a fluid medium with steering could hold the loop.</p>
+      <span class="lbl t">What's true</span>
+      <p>The bare mechanics are stated correctly: a body in motion continues in a straight line unless a force deflects it, and the model does balance an inward inverse-square pull against tangential motion. That is exactly right — and exactly Newton.</p>
+      <span class="lbl w">Three premises, all doing false work</span>
+      <p>First, the <em>drama is invented.</em> Earth's orbit is barely off a circle (eccentricity 0.0167). Its speed varies from 30.29 to 29.29 km/s — about 1 km/s, ±1.7% — spread gradually over six months. The "cornering" acceleration is a = GM/r² ≈ <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html">0.0059 m/s²</a>, about <strong>0.0006 g</strong>, one part in sixteen hundred of surface gravity. There is no hairpin; the "sharp curve of the apex" is a curve so gentle you would feel nothing on it. The adjectives — "breach the trajectory," "terminal drift," "whipping around the corner" — carry the whole argument, and the numbers dissolve them.</p>
+      <p>Second, <em>a circle is an ellipse.</em> A circle is the special case of eccentricity zero; ellipse and circle are one curve family, differing by a single number. And a circular orbit needs a continuous inward force too — constant-speed circular motion is still accelerated motion, because the direction is always changing. So the paper's argument, if it worked, would forbid <em>circular</em> orbits with equal force. It has not found a problem peculiar to ellipses; it has restated its refusal to grant a centripetal force, which abolishes every orbit.</p>
+      <p>Third, <em>the vacuum is a red herring.</em> Newton's first law is medium-independent: a body needs an inward force to follow any curved path, in vacuum or in fluid alike. The "stratified fluid medium" supplies none — fluids push along pressure gradients and drag <em>backward</em> along the motion; nothing in plasma soup pulls a planet toward the Sun. Worse, a real resisting medium would add drag, and drag decays orbits: a planet plowing through fluid for eons would have spiralled in. It hasn't — which is itself the disproof of the medium.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Look for the drag. If space were a resisting medium, orbits would decay measurably. Range a passive satellite for decades; coast a spacecraft engine-off across the solar system and see whether it arrives where a drag-free gravitational model says.</p>
+      <span class="lbl p">The public record</span>
+      <p>The LAGEOS satellite has been laser-ranged since 1976 to millimetre precision with no fluid-drag decay — only the tiny, fully-modelled non-gravitational effects. Perseverance coasted 471 million km on a pure gravitational trajectory, no drag term in the navigation, into a Jezero landing ellipse a few kilometres across. And for the one orbit that <em>is</em> a genuine hairpin — <a href="https://en.wikipedia.org/wiki/Halley%27s_Comet">Halley's Comet, eccentricity 0.967</a>, whipping from 0.9 km/s to 54.6 km/s at perihelion — nothing steers it, and it still returns on Newton's schedule, exactly as Edmond Halley predicted for 1758. The breakneck orbit that actually exists is the one that most cleanly obeys the law the paper says can't hold it.</p>
+    </div>
+  </article>
+
+  <!-- C4 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 4 · The "vacuum contradiction"</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Gravity cannot be isolated, so it is an unverified mathematical placeholder"</h2>
+      <p class="assertion">Evacuating a chamber doesn't change the object's weight; a force that can't be shielded or switched off is a placeholder, while "frequency-driven vortex devices" show real vector control.</p>
+      <span class="lbl t">What's true</span>
+      <p>It is correct that pumping out the air doesn't change the object's weight, and that the feather and the bowling ball then fall together. The paper reports the demonstration accurately.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>Two false moves, both recycled from the account's earlier papers. First, "cannot be isolated, therefore unverified" is an invented criterion — the same one its gravity and gravimeter papers ran on. A force is measured by its effect; gravity's effect is measured to parts per billion by dropped-mirror gravimeters worldwide. Second, and self-defeating: the section says evacuating the chamber "does not alter the weight causing the downward vector." That grants a downward vector — a force — acting on the object. A measured acceleration of a mass <em>is</em> a force, by definition (F = ma); the feather-and-ball result shows only that the force is proportional to mass, which is why the acceleration is the same for both. The paper concedes the force in the sentence meant to deny it.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Time the fall. The feather and the ball accelerate at ~9.8 m/s², identically, in vacuum — a mass-independent acceleration, the fingerprint of a force proportional to mass. That number is a stopwatch measurement, not a placeholder.</p>
+      <span class="lbl p">The public record</span>
+      <p>Gravity's value is timed directly by absolute gravimeters (a falling mirror in vacuum) and agrees across pendulum, drop, and atom-interferometer instruments that share no mechanism. As for "frequency-driven vortex levitation" being the real alternative: acoustic and electromagnetic levitation are real lab techniques — and every one of them <em>adds</em> an external force to oppose gravity, which presupposes the gravity it is opposing. They demonstrate the force; they do not replace it.</p>
+    </div>
+  </article>
+
+  <!-- C5 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 5 · Keplerian optics</span>
+      <span class="stamp false">Self-Contradicted</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Kepler's optical corrections are an active falsification of raw visual reality"</h2>
+      <p class="assertion">Using a mathematical formula to subtract the pinhole's blur "reshapes reality to fit a presupposed model," the ancestor of software that "manipulates pixels."</p>
+      <span class="lbl t">What's true</span>
+      <p>Everything the paper credits is correct — and it credits a lot. It grants that Kepler "successfully demonstrated" the eye projects an inverted image on the retina, and correctly explained why a square or triangular aperture still casts a round image of the Sun (overlapping cones of light from each point of the source). Those are two foundational, correct results, still in every optics textbook. The paper says so.</p>
+      <span class="lbl w">The contradiction</span>
+      <p>Having accepted the optics, it condemns the arithmetic that <em>is</em> the optics. Modeling the aperture's known blur and correcting for it is not "falsifying" the image — it is recovering the source from a system whose distortion you have physically characterised. That is the same principle by which the correct round-Sun explanation works in the first place; you cannot accept the physics of overlapping light cones and reject the calculation that inverts it. And the modern heir the paper names — the point-spread function and deconvolution — is exactly this: a measured instrument response, inverted to recover the true image, not "pixels manipulated to fit a narrative." The section accepts the mechanism and rejects its use in the same breath.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Photograph a known target through a known aperture, apply the deconvolution, and compare to the target measured directly. The corrected image matches the independently-measured object — which is what makes it a correction, not a fabrication.</p>
+      <span class="lbl p">The public record</span>
+      <p>Kepler, <em>Ad Vitellionem Paralipomena</em> (1604): <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/">the first correct theory of the retinal image and of the camera obscura</a>, and the basis of the telescope he designed in <em>Dioptrice</em> (1611). Deconvolution against a measured point-spread function is standard, validated image restoration — it sharpened Hubble's early images against a precisely known optical flaw, recovering real structure confirmed by later corrected optics.</p>
+    </div>
+  </article>
+
+  <!-- C6 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 6 · The inverse-square law</span>
+      <span class="stamp false">Self-Contradicted</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The inverse-square law of light is a verified, measurable fact of physical reality"</h2>
+      <p class="assertion">Light's 1/d² intensity falloff is real and measurable; only the "spherical wave expanding into empty vacuum" interpretation is unestablished — light is really a frequency in a stratified medium.</p>
+      <span class="lbl t">What's true</span>
+      <p>Yes — the inverse-square falloff of light with distance is a verified, measurable fact. Stated without qualification, and correctly.</p>
+      <span class="lbl w">The contradiction</span>
+      <p>It is the <em>same law</em> the paper spent Section 3 calling chalkboard fiction. There, the inward gravitational pull "governed by an inverse-square law (1/r²)" was the imaginary math propping up impossible orbits; here, the inverse-square law of intensity is "a verified, measurable fact." One geometry — intensity, force, or field spreading over the surface of a sphere, so falling as 1/r² — endorsed for photons and denied for gravity, eight paragraphs apart. It is not the inverse-square <em>mathematics</em> the paper rejects, since it certifies that math for light. It is specifically the <em>gravitational force</em> it won't grant — which is the through-line of all seven papers, surfacing here as a flat contradiction with itself.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Ask what distinguishes the two cases. Both are inverse-square because both spread over a sphere's growing area. The gravitational version is tested directly — the 1/r² law of gravity has been <a href="https://link.aps.org/doi/10.1103/PhysRevLett.124.101101">verified in the laboratory down to separations of tens of microns</a>. If 1/r² is "verified fact" for light, the same geometry, verified for gravity, cannot be fiction.</p>
+      <span class="lbl p">The public record</span>
+      <p>The gravitational inverse-square law is confirmed by torsion-balance experiments to sub-millimetre ranges (Lee et al., 2020, down to 52 μm), by the entire success of celestial mechanics, and by every spacecraft navigated on it. The paper certifies the geometry for one force and refuses it for the other, with nothing distinguishing them but which one holds the planets up.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="killshot">
+  <div class="kicker">05 · The Decisive Contradictions</div>
+  <h2>Retrograde, and the weapon that misfires backward</h2>
+  <p>The sharpest failure isn't in the physics; it's that the paper's foundation is the exact move the author has denounced as science's cardinal sin. In his running argument against being reviewed, he offers one signature example of "math that works but is false": Ptolemy's epicycles. "For centuries, astronomers used highly complex math (Ptolemaic epicycles) to predict planetary paths with absolute precision. The math worked perfectly… but the underlying physical model was entirely false." He wields the <em>fall of epicycles</em> as proof that predictive success is not truth.</p>
+  <p>But the fall of epicycles <em>is Kepler.</em> The ellipse-plus-area-law is what eliminated the epicyclic machinery — and this paper says so, in its own words: Kepler "abandoned the circle for the ellipse, thereby eliminating the ancient system of epicycles." So the author holds up the death of epicycles as his prime example when attacking his critics, and then writes a paper attacking the very work that killed them, wanting the machinery back. He is at once the man who says epicycles were a dead end and the man defending the cosmos that requires them.</p>
+  <p>Retrograde motion is where this becomes vivid, and it is exactly the kind of thing the author says he prizes: a physical mechanism replacing brute description. Mars visibly loops backward against the stars — an <em>observed</em> fact, on his own gold standard. The only question is why. The geocentric answer is a per-planet epicycle: the planet just loops, no unifying cause — the cosmic version of "the planets chose to retrograde." The heliocentric answer gives every retrograde a single physical cause: Earth, on a faster inner orbit, overtakes the outer planet, and the backward loop is the <a href="https://courses.ems.psu.edu/astro801/book/export/html/1536">parallax of the pass</a>. One mechanism, all planets. That is mechanism replacing abstraction — the author's stated ideal — and his paper throws it away to return to "they just loop." Then it names its replacement: a "stratified fluid medium" with "plasma nodes," a modern epicycle that doesn't do the one thing epicycles did. Ptolemy's at least <em>predicted</em>; that was the whole force of the author's own argument. His fluid story predicts nothing. He is defending something beneath the epicycles he mocks — the vice he attacks, without the virtue he grudgingly grants.</p>
+  <div class="note warn">
+    <div class="kicker">The horns, stated once</div>
+    <p>There is no consistent escape. To swing at his critics, the author needs epicycles to have "worked perfectly" — an impressive-but-false predictive system. To swing at Kepler, he needs geometry to be worthless abstraction. He cannot hold both: if all geometry is equally empty, the "epicycles predicted perfectly" contrast that powers his anti-review argument evaporates; if epicycles' predictive success was a real achievement worth reckoning with, then Kepler's — which predicts more, with less machinery — is a greater one, and the fluid medium, which predicts nothing, is beneath both. The paper's foundation and the author's method-critique cannot both stand.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT THE PAPER NEVER MENTIONS ============ -->
+<section id="omissions">
+  <div class="kicker">06 · What The Paper Never Mentions</div>
+  <h2>The predictions a "fabricated" system keeps making</h2>
+  <p>A paper arguing that Keplerian mechanics is abstraction-not-reality omits every place the abstraction goes out and touches the world in advance. Each is checkable.</p>
+  <dl class="ledger">
+    <dt>Gassendi's transit of Mercury, 1631</dt>
+    <dd><p>Kepler's Rudolphine Tables forecast a Mercury transit for 7 November 1631; Gassendi observed it — the first ever seen — with the planet close to where Kepler said and far closer than the Ptolemaic or Copernican tables. Predicting an event decades out is the opposite of "smoothing data you already have."</p></dd>
+    <dt>Halley's Comet, returning on schedule</dt>
+    <dd><p>The most eccentric orbit in the paper's reach — the genuine "hairpin" it says is impossible — was predicted by Edmond Halley to return around 1758, and did, the first predicted return of a comet. Nothing steers it; Newton's inverse-square does, to the year, three-quarters of a century ahead.</p></dd>
+    <dt>Spacecraft flown to the ellipses</dt>
+    <dd><p>Perseverance coasted engine-off across 471 million km and landed inside a Jezero ellipse a few kilometres wide; every interplanetary mission is navigated this way. You cannot steer a machine to a geometric fiction, decades of planning in advance, and arrive.</p></dd>
+    <dt>The absence of drag</dt>
+    <dd><p><a href="https://www.nasa.gov/history/now-40-nasas-lageos-set-the-bar-for-studies-of-earth/">LAGEOS has been laser-ranged since 1976 to the millimetre</a> with no fluid-drag decay. A "stratified resisting medium" would show up as orbital decay; its absence is the empirical death of the medium the paper proposes.</p></dd>
+    <dt>The third law weighing the universe</dt>
+    <dd><p>T²/a³ is one constant across the whole solar system, another across Jupiter's moons — and it is how the masses of stars and the existence of thousands of exoplanets are measured. The "arbitrary numbers" the paper describes are the most universal quantitative law in astronomy.</p></dd>
+    <dt>That a circle is an ellipse</dt>
+    <dd><p>Eccentricity zero. The paper treats the ellipse as a special impossible case, never noting that its own argument — inertia forbids curved motion without a force — applies identically to the circle it would presumably allow. The distinction it builds a section on does not exist.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ ANTICIPATED RESPONSES ============ -->
+<section id="responses">
+  <div class="kicker">07 · Anticipated Responses</div>
+  <h2>Objections, answered in advance</h2>
+  <dl class="qa">
+    <dt>"Heliocentrism is just a chosen frame — you admit it yourself."</dt>
+    <dd><p>Granted, and it doesn't help the paper. The <em>path</em> — the timed positions — is a set of observed events, real in any frame; in a geocentric frame it is just a messier looping curve describing the identical observations. The objection was never "which frame," it was "the ellipse is fabricated," and the ellipse is the shape of the data in every frame. The frame that makes the path simplest and most predictive is the heliocentric-elliptical one, and simplicity-that-predicts is exactly the empirical virtue the paper claims to prize.</p></dd>
+    <dt>"Predictive math isn't truth — epicycles predicted perfectly and were false."</dt>
+    <dd><p>Then the paper's own alternative is convicted first: the fluid medium predicts <em>nothing</em>, where epicycles at least predicted. And the example cuts the wrong way here — the ellipse didn't just fit past data, it forecast events no one had recorded (a 1631 transit, a 1758 comet). Curve-fitting can't do that; only a law can. Prediction of unseen events is precisely the line between "smoothing" and "physics," and Kepler's geometry is on the physics side of it.</p></dd>
+    <dt>"Orbits are impossible without physical tracks or a steering medium."</dt>
+    <dd><p>They run on a force, not a track — a centripetal pull, supplied by gravity, needed identically for circles and ellipses and in any medium. A fluid supplies no such central pull and would add drag that observation rules out. The "track" the paper is missing is the gravitational field it declined to grant; put it back and the orbit is ordinary free-fall, which is all an orbit ever was.</p></dd>
+    <dt>"The review didn't address the paper in its entirety."</dt>
+    <dd><p>The introduction and all six sections — the ellipse, the harmonic law, the "centrifugal paradox," the vacuum argument, the optics, and the inverse-square section — are addressed above, along with the caption's framing. The standing invitation is unchanged: name one specific error on this page and it will be corrected, visibly.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">08 · Primary Sources</div>
+  <h2>Check us</h2>
+  <ol>
+    <li><b>Kepler, J. (1609)</b> — <em>Astronomia Nova</em> (Donahue trans.): the eight-arcminute Mars residual and the First and Second laws. "These eight minutes alone will have led the way to the reformation of all of astronomy." <b>(1619)</b> — <em>Harmonices Mundi</em>: the Third law, T² ∝ a³.</li>
+    <li><b>Kepler, J. (1604)</b> — <em>Ad Vitellionem Paralipomena</em> (Astronomiae Pars Optica): the first correct theory of the retinal image and of the camera obscura. <b>(1611)</b> — <em>Dioptrice</em>: the Keplerian telescope.</li>
+    <li><b>Brahe, Tycho</b> — naked-eye positional observations accurate to ~1–2 arcminutes, the best pre-telescopic data; the basis of Kepler's work.</li>
+    <li><b>Gassendi, P. (1631)</b> — observation of the transit of Mercury, 7 November 1631, predicted by Kepler's Rudolphine Tables (1627); the first transit of Mercury observed. <b>Horrocks, J. (1639)</b> — the first observed transit of Venus, predicted by correcting Kepler's tables.</li>
+    <li><b>Newton, I. (1687)</b> — <em>Principia</em>: all bound orbits under an inverse-square force are conic sections (a circle is an ellipse of eccentricity 0); orbital motion is continuous free-fall (the cannonball). The generalized third law, T² = 4π²a³/G(M+m), from which stellar and exoplanet masses are measured.</li>
+    <li><b>Retrograde motion</b> — Penn State Astro 801, "The Heliocentric Model": retrograde as a perspective effect of Earth overtaking a slower outer planet; the Ptolemaic epicycle-on-deferent as descriptive device without unifying cause.</li>
+    <li><b>NASA NSSDC planetary fact sheets</b> — Earth: eccentricity 0.0167; orbital speed 30.29 km/s (perihelion) to 29.29 km/s (aphelion), mean 29.78. Mars: eccentricity 0.0935; 26.50 to 21.97 km/s; a = 1.524 AU. Centripetal acceleration of Earth toward the Sun a = GM☉/r² ≈ 0.0059 m/s² ≈ 0.0006 g (GM☉ = 1.327×10²⁰ m³/s²).</li>
+    <li><b>Halley's Comet (1P/Halley)</b> — eccentricity 0.967; perihelion speed ≈ 54.6 km/s, aphelion ≈ 0.9 km/s; predicted by Edmond Halley to return ~1758, recovered December 1758 (perihelion March 1759): the first predicted return of a comet.</li>
+    <li><b>NASA/JPL Mars 2020 (Perseverance)</b> — launched 30 July 2020, landed Jezero Crater 18 February 2021; ~471 million km ballistic cruise, ~203 days, engine-off, landing ellipse ~7.7 × 6.6 km. Navigation on a drag-free gravitational trajectory.</li>
+    <li><b>NASA, LAGEOS (1976– )</b> — satellite laser ranging to millimetre precision for five decades, with no fluid-drag decay; the precision benchmark that would reveal a resisting medium if one existed.</li>
+    <li><b>Lee, J. G. et al. (2020)</b> — "New test of the gravitational 1/r² law at separations down to 52 μm," <em>Phys. Rev. Lett.</em> 124, 101101. The gravitational inverse-square law, verified in the laboratory.</li>
+    <li><b>Point-spread function / deconvolution</b> — the measured impulse response of an imaging system, inverted to restore the true image: standard, validated image processing (the method that recovered structure from Hubble's known early optical flaw), not "pixel manipulation."</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> <a href="../earth-shapes-review/">#4</a> <span class="vsep">|</span> <a href="../gyroscope-review/">#5</a> <span class="vsep">|</span> <a href="../plant-gravity-review/">#6</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier <span class="vsep">|</span> <a href="/method-objections/">Objections to the method, answered</a>
+  </div>
+</footer>
+
+</body>
+</html>
