@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant It Any Way Up — the "Gravitropism Dissection" paper, reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 'Plant Structural Dynamics' paper claiming plants have no gravity sense — only soil-anchoring and light. The deciding test (null the gravity vector; the roots lose their way) is run on clinostats, on centrifuges, and on the ISS. The paper's own caption contradicts its own body.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="Plant It Any Way Up — the 'Gravitropism Dissection' paper, reviewed">
+<meta property="og:description" content="The caption says gravity doesn't affect plants; the body says gravity torques the branch downward. A seed planted upside down still roots down in the dark. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/plant-gravity-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/plant-gravity-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plant It Any Way Up — the 'Gravitropism Dissection' paper, reviewed">
+<meta name="twitter:description" content="Null the gravity vector and roots lose their way — on a clinostat, in orbit, with no soil anywhere. The paper never nulls it. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/plant-gravity-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/plant-gravity-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:52ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* header signature: plant it any way up, the root still finds down */
+  .growpanel{position:absolute;top:64px;right:24px;width:176px;background:var(--paper);padding:14px 14px 12px;border-left:2px solid var(--rule);font-family:var(--mono);text-align:center}
+  .growpanel .stage{width:96px;height:96px;margin:2px auto 10px;position:relative}
+  .growpanel .seed{position:absolute;inset:0;animation:tumble 7s linear infinite}
+  .growpanel .pot{position:absolute;left:50%;top:50%;width:34px;height:22px;margin:-11px 0 0 -17px;border:2px solid var(--grey);border-top:none}
+  .growpanel .rootwrap{position:absolute;left:50%;top:50%;width:2px;height:38px;margin-top:-2px;transform-origin:top center;animation:finddown 7s linear infinite}
+  .growpanel .root{width:2px;height:38px;background:var(--burgundy);position:relative}
+  .growpanel .root::after{content:"";position:absolute;bottom:-1px;left:-3px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--burgundy)}
+  .growpanel .g{position:absolute;right:2px;top:2px;font-size:9px;color:var(--grey)}
+  .growpanel .cap{display:block;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);line-height:1.5}
+  @keyframes tumble{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+  @keyframes finddown{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}
+  @media (max-width:980px){.growpanel{display:none}}
+  @media (min-width:981px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 210px)}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+  .lbl.x{color:var(--brass)}
+  .lbl.p{color:var(--ink)}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="growpanel" aria-hidden="true">
+      <div class="stage">
+        <div class="seed"><div class="pot"></div></div>
+        <div class="rootwrap"><div class="root"></div></div>
+        <span class="g">g ↓</span>
+      </div>
+      <span class="cap">plant it any way up · the root still finds down</span>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>Plant It Any Way Up</h1>
+    <p class="sub">A review of <em>"A Critical Analysis of Macro-Mechanics, Environmental Gradients, and Historical Theoretical Contradictions in Plant Structural Dynamics"</em> — a paper arguing that plants have no sense of gravity, only soil and sunlight.</p>
+    <p class="byline"><b>Verdict up front:</b> the caption says gravity doesn't affect plants; the paper's own body says gravity "generates a downward torque" on the branch. Between those two sentences sits the whole field of gravitropism — a seed that roots downward in dark soil no matter which way up you plant it, a mechanism traceable to sedimenting starch grains, and a control experiment (take the gravity direction away and the roots lose their way) run on clinostats since 1879 and aboard the ISS with no soil at all. The paper attacks the 1806 experiment that already answered it.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The sixth paper-formatted release from the Azimutha.FE TikTok account: a continuously-scrolling "research paper," formal running head, "Independent Research" byline, and the by-now-standard structure — an introduction, a physics preamble, a "macro-mechanics" model, and a dissection of the historical experiments. It exists only as screenshots; no hosted text, no named author, no checkable copy. The caption states the thesis in one line: "Scientists think gravity affects the plants. However that is an incorrect statement."</p>
+  <p>This is the account's most self-defeating paper, and it doesn't need us to supply the contradiction — it supplies its own, twice. It denies gravity affects plants in a section that describes gravity torquing a branch toward the ground. And it raises its own recurring "atmospheric voltage gradient" mechanism — the one it built paper #3 on — only to demolish it in the next paragraph, leaving no candidate for "down" at all except the gravity it set out to deny.</p>
+  <p>As before, each device of the paper is examined the same way: what's true in its mechanics, the premise doing the illegitimate work, the experiment that settles it, and the public record of that experiment — here running from a garden waterwheel in 1806 to a centrifuge in orbit, and through every seed tray on Earth.</p>
+  <p><strong>One fact holds for every paper in this series and is worth stating plainly:</strong> the author reports no physical test of their own — no measurement, no apparatus, no data, no experiment they performed — only argument about other people’s work. It is a document that demands physical proof from its targets while presenting none.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" id="steelman">
+  <div class="kicker">02 · Steelman</div>
+  <h2>The strongest version of the paper's case</h2>
+  <p><strong>Several of its physical observations are simply true.</strong> Plants really are shaped by biomechanics: a branch growing outward is a lever arm, its own weight really does generate a downward torque, and an under-rigid stem really does sag. Packed soil really does anchor roots. Phototropism is real — shoots really do grow toward light. Turgor and hydraulics really do drive elongation. None of this is in dispute, and the paper states much of it correctly.</p>
+  <p><strong>Its suspicion of over-tidy laboratory models is also healthy in principle.</strong> Sachs's "sine law" really is an idealization; roots in real soil really do wander around stones rather than plumb straight down; a spinning waterwheel really is an artificial environment. A reviewer should grant all of that and then ask the only question that matters: when you strip the artifice away and hold everything else constant, does growth direction still depend on gravity? The paper never asks it. The experiments it attacks already answered it — yes.</p>
+</section>
+
+<!-- ============ CENTRAL MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>Answer a question nobody asked</h2>
+  <p>Gravitropism is a claim about <strong>direction</strong>: which way a root and a shoot grow — root toward the gravity vector, shoot away from it — demonstrated in the dark, with the plant reoriented, in the total absence of soil. The paper never engages that claim. It quietly substitutes a different one — the <strong>structural stability of an already-established plant</strong>: whether a branch sags, how packed soil anchors a root, how a stem bears load. That second question really is mechanical, really is about leverage and turgor, and nobody has ever said otherwise. Having answered it, the paper declares the first question closed. It is the same substitution the account ran on Earth's shape — win a debate no scientist entered, and treat the strawman's defeat as the real one's.</p>
+  <p>Watch the swap happen inside a single sentence. The soil-anchoring section says: "Gravity acts directly upon this mass, generating a downward torque at the pivot point." That is gravity, affecting a plant, in the paper's own words — flatly contradicting the caption's "gravity does not affect plants." The paper concedes the force in the act of denying it, because it needs gravity to explain why a heavy branch sags while insisting gravity has nothing to do with where a root grows. Both cannot be true.</p>
+  <p>The second engine is the same false premise the account has run since its gravity papers: that a real force "requires a defined polarity." Gravity, having no plus and minus, is declared not a real pull — and the atmosphere's voltage gradient is floated as the polarity that supplies "down." Then, remarkably, the paper refutes its own alternative: if the gradient acted on plants, it writes, "a human would receive a physical shock upon touching a leaf" and the current "would fry the plant's tissues." Correct — and fatal, because that was the paper's only proposed source of down. Having rejected gravity for lacking polarity and rejected its own electrical replacement for the shocks it would cause, the document is left with a plant that stands upright and a root that grows downward and no force permitted to do either. What it never tries is the one move that would settle the whole thing: take the gravity <em>direction</em> away and see whether directional growth survives. It doesn't — and that experiment has a two-century public record.</p>
+</section>
+
+<!-- ============ CLAIM BY CLAIM ============ -->
+<section id="claims">
+  <div class="kicker">04 · Claim by Claim</div>
+  <h2>The parts, audited</h2>
+  <p>Each card: what's real in the paper's mechanics, the premise doing the work, the test that would tell, and the public record — from the archives and from the field.</p>
+
+  <!-- C1 the contradiction -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Caption vs. body · The contradiction</span>
+      <span class="stamp false">Self-Contradicted</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Gravity does not affect plants" … "Gravity acts directly upon this mass, generating a downward torque"</h2>
+      <p class="assertion">Both sentences are the paper's own — the first in its caption, the second in its soil-anchoring section.</p>
+      <span class="lbl t">What's true</span>
+      <p>The second sentence is correct physics: a branch is a lever, its weight produces a torque about its base, and an insufficiently rigid stem bends under it. The paper describes plant biomechanics accurately.</p>
+      <span class="lbl w">The contradiction</span>
+      <p>It describes that biomechanics while denying its cause. You cannot explain a sagging branch by "gravity acts directly upon this mass" and also headline the document "gravity does not affect plants." The paper needs gravity to be real when a branch droops and unreal when a root chooses a direction — one force, granted and denied on the same page. Everything downstream inherits the incoherence: a document that cannot decide whether gravity exists is in no position to adjudicate what it does to a root.</p>
+      <span class="lbl p">The public record</span>
+      <p>Mainstream plant physiology has no such trouble: gravity both loads the branch (biomechanics) and orients the root (gravitropism) — two effects of one force, neither in tension with the other. It is only the paper's need to deny the second while using the first that manufactures the contradiction.</p>
+    </div>
+  </article>
+
+  <!-- C2 polarity + self-killed electrostatic -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Physics preamble · Polarity &amp; its self-demolished replacement</span>
+      <span class="stamp false">Self-Contradicted</span>
+    </div>
+    <div class="claim-body">
+      <h2>"A mechanical pull requires a polarity" — then the electrical alternative is refuted by its own author</h2>
+      <p class="assertion">Gravity is dismissed for having no polarity; the atmospheric voltage gradient is offered as the polar alternative; then that alternative is dismissed too.</p>
+      <span class="lbl t">What's true</span>
+      <p>The mass-versus-weight distinction the paper draws is real, and so is the fair-weather potential gradient it cites — about 100–130 volts per metre, exactly as Feynman's <em>Lectures</em> (Vol. II, Ch. 9) document. The paper's atmospheric physics is not the problem.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>The invented axiom that "a mechanical pull requires a defined polarity." It doesn't — gravity is measured to attract without any plus or minus, which is the entire working basis of gravimetry, and the account has been told so in three prior reviews. But watch what the paper then does to its own escape route. Needing a polar force for "down," it nominates the voltage gradient — and immediately refutes it: were the gradient acting on plants, "a human would receive a physical shock upon touching a leaf," and it would "fry the plant's delicate tissues." Both true. The gradient is a currentless static potential and the plant sits at ground potential, so it does no work on the plant — which the paper argues correctly, thereby destroying the only "down" it had left after discarding gravity.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Ask which candidate force actually moves a root. Shield a growing seedling from the atmospheric field inside a grounded metal box; it still roots downward. Remove gravity's direction instead; it stops. Only one of the two candidates, removed, removes the behaviour.</p>
+      <span class="lbl p">The public record</span>
+      <p>This is also a collision with the account's own paper #3, which built its "down" on precisely this atmospheric gradient. Paper #3 says the gradient supplies down; paper #6 says the gradient would electrocute the plant. Both cannot stand, and between them they leave the account with no proposed mechanism for down except the gravity it spent six papers denying.</p>
+    </div>
+  </article>
+
+  <!-- C3 soil anchoring - SME -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Macro-mechanics · Soil anchoring &amp; leverage</span>
+      <span class="stamp true">Standard Model Explains</span>
+    </div>
+    <div class="claim-body">
+      <h2>"An established plant's shape is governed by mechanical load and structural leverage"</h2>
+      <p class="assertion">Packed soil clamps the roots, weight torques the branches, and hydraulic pressure holds the stem — so "microscopic internal cells" are irrelevant to the outcome.</p>
+      <span class="lbl t">What's true</span>
+      <p>Nearly all of it. Biomechanics governs whether a mature plant stands or sags; soil anchorage, turgor pressure, and the strength of stem tissue are real and load-bearing, in every sense. Mainstream plant science agrees completely — this is textbook plant biomechanics, not a heterodoxy.</p>
+      <span class="lbl w">Where it goes wrong</span>
+      <p>It answers the wrong question and claims the prize for the right one. Stability is about whether a plant <em>stays</em> where it grew; gravitropism is about which <em>direction</em> it grew in the first place. A steel beam's rigidity explains why a bridge doesn't sag; it says nothing about which way the surveyor pointed it. By collapsing orientation into stability, the paper explains the standing of the plant and then announces it has explained the aiming of the root — a different phenomenon, decided long before the "vise of packed dirt" ever closes, in a germinating seed underground.</p>
+      <span class="lbl p">The public record</span>
+      <p>The decider is the germinating seed, and it defeats the soil-mechanics account on the soil-mechanics account's home turf. A bean planted upside down in loose, dark soil sends its root <em>downward</em> and its shoot <em>upward</em> before a single leaf sees light — the orientation is set while the soil is still loose and the plant has no leverage, no load, and no established form to stabilise. Packed dirt cannot aim a root it has not yet gripped. And an entire industry now grows food with no dirt to do the gripping: in hydroponics and aeroponics — a market in the billions — roots develop in water, nutrient film, or bare misted air, and still the primary root heads down and the shoot heads up, gravity-directed, with no soil anywhere to anchor to. (Roots also forage toward the water and nutrients, so they aren’t plumb-straight — but the downward set-point owes nothing to packing.) The cleanest inversion of the paper’s premise is in orbit: NASA’s space-station plant habitats grow roots in a packed clay medium, yet in the absence of gravity the roots get no reliable “down” at all and fall back on light. Packed medium present, gravity absent, direction lost — the exact opposite of what a “packed-dirt vise” predicts.</p>
+    </div>
+  </article>
+
+  <!-- C4 Knight -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">History · Thomas Andrew Knight (1806)</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Knight eliminated the natural foundation of packed dirt, so the sprout just conformed to mechanical stress"</h2>
+      <p class="assertion">Spinning seeds on a waterwheel introduced an artificial acceleration and slung the soft sprouts outward; it proved no natural law.</p>
+      <span class="lbl t">What's true</span>
+      <p>The description is accurate. Knight did pin germinating seeds to a water-powered wheel, there was no soil, and the roots did grow outward along the centrifugal direction. The paper reports the experiment correctly.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That removing the soil <em>spoils</em> the experiment. It is what <em>makes</em> it — removing a variable is how a control works. With no soil to anchor to, the roots still chose a direction, and Knight could <em>re-aim</em> that direction at will: he varied the wheel's speed and the roots followed the resultant of gravity plus centrifugal force, growing about 45° from vertical at low speed and nearly horizontal at high speed. A root that points 45° up-and-out because a wheel is spinning is not "conforming to soil" — there is no soil — it is following an acceleration vector, precisely as gravitropism says. The paper cites the experiment that refutes it and mistakes the control for the flaw.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Vary the acceleration and see whether the growth angle tracks it. If direction followed soil or "mechanical stress," changing only the rotation rate would do nothing to the angle. It does exactly what an acceleration-sensing model predicts.</p>
+      <span class="lbl p">The public record</span>
+      <p><a href="https://royalsocietypublishing.org/doi/10.1098/rstl.1806.0006">Knight, <em>Philosophical Transactions of the Royal Society</em>, 1806</a>, read to the Society that January — the roots followed the combined vector, the angle set by the rotation speed. Two hundred and nineteen years later the same experiment flies on the ISS with a calibrated centrifuge instead of a stream, and returns the same answer at every gravity level. Same question, better wheel.</p>
+    </div>
+  </article>
+
+  <!-- C5 Sachs/clinostat -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">History · Sachs, the sine law &amp; the clinostat</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Sachs turned a living plant into an abstract geometric equation — theoretical nonsense"</h2>
+      <p class="assertion">The sine law ignores the plant's actual life force, which is the drive to reach sunlight, not to satisfy a formula.</p>
+      <span class="lbl t">What's true</span>
+      <p>The sine law <em>is</em> an idealization — response roughly proportional to the sine of the tilt angle — and real plants depart from it, a point modern researchers make themselves. Fair.</p>
+      <span class="lbl w">What the paper omits</span>
+      <p>Sachs's decisive instrument, which the paper skips entirely: the clinostat, which he built in 1879. It slowly rotates a plant about a horizontal axis so gravity arrives from every side in turn and no single direction persists long enough to register — it removes the gravity <em>direction</em> while touching nothing else. Soil, water, hydraulics, tissue, light: all unchanged. And on a clinostat, oriented growth <em>disappears</em> — roots and shoots grow every which way. That is the exact control the "macro-mechanics" model cannot survive: nothing mechanical has changed, yet averaging the gravity direction to zero abolishes the very orientation the paper attributes to soil and leverage. If soil clamped the answer, the clinostat would change nothing. It changes everything.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Hold soil, light, and hydraulics fixed and null only the gravity vector. The sunlight-only account predicts no change (the light is still there); the gravity account predicts orientation collapses. Orientation collapses.</p>
+      <span class="lbl p">The public record</span>
+      <p>The <a href="https://en.wikipedia.org/wiki/Clinostat">clinostat</a> has been standard laboratory apparatus since 1879 and its result is reproduced in every plant-physiology teaching lab; its <a href="https://link.springer.com/article/10.1007/s00425-012-1633-y">spaceflight successor</a> — actual weightlessness — does the same thing more cleanly, and an onboard centrifuge switches the orientation back on. "Reaching for sunlight" cannot explain a plant that loses its way when only the direction of gravity is removed and the light is left untouched.</p>
+    </div>
+  </article>
+
+  <!-- C6 Darwin -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">History · Charles &amp; Francis Darwin (1880)</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The tip lacks the mass and leverage to move an entire stalk"</h2>
+      <p class="assertion">Academia used the Darwins' tip experiments to claim the microscopic tip physically bends the plant, which is mechanically impossible.</p>
+      <span class="lbl t">What's true</span>
+      <p>The tip indeed lacks the mass to bend a stalk — and the actual bending "occurs much further down," as the paper says. Every word of that is correct.</p>
+      <span class="lbl w">Why it misleads</span>
+      <p>It is a strawman, and the paper refutes it by agreeing with Darwin. The Darwins never claimed the tip bends the plant mechanically. Their finding was the opposite of a lever: the tip is a <em>sensor</em> — cover it or remove it and the root stops responding to gravity — and it transmits a signal to the elongation zone below, which does the bending. "The tip senses; the zone below bends" is Darwin's actual conclusion, and the paper states it verbatim ("the actual bending occurs much further down") as though correcting him. It has reinvented the very hormone-signalling idea it thinks it is debunking. The separation of sensing from bending is now textbook: gravity is perceived in the root-cap columella cells and the response executed in the elongation zone, a physical separation confirmed a century after Darwin guessed it.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Remove only the tip — no other change — and see whether direction-finding fails. If bending were purely mechanical load in the elongation zone, decapitating the distant tip would do nothing. It abolishes the response, then restores it when the tip regrows.</p>
+      <span class="lbl p">The public record</span>
+      <p><a href="https://darwin-online.org.uk/EditorialIntroductions/Freeman_ThePowerofMovementinPlants.html">Darwin &amp; Darwin, <em>The Power of Movement in Plants</em>, 1880</a>; the sensing/bending division <a href="https://academic.oup.com/jxb/article/66/8/2155/496922">confirmed molecularly</a> in the modern era, down to the hormone (auxin) and the transport proteins (PIN) that carry it to the lower flank. Crucially, the Darwins obtained the root response <em>in darkness</em> — which is why the paper's "it's only reaching for sunlight" cannot be salvaged here: there was no light to reach for.</p>
+    </div>
+  </article>
+
+  <!-- C7 phototropism collapse -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Thesis · "It's just reaching for sunlight"</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"When a plant tilts, it is executing a survival mechanic to reach the sunlight"</h2>
+      <p class="assertion">Directional growth is phototropism — the drive for light — not a response to any gravity vector.</p>
+      <span class="lbl t">What's true</span>
+      <p>Phototropism is real and important: shoots do bend toward light, through a well-characterised blue-light pathway. The paper is right that light steers plants.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That light is the <em>only</em> steering signal, so gravity can be dispensed with. But the two are separable, and where they part ways the sunlight account fails outright. Roots grow <em>downward</em> — <em>away</em> from where any light would be — and they do it in total darkness, underground, where "reaching for sunlight" would predict them growing up toward the surface. A seed germinating in dark soil orients root-down and shoot-up before it has ever seen light. And when biologists remove gravity entirely, the relationship between the two signals shows its true rank: on Earth the gravity vector overrides light and drives the root down; in orbit, with gravity gone, roots fall back on light as the cue instead. Gravity is not a synonym for phototropism — it is a separate channel that, when present, outranks it.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Separate the two cues. Grow a seedling in the dark: the sunlight model predicts no consistent direction (no light to seek); the gravity model predicts root-down, shoot-up. Then put light and gravity in conflict and see which wins.</p>
+      <span class="lbl p">The public record</span>
+      <p>Dark-grown roots bend downward as a standard laboratory result, no light present. On the ISS, <a href="https://bmcplantbiol.biomedcentral.com/articles/10.1186/1471-2229-12-232">Arabidopsis roots deprived of gravity default to following light and moisture</a> — then a spun-up centrifuge, supplying gravity as the only changed variable with no soil anywhere, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2019.01529/full">restores normal downward orientation as a graded function of the acceleration</a>, kicking in around a third of Earth gravity. Light steers; gravity outranks it; and the paper has kept the junior partner and thrown away the senior one.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ KILL SHOT ============ -->
+<section id="killshot">
+  <div class="kicker">05 · The Decisive Test</div>
+  <h2>Take the direction away</h2>
+  <p>The paper's model and the gravity model agree on almost everything visible in a garden — both predict a root going down, a shoot going up, a heavy branch sagging. To tell them apart you have to do the one thing the paper never does: hold soil, water, light, and hydraulics constant and remove <em>only the direction of gravity</em>. The soil-and-sunlight model predicts nothing should change. The gravity model predicts orientation collapses. The experiment has been run for a century and a half, at every scale, and orientation collapses every time.</p>
+  <p>On a <strong>clinostat</strong> — Sachs's slow horizontal rotator, standard since 1879 — gravity arrives from all sides in turn and averages to no direction. Nothing mechanical is touched; the plant is still in its medium, still watered, still lit. Its roots and shoots lose their bearings and grow at random. In <strong>orbit</strong> the test is cleaner still, because there is no soil in <em>any</em> condition to argue about: on the ISS, Arabidopsis roots with no gravity vector wander by light and moisture — and when an <strong><a href="https://link.springer.com/article/10.1007/s00425-012-1633-y">onboard centrifuge</a></strong> spins up artificial gravity, normal downward growth returns, more strongly as the acceleration rises, with a threshold near a third of a g. Same seeds, same hardware, no dirt: acceleration dialed as the only variable, and directional growth follows it like a needle. That is the definition of a controlled experiment, and the paper's model has no move left — it staked everything on soil and light, and here both are held fixed while gravity alone does the steering.</p>
+  <p>And you don't need a spacecraft. The humblest version runs in every seed tray on Earth: plant a bean upside down, sideways, any way you like, in dark soil, and the root turns down and the shoot turns up regardless — orientation decided underground, in darkness, before a leaf unfurls, by a mechanism the paper says does not exist. Two centuries of instruments, from Knight's waterwheel to a centrifuge in low Earth orbit, have asked whether an acceleration vector aims a growing root. The answer has never once been no.</p>
+  <div class="note warn">
+    <div class="kicker">The sensor the paper says isn't there</div>
+    <p>The paper insists plants have no gravity-sensing apparatus — only mass and leverage. They have a specific one. In the root cap and the shoot's starch sheath sit specialised cells whose interiors carry dense, starch-packed granules called statoliths that physically <em>sediment</em> to the low side of the cell, the plant's literal plumb-bob. Proposed in 1900 and confirmed since: <a href="https://link.springer.com/article/10.1007/BF00392808">plants engineered to make no statolith starch have measurably impaired gravitropism</a> — normal anchoring, normal hydraulics, normal light, a specific sensing deficit that no soil-mechanics model can touch. The plant has a gravity sensor. It is made of falling starch.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT THE PAPER NEVER MENTIONS ============ -->
+<section id="omissions">
+  <div class="kicker">06 · The Omissions</div>
+  <h2>What a paper on plants and gravity never mentions</h2>
+  <p>A document dissecting "all" the historical growth-vector experiments manages to leave out every result that would settle the matter — including the controls belonging to the very experiments it does cite. Each is checkable from a library card or a windowsill.</p>
+  <dl class="ledger">
+    <dt>The clinostat's result — the control inside the experiment it attacks</dt>
+    <dd><p>The paper names Sachs and mocks his sine law, but never mentions his clinostat or what it shows: null the gravity direction and oriented growth vanishes, with soil, light, and hydraulics untouched. It is the one control that falsifies the paper's model, attached to the very researcher the paper dismisses.</p></dd>
+    <dt>Statoliths — the physical gravity sensor</dt>
+    <dd><p>Dense starch grains that sediment inside specialised cells, proposed in 1900 and load-bearing ever since. A paper claiming plants have no gravity-sensing organ omits the gravity-sensing organ.</p></dd>
+    <dt>Gravitropism in total darkness</dt>
+    <dd><p>Roots bend downward in the dark, with no light to "reach for" — the standard way the experiment is run. It is fatal to the sunlight thesis and appears nowhere.</p></dd>
+    <dt>Roots grow <em>away</em> from light</dt>
+    <dd><p>Shoots seek light; roots avoid it. "Reaching for sunlight" predicts roots growing up toward the surface. They grow down. The paper's single mechanism gets the root exactly backwards.</p></dd>
+    <dt>Knight varied the speed — and the angle followed</dt>
+    <dd><p>The paper cites Knight's 1806 wheel but omits the finding that convicts it: the growth angle tracked the rotation rate, following the acceleration vector. That is the whole result, and it is missing.</p></dd>
+    <dt>Spaceflight and the onboard centrifuge</dt>
+    <dd><p>The cleanest test ever run — no soil in any condition, gravity dialed by a centrifuge in orbit, directional growth following the dial. A survey of gravity-and-plants experiments that stops before the ones done in actual variable gravity has chosen its evidence to fit.</p></dd>
+    <dt>Auxin — Darwin's transmitted signal, now named</dt>
+    <dd><p>The hormone that carries the tip's signal to the elongation zone, redistributing to the lower flank to bend the organ. It is the molecular cash-value of exactly the tip-senses-zone-bends finding the paper restates as its own rebuttal.</p></dd>
+    <dt>Hydroponics — a whole industry with no dirt to “clamp” anything</dt>
+    <dd><p>Billions of dollars of lettuce, tomatoes, and greens are grown in water and misted air with no soil at all, roots heading downward into the solution and shoots upward — the paper’s “packed-dirt vise” simply isn’t present, and the orientation happens anyway. A survey of what directs plant growth that never mentions soil-free growing has skipped the controlled experiment running in every greenhouse.</p></dd>
+    <dt>The seed you cannot plant upside down</dt>
+    <dd><p>Every farmer and gardener knows it and none of them think about it: sow the seed any way up and it self-orients underground. It is gravitropism at farm scale, running under every field on Earth, and the paper about plants and gravity never mentions that you can't plant a seed the wrong way up.</p></dd>
+    <dt>Cut flowers that bend up in the box; cereals that stand back up after a storm</dt>
+    <dd><p>Gladiolus and snapdragon stems bend upward if shipped flat — a real logistics cost, solved by shipping them upright — and lodged wheat re-erects itself through negative gravitropism at the stem nodes. The plant's gravity response is a line item in agriculture, not a laboratory abstraction.</p></dd>
+  </dl>
+  <p>A survey that omits one decisive result has an oversight. A survey that omits the sensor, the darkness control, the spaceflight test, the hormone, and the contents of every seed packet has selected its universe so the thesis can breathe.</p>
+</section>
+
+<!-- ============ ELECTRICITY COUNTERPOINT ============ -->
+<section id="electricity">
+  <div class="kicker">07 · The Richer Science</div>
+  <h2>What electricity actually does to plants</h2>
+  <p>Here the paper's instinct is worth crediting, because it reaches toward something real: the textbook shorthand — "plants sense gravity, full stop" — really is incomplete. Plants have a genuine, dramatic electrical life, and run a current through them and you get real effects. But there are two very different things called "electricity" in this paper, and the whole argument depends on quietly swapping one for the other. One is <strong>active current</strong> — charge actually flowing, doing work. The other is a <strong>static potential gradient</strong> — a voltage that sits there with essentially no current behind it. The first does things to plants. The second, by the paper's own description, does almost nothing at all.</p>
+  <dl class="ledger">
+    <dt>Active current does work — and the plant runs on it</dt>
+    <dd><p>A plant's own signalling is active electricity: real ion currents, not static charge. The Venus flytrap snaps shut on an action potential and <em>counts</em> — two touches of a trigger hair within about twenty seconds are needed to close it, more still before it turns on its digestive genes. <em>Mimosa</em>'s leaves collapse on a travelling electrical-and-calcium wave. Bite one leaf and the plant warns the others with a calcium wave moving about a millimetre a second, gated by receptors closely related to the glutamate receptors in your own nervous system. Real electricity, real plants — and, fittingly, Charles Darwin, whose 1880 tip experiments this paper attacks, was working on the flytrap's electrical behaviour in the same decade its action potential was first recorded. The mechanism the paper waves away has been on the instruments since the 1870s.</p></dd>
+    <dt>Push a current through a seed tray and you get a real, modest bump</dt>
+    <dd><p>This is the part a grower or a school-lab experimenter actually sees — and it's real. Apply an <em>active</em> electric current or field to seeds and germination and early vigour can measurably rise; cold-plasma seed treatment, a serious agronomy field, lifts soybean germination and seedling weight by double-digit percentages at the right dose by etching the seed coat so it drinks faster. The tradition is old — the Abbé Nollet electrifying seeds in the 1740s, Karl Lemström's 1880s field trials under charged overhead wires — and Britain's interwar Electro-Culture Committee gave the fair verdict for all of it: the effects are real but "erratic and very hard to control." Note what every one of these has in common: <em>current is being supplied.</em> And note what it does — it modulates how vigorously a plant grows. It never once tells the plant which way is down.</p></dd>
+    <dt>The atmospheric gradient is real — and, by his own account, currentless</dt>
+    <dd><p>The paper's headline number is genuine physics, and we'll meet it on the reference every reader of this genre already owns: <a href="https://www.feynmanlectures.caltech.edu/II_09.html">Feynman's <em>Lectures</em> (Vol. II, Ch. 9, "Electricity in the Atmosphere")</a> document the fair-weather field at roughly 100 volts per metre. It is real, and organisms do use it — bumblebees read the electric fields of flowers, spiders sense the same atmospheric field and use it as the cue to balloon into the air on a windless day. But this is a <em>static potential,</em> not a current, and the paper says so itself: its "Absence of Current" passage calls the gradient "potential energy rather than active electrical flow," and its "Grounded Potential" passage puts the plant at zero volts relative to the earth. A currentless field, dropping zero volts across a grounded plant, does no work on it — which is why the same field that a bee can <em>sense</em> cannot <em>pull</em> a root downward. The paper draws the active-versus-static line correctly, then leans its entire discarded-and-restored "down" argument on the static side of it.</p></dd>
+  </dl>
+  <div class="note warn">
+    <div class="kicker">The one electrical story that fails the test</div>
+    <p>The paper's electrical mechanism has a popular modern cousin: "electroculture," the copper-coil antennas sold to harvest the atmospheric gradient and boost plant growth. It is the purest attempt to get useful work out of the static field — and it is the one part of this whole subject that controlled testing flatly rejects. A <a href="https://doi.org/10.1371/journal.pone.0329615">2025 trial across four crops</a> found no consistent benefit to photosynthesis, growth, or yield, and measured what the copper rods actually deliver into the soil: about two millivolts, against the several volts that appear even in studies claiming any real electrical effect. That is the active-versus-static distinction settling the matter empirically. Supply a current and a plant responds a little; tap the currentless gradient and you get two millivolts and a placebo. The honest science credits the instinct and refutes the conclusion in the same breath — which is the whole difference between reaching for physics and dressing in it.</p>
+  </div>
+</section>
+
+<!-- ============ ANTICIPATED RESPONSES ============ -->
+<section id="responses">
+  <div class="kicker">08 · Anticipated Responses</div>
+  <h2>Objections, answered in advance</h2>
+  <dl class="qa">
+    <dt>"Removing the soil or cutting the tip is unnatural mutilation — it proves nothing about real plants."</dt>
+    <dd><p>Removing one variable while holding the rest fixed is not mutilation; it is the definition of a controlled experiment, and it is how every claim in the paper's own "macro-mechanics" would have to be tested too. And the natural case agrees with the controlled one: a seed in undisturbed dark soil, planted any way up, roots downward with nothing cut and nothing removed. The lab result and the seed packet say the same thing.</p></dd>
+    <dt>"Plants grow toward light. That's all this ever was."</dt>
+    <dd><p>Then roots — which grow <em>down, away</em> from light, in the dark — should not exist, and they are most of the plant. Light and gravity are separable signals: remove gravity in orbit and light takes over; grow a seedling in darkness and gravity alone still orients it. The sunlight account explains the shoot and gets the root exactly backwards.</p></dd>
+    <dt>"Those space and lab experiments come from the institutions the paper distrusts."</dt>
+    <dd><p>The core result needs no institution. It runs in a jar on a windowsill — germinate a bean against the glass, upside down, and watch the root turn down — and it is a daily working assumption for every farmer, orchardist, and cut-flower shipper on Earth. People who lose money when plants grow the wrong way have relied on gravitropism for centuries; a mistaken effect that costs money gets found out fast.</p></dd>
+    <dt>"The review didn't address the paper in its entirety."</dt>
+    <dd><p>The physics preamble, the electrostatic section, the macro-mechanics model, and all four historical dissections (Knight, Frank, Sachs, the Darwins) are addressed above, along with the caption that contradicts the body. The standing invitation is unchanged: name one specific error on this page and it will be corrected, visibly.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">09 · Primary Sources</div>
+  <h2>Check us</h2>
+  <ol>
+    <li><b>Knight, T. A. (1806)</b> — "On the direction of the radicle and germen during the vegetation of seeds," <em>Philosophical Transactions of the Royal Society of London</em> 96, 99–108. Roots followed the gravity-plus-centrifugal resultant; the angle tracked the rotation speed.</li>
+    <li><b>Darwin, C., assisted by F. Darwin (1880)</b> — <em>The Power of Movement in Plants</em>, John Murray, London. The tip senses and signals; the elongation zone below bends; root responses obtained in darkness.</li>
+    <li><b>Sachs, J.</b> — the "sine law" of geotropism, and the <b>clinostat</b> (1879): rotating a plant to average the gravity vector to zero abolishes oriented growth with all else held constant. See <em>Lectures on the Physiology of Plants</em> (Eng. trans., Clarendon, 1887).</li>
+    <li><b>Frank, A. B. (1868)</b> — coined the term <em>Geotropismus</em> (geotropism), later broadened to gravitropism once the stimulus was understood as the acceleration vector.</li>
+    <li><b>Haberlandt, G. (1900)</b> and <b>Němec, B. (1900)</b> — independently proposed the starch-statolith hypothesis, <em>Berichte der Deutschen Botanischen Gesellschaft</em> 18: dense sedimenting amyloplasts in statocyte cells are the gravity sensor.</li>
+    <li><b>Kiss, J. Z., Hertel, R. &amp; Sack, F. D. (1989)</b> — "Amyloplasts are necessary for full gravitropic sensitivity in roots of <em>Arabidopsis thaliana</em>," <em>Planta</em> 177(2), 198–206. Starchless mutants show reduced, delayed gravitropism; wild type responds to as little as 10 s of stimulus.</li>
+    <li><b>Morita, M. T. (2010)</b> — "Directional gravity sensing in gravitropism," <em>Annual Review of Plant Biology</em> 61, 705–720. The statolith-sedimentation sensor and its transduction.</li>
+    <li><b>Friml, J. et al. (2002)</b> — "Lateral relocation of auxin efflux regulator PIN3 mediates tropism in <em>Arabidopsis</em>," <em>Nature</em> 415, 806–809. The hormone-transport machinery that carries the signal to the lower flank (the Cholodny–Went redistribution, at molecular resolution).</li>
+    <li><b>Sato, E. M. et al. (2015)</b> — "New insights into root gravitropic signalling," <em>Journal of Experimental Botany</em> 66(8), 2155–2165. "Gravity is perceived in the columella cells… the gravitropic response takes place in the elongation zone" — Darwin's division of labour, confirmed.</li>
+    <li><b>Kiss, J. Z., Millar, K. D. L. &amp; Edelmann, R. E. (2012)</b> — "Phototropism of <em>Arabidopsis thaliana</em> in microgravity and fractional gravity on the International Space Station," <em>Planta</em> 236(2), 635–645. Onboard-centrifuge fractional gravity; responses graded by acceleration, threshold near 0.3 g.</li>
+    <li><b>Herranz, R. et al. (2019)</b> — "RNAseq Analysis of the Response of <em>Arabidopsis thaliana</em> to Fractional Gravity Under Blue-Light Stimulation During Spaceflight," <em>Frontiers in Plant Science</em> 10, 1529. Root curvature tied to the magnitude of the gravity vector; light-following "effectively negated at 0.3 g and higher."</li>
+    <li><b>Paul, A.-L., Amalfitano, C. E. &amp; Ferl, R. J. (2012)</b> — "Plant growth strategies are remodeled by spaceflight," <em>BMC Plant Biology</em> 12, 232. With gravity removed, roots default to light and moisture as the directional cue.</li>
+    <li><b>Raven, <em>Biology</em> (Biology LibreTexts), "Plant Responses to Gravity"</b> — "Whether or not they germinate in the light or in total darkness, shoots usually sprout up… roots grow downward." The seed-in-the-dark result.</li>
+    <li><b>UMass Extension (2016)</b>, "Harvesting and Handling Cut Flowers," and <b>Philosoph-Hadas, S. et al. (2001)</b>, "Gravitropism in cut flower stalks of snapdragon," <em>Advances in Space Research</em> 27(5), 921–932 — gladiolus and snapdragon stems bend upward if shipped horizontally; handle upright.</li>
+    <li><b>Kaufman, P. B. et al. (1987)</b> — "How cereal grass shoots perceive and respond to gravity," <em>American Journal of Botany</em> 74(9) — lodged cereals re-erect via negative gravitropism at the leaf-sheath pulvinus.</li>
+    <li><b>Feynman, R. P.</b> — <em>Lectures on Physics</em>, Vol. II, Ch. 9, "Electricity in the Atmosphere" — the fair-weather field at ~100 V/m (the paper's own cited gradient).</li>
+    <li><b>Electrical-biology exemplars:</b> <b>Böhm, J. et al. (2016)</b>, "The Venus Flytrap… Counts Prey-Induced Action Potentials," <em>Current Biology</em> 26(3), 286–295; <b>Toyota, M. et al. (2018)</b>, "Glutamate triggers long-distance, calcium-based plant defense signaling," <em>Science</em> 361, 1112–1115; <b>Clarke, D. et al. (2013)</b>, "Detection and Learning of Floral Electric Fields by Bumblebees," <em>Science</em> 340, 66–69; <b>Morley, E. L. &amp; Robert, D. (2018)</b>, "Electric Fields Elicit Ballooning in Spiders," <em>Current Biology</em> 28(14), 2324–2330.</li>
+    <li><b>Chier, M. et al. (2025)</b> — "Passive electroculture using copper rods does not improve yield in home container vegetable gardening," <em>PLOS ONE</em>. No consistent benefit across four crops; ~2 mV delivered.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> <a href="../earth-shapes-review/">#4</a> <span class="vsep">|</span> <a href="../gyroscope-review/">#5</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier <span class="vsep">|</span> <a href="/method-objections/">Objections to the method, answered</a>
+  </div>
+</footer>
+
+</body>
+</html>
