@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Contradiction Map — Azimutha.FE against himself | FunWithScience</title>
+<meta name="description" content="A cross-corpus audit of the Azimutha.FE papers against each other. Nineteen places where one paper's claim is incompatible with another's — gravity denied then invoked by name, the inverse-square law real for light but fiction for gravity, an aether mocked then relied on. All quotes verbatim from his own papers.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="The Contradiction Map — Azimutha.FE against himself">
+<meta property="og:description" content="Nineteen places the papers contradict each other, in his own words: gravity denied across the corpus then used by name to explain a drooping branch and the Moon's orbit; the inverse-square law a 'verified fact' for light but a 'fiction' for gravity; the aether he mocks is the medium he needs.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/contradictions/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/contradictions/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Contradiction Map — Azimutha.FE against himself">
+<meta name="twitter:description" content="He never contradicts mainstream physics politely — he demolishes it. The trouble is he also, repeatedly, demolishes himself. Nineteen collisions, all in his own words.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/contradictions/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/contradictions/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  a{color:var(--navy)}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:16ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:60ch}
+  .byline{margin-top:18px;font-size:16px;max-width:64ch}
+
+  /* header collision motif */
+  .cmotif{position:absolute;top:60px;right:24px;width:150px;height:110px}
+  @media (max-width:900px){.cmotif{display:none}}
+  .cmotif .qa{fill:none;stroke:var(--navy);stroke-width:2.4}
+  .cmotif .qb{fill:none;stroke:var(--burgundy);stroke-width:2.4}
+  .cmotif .spark{stroke:var(--brass);stroke-width:2.2;animation:spk 2.4s ease-in-out infinite}
+  .cmotif .spark:nth-of-type(2){animation-delay:.3s}
+  .cmotif .spark:nth-of-type(3){animation-delay:.6s}
+  @keyframes spk{0%,100%{opacity:.25}50%{opacity:1}}
+
+  main{padding:8px 0 40px}
+  section{padding:38px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(23px,3.2vw,29px);line-height:1.15;margin-bottom:14px}
+  p{margin:0 0 14px;max-width:68ch}
+  p:last-child{margin-bottom:0}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  /* paper key */
+  .key{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:6px}
+  .key td{border-bottom:1px solid var(--rule);padding:7px 10px 7px 0;vertical-align:top}
+  .key .n{font-family:var(--mono);color:var(--grey);white-space:nowrap;width:2.6em}
+  .key .h{font-family:var(--mono);font-weight:600;white-space:nowrap;padding-right:16px}
+  .key a{text-decoration:none}
+  .key a:hover{text-decoration:underline}
+
+  /* contradiction card */
+  .cx{background:var(--card);border:1px solid var(--rule);padding:22px 24px 24px;margin:0 0 18px}
+  .cx-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .cx-num{font-family:var(--mono);font-size:12.5px;color:var(--grey);flex-shrink:0}
+  .cx h3{font-family:var(--disp);font-weight:600;font-size:20px;line-height:1.2;margin:2px 0 0}
+  .dmg{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:4px 8px 3px;border:2px solid;white-space:nowrap;flex-shrink:0;transform:rotate(2deg);margin-top:2px}
+  .dmg.high{color:var(--burgundy);border-color:var(--burgundy)}
+  .dmg.mid{color:var(--brass);border-color:var(--brass)}
+  .dmg.low{color:var(--grey);border-color:var(--grey)}
+  .side{border-left:3px solid;padding:2px 0 2px 15px;margin:14px 0}
+  .side.a{border-color:var(--navy)}
+  .side.b{border-color:var(--burgundy)}
+  .plbl{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;font-weight:600}
+  .side.a .plbl{color:var(--navy)}
+  .side.b .plbl{color:var(--burgundy)}
+  .plbl a{text-decoration:none;color:inherit;border-bottom:1px dotted currentColor}
+  .side p{font-size:15.5px;margin:0}
+  .side q{font-style:italic}
+  .side q:before{content:'“'}.side q:after{content:'”'}
+  .collide{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);text-align:center;margin:2px 0}
+  .cx-why{font-size:15.5px;margin-top:14px}
+  .cx-why b{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);font-weight:600;display:block;margin-bottom:3px}
+  .cx-type{font-family:var(--mono);font-size:11.5px;color:var(--grey);margin-top:12px;border-top:1px dashed var(--rule);padding-top:10px}
+
+  .lede{font-size:18px}
+  .scoregrid{margin-top:6px}
+  .scoregrid h3{font-family:var(--disp);font-weight:600;font-size:19px;margin:20px 0 8px}
+  .scoregrid ul{margin:0 0 6px;padding-left:20px}
+  .scoregrid li{margin-bottom:7px;font-size:15.5px;max-width:66ch}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0 0;font-size:15.5px}
+  .note .kicker{margin-bottom:6px}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <svg class="cmotif" viewBox="0 0 150 110" aria-hidden="true">
+      <path class="qa" d="M20,20 Q58,20 58,55 Q58,90 20,90"/>
+      <path class="qb" d="M130,20 Q92,20 92,55 Q92,90 130,90"/>
+      <line class="spark" x1="62" y1="46" x2="88" y2="40"/>
+      <line class="spark" x1="62" y1="55" x2="88" y2="55"/>
+      <line class="spark" x1="62" y1="64" x2="88" y2="70"/>
+    </svg>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>The Contradiction Map</h1>
+    <p class="sub">Reading all thirteen papers together surfaces something no single review can: the papers do not agree with <em>each other</em>. This is a cross-corpus audit of the author against himself.</p>
+    <p class="byline"><b>The pattern:</b> he never contradicts mainstream physics politely — he demolishes it. The trouble is that he also, repeatedly, demolishes <em>himself</em>. Below are nineteen places where a claim, assumption, or endorsement in one paper is incompatible with one in another. Every quotation is verbatim from his own papers. The most damaging are first, and special attention is paid to cases where a <em>later</em> paper undercuts an <em>earlier</em> one — a rupture invisible while the earlier paper stood alone.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<section id="how">
+  <div class="kicker">How to read this</div>
+  <p class="lede">Each entry sets two of his own passages side by side — <span style="color:var(--navy);font-weight:600">one in navy</span>, <span style="color:var(--burgundy);font-weight:600">one in burgundy</span> — and shows why they cannot both be true. Paper labels link to that paper's full review. A short note records whether the collision is a <em>later paper undercutting an earlier one</em> or a <em>simultaneous tension</em> running through the corpus.</p>
+  <div class="note">
+    <div class="kicker">The papers, by short handle</div>
+    <table class="key">
+      <tr><td class="n">#1</td><td class="h"><a href="../gravity-audit-review/">g₀ Audit</a></td><td>An Audit of Terrestrial Gravity and Geodetic Standardizations</td></tr>
+      <tr><td class="n">#2</td><td class="h"><a href="../gravimeter-dissection-review/">Gravimeters</a></td><td>Gravimeter Analysis</td></tr>
+      <tr><td class="n">#3</td><td class="h"><a href="../inverse-square-constants-review/">kₑ vs G</a></td><td>Comparative Analysis of Inverse-Square Scaling Constants</td></tr>
+      <tr><td class="n">#4</td><td class="h"><a href="../earth-shapes-review/">Earth Shapes</a></td><td>Earth's Physical Shape, Atmospheric Containment…</td></tr>
+      <tr><td class="n">#5</td><td class="h"><a href="../gyroscope-review/">Gyroscopes</a></td><td>Gyroscope Manufacturing and Earth Rotation Detection</td></tr>
+      <tr><td class="n">#6</td><td class="h"><a href="../plant-gravity-review/">Plants</a></td><td>Macro-Mechanics in Plant Structural Dynamics (gravitropism)</td></tr>
+      <tr><td class="n">#7</td><td class="h"><a href="../kepler-mechanics-review/">Kepler</a></td><td>A Critical Audit of Keplerian Mechanics and Foundational Optics</td></tr>
+      <tr><td class="n">#8</td><td class="h"><a href="../atomic-clock-review/">Atomic Clocks</a></td><td>The Atomic Clock Analysis (chronologically his first)</td></tr>
+      <tr><td class="n">#9</td><td class="h"><a href="../field-mechanics-review/">Einstein</a></td><td>The Post-Einsteinian Institutional Hijack</td></tr>
+      <tr><td class="n">#10</td><td class="h"><a href="../aristotelian-mechanics-review/">Aristotle</a></td><td>A Mechanistic Audit of Classical Natural Philosophy (dome capstone)</td></tr>
+      <tr><td class="n">#11</td><td class="h"><a href="../cavendish-metrology-review/">Torsion Balance</a></td><td>Circularity in Precision Gravitational Metrology</td></tr>
+      <tr><td class="n">#12</td><td class="h"><a href="../wave-graviton-review/">Graviton</a></td><td>Wave Propagation Mechanics and the Quantization of Gravity</td></tr>
+      <tr><td class="n">#13</td><td class="h"><a href="../newtonian-mechanics-review/">Newton</a></td><td>Newtonian Mechanics, Field Dissipation, and the Fallacy of Subatomic Particles (his final)</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="map">
+  <div class="kicker">Nineteen collisions · ranked by damage</div>
+  <h2>The map</h2>
+
+  <!-- 1 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">01</span><h3>“Gravity acts directly upon this mass”</h3></div><span class="dmg high">High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">He denies gravity across the corpus — then affirms it by name, and uses it as a real force, in the two papers where his argument needs it.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../plant-gravity-review/">Paper #6 · Plants</a></div>
+      <p><q>Gravity acts directly upon this mass, generating a downward torque at the pivot point… the branch must naturally bend or sag toward the ground under its own weight.</q> — though the paper's own caption says plants react to environment, <q>not a magical force.</q></p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../earth-shapes-review/">Paper #4 · Earth Shapes</a></div>
+      <p><q>any orbit is a ballistic path requiring precise balance between centrifugal force (Fc = mv²/r) and gravitational force (Fg = GMm/r²).</q> Oceans, likewise, <q>conform to gravitational equipotential surfaces.</q> Meanwhile #1, #10, #11, #12 and #13 call gravity a <q>legal fiction</q> and a <q>non-existent mechanism.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>The load-bearing thesis of the entire corpus is that gravity does not exist and “down” is density or pressure or charge. You cannot found a project on “there is no gravity” while invoking gravity by name to explain a drooping branch and to compute the Moon's orbit.</p>
+    <div class="cx-type">Simultaneous tension — foundational papers #4/#6 concede gravity; the later denial capstones (#10, #12, #13) make the collision retroactively fatal.</div>
+  </article>
+
+  <!-- 2 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">02</span><h3>One law, three verdicts</h3></div><span class="dmg high">High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">The inverse-square law is a verified fact for light, and real for electric charge — but the identical law is a fiction for gravity.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../kepler-mechanics-review/">Paper #7 · Kepler</a> &amp; <a href="../inverse-square-constants-review/">#3 · kₑ vs G</a></div>
+      <p><q>The formulation of the inverse-square law of light decay over distance (I ∝ 1/d²) stands as a verified, measurable fact of physical reality.</q> And Coulomb's 1/r² law is treated as real — it is the mechanism he uses to replace gravity.</p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../newtonian-mechanics-review/">Paper #13 · Newton</a> &amp; <a href="../cavendish-metrology-review/">#11 · Torsion Balance</a></div>
+      <p>The gravitational inverse-square law is fiction: G is <q>not an independently isolated physical property of nature — it is a calibration target.</q> Yet #13 itself calls Newton's and Coulomb's laws <q>an unmistakable, identical mathematical blueprint.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>He acknowledges the electrostatic and gravitational force laws are mathematically identical, then rates one an empirical fact and the other an institutional fiction — on no stated criterion except that he needs the electric one and dislikes the gravitational one.</p>
+    <div class="cx-type">Simultaneous tension — sharpened by #13 (later) explicitly conceding the “identical blueprint.”</div>
+  </article>
+
+  <!-- 3 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">03</span><h3>The aether he mocks is the aether he needs</h3></div><span class="dmg high">High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">He celebrates the abandonment of the luminiferous aether as proof mainstream science invents fictions — while his own optics, redshift, and gravity all require a space-filling, light-carrying medium.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../cavendish-metrology-review/">Paper #11 · Torsion Balance</a></div>
+      <p><q>the Luminiferous Aether (‘later abandoned as non-existent’), the Graviton…</q> that mainstream must invent invisible entities is offered as <q>empirical validation of this critique.</q></p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../kepler-mechanics-review/">#7</a>, <a href="../field-mechanics-review/">#9</a>, <a href="../wave-graviton-review/">#12</a>, <a href="../newtonian-mechanics-review/">#13</a></div>
+      <p>Light is <q>radiation… moving through a uniform, stratified medium</q> (#7); redshift is <q>light losing energy across a continuous material medium</q> (#9); gravity is <q>a structural pressure gradient within a unified medium</q> (#12); a <q>self-sustaining toroidal field</q> pervades space (#13).</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>A continuous, light-carrying, energy-degrading, force-transmitting medium filling all space <em>is</em> an aether under another name. He ridicules mainstream for having posited (and dropped) exactly the invisible pervasive medium his own physics silently depends on.</p>
+    <div class="cx-type">Simultaneous tension — his “material realism” brand collapses if his own foundational medium is the same class of unobservable he uses to discredit others.</div>
+  </article>
+
+  <!-- 4 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">04</span><h3>No particles, except the ones holding up the sky</h3></div><span class="dmg high">High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Particles and photons are “mathematical ghosts” — yet the sun, moon and stars are made of plasma (ionized particles), and photon momentum and E = hv are used as fact.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../newtonian-mechanics-review/">#13</a>, <a href="../wave-graviton-review/">#12</a>, <a href="../field-mechanics-review/">#9</a></div>
+      <p>The photon is <q>Mechanically… non-existent; a mathematical ghost</q>; the neutrino is <q>mathematically invented</q>; subatomic particles are <q>conceptual ghosts.</q></p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">#10</a>, <a href="../gravimeter-dissection-review/">#2</a>, <a href="../field-mechanics-review/">#9</a></div>
+      <p>The sun, moon and planets are <q>localized plasma engines</q>, stars <q>LEDs on a printed circuit board</q> (#10). Plasma <em>is</em> ionized particles. Meanwhile #2 states as fact that laser cooling works by <q>transferring photon momentum</q>, and #9 endorses <q>the Planck-Einstein relation E = hv.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>You cannot build the entire visible cosmos out of plasma while denying the charged particles that define plasma, and you cannot deny the photon while using photon momentum and E = hv as established facts.</p>
+    <div class="cx-type">Later undercuts earlier — #2 (photon momentum) and #9 (E = hv) precede #13's flat denial of the photon; #10's plasma cosmology cannot coexist with it.</div>
+  </article>
+
+  <!-- 5 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">05</span><h3>The self-cancelling Earth</h3></div><span class="dmg high">High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Paper #4 proves Earth must be a “perfect sphere” using real gravity and real orbits — then concludes it is “not a physically proven globe”; and the later dome paper deletes the very orbit the proof depends on.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../earth-shapes-review/">Paper #4 · Earth Shapes</a> (internal)</div>
+      <p><q>only a perfectly spherical Earth can sustain a stable… Earth-Moon-Sun orbital alignment</q> — then, four slides on: <q>Earth is not a physically proven globe, oblate spheroid, triaxial ellipsoid, pear-shape, or geoid.</q></p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">Paper #10 · Aristotle</a></div>
+      <p>Earth is <q>a stationary, non-rotating topographical plane</q> under a <q>pressurized containment dome</q>; the Moon rides <q>fixed magnetic tracks</q> — there is no gravitational orbit at all.</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>#4's central proof (a stable <em>gravitational</em> orbit ⇒ an unchanged, spherical Earth) is only valid if gravity and orbits are real — which #4 half-grants and #10 flatly denies by putting the Moon on rails. And within #4 alone, the proof and the conclusion negate each other.</p>
+    <div class="cx-type">Internal contradiction in #4, compounded by #10 (later) removing the mechanism the proof runs on.</div>
+  </article>
+
+  <!-- 6 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">06</span><h3>Redshift needs a big cosmos he doesn't have</h3></div><span class="dmg high">High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">He denies cosmic expansion and endorses “tired-light” redshift across “immense distances” among galaxies — but his own universe is a small dome with nearby luminaries and no light-years.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../field-mechanics-review/">Paper #9 · Einstein</a></div>
+      <p>Redshift is <q>light losing energy across a continuous material medium over immense distances… rather than physical recession velocity,</q> so <q>the expanding universe hypothesis evaporates.</q> This treats real galaxies and intergalactic distances as given.</p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">#10</a> &amp; <a href="../newtonian-mechanics-review/">#13</a></div>
+      <p>Stars are <q>LEDs on a printed circuit board</q> on a dome; the light-year is <q>an unverified mathematical abstraction… No human being has ever tested or verified this metric.</q> There are no galaxies and no immense distances.</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>“Tired-light” redshift is a cosmological-distance phenomenon — it requires light traversing vast intergalactic paths. His dome cosmology annihilates the distances the redshift argument presupposes.</p>
+    <div class="cx-type">Later undercuts earlier — #10/#13 dome capstones vs #9.</div>
+  </article>
+
+  <!-- 7 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">07</span><h3>Does light spread, or not? Pick one</h3></div><span class="dmg mid">Med–High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Light intrinsically expands as a wavefront in one paper — and intrinsically doesn't, with apparent spreading an illusion, in another.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../gravity-audit-review/">Paper #1 · g₀ Audit</a></div>
+      <p>Light <q>propagates as an expanding wavefront, illuminating vast areas. It only appears straight when artificially restricted… by the lenses of an instrument.</q> (Used to attack optical triangulation.)</p>
+    </div>
+    <div class="collide">— exact inversion —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../wave-graviton-review/">Paper #12 · Graviton</a></div>
+      <p>A bulb's light <q>is not a single signal expanding outward; rather, it consists of thousands of individual, straight-line lines-of-sight… mainstream models erroneously conceptualize it as a single, expanding spherical wave.</q> (Used to attack spherical waves and the graviton.)</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>These are exact inversions. #1: expansion is real, straightness is the artifact. #12: straightness is real, expansion is the erroneous illusion. Two flagship arguments rest on opposite premises about the nature of light.</p>
+    <div class="cx-type">Later undercuts earlier — #12 vs #1.</div>
+  </article>
+
+  <!-- 8 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">08</span><h3>One fictitious force is fake, the other is real</h3></div><span class="dmg mid">Med–High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Coriolis force is dismissed as a non-physical “mathematical convenience” — but centrifugal force (and gravity) are used as real, load-bearing physical forces.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../gyroscope-review/">Paper #5 · Gyroscopes</a></div>
+      <p><q>‘Coriolis force’ is an apparent force in a rotating reference frame; it has no independent existence</q> — a <q>mathematical convenience.</q></p>
+    </div>
+    <div class="collide">— same category, opposite verdicts —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../earth-shapes-review/">#4</a>, <a href="../kepler-mechanics-review/">#7</a>, <a href="../plant-gravity-review/">#6</a></div>
+      <p>#4 balances <q>centrifugal force (Fc = mv²/r)</q> as a real force; #7 balances an inward inverse-square vector; #6 treats <q>kinetic acceleration (a = v²/r)</q> as a real slinging force.</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>Coriolis and centrifugal force are the <em>same category</em> — inertial pseudo-forces that appear only in a rotating frame. He rules one non-existent and treats the other as a genuine, computable physical vector.</p>
+    <div class="cx-type">Simultaneous tension — the “physical vs. mathematical” line he polices in others is applied opportunistically to himself.</div>
+  </article>
+
+  <!-- 9 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">09</span><h3>Is G a real constant, or a software artifact?</h3></div><span class="dmg mid">Med–High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">G is a real “mirrored bookend” constant, the medium's compliance, in one paper — and a fictional “calibration target” that isn't a property of nature in others.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../inverse-square-constants-review/">Paper #3 · kₑ vs G</a></div>
+      <p><q>kₑ and G are not unrelated constants, but perfectly mirrored bookends of field mechanics,</q> with G <q>modeled as the compliance… of that same medium.</q> A genuine physical constant with real mechanical meaning.</p>
+    </div>
+    <div class="collide">— cannot both be true —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../cavendish-metrology-review/">#11</a> &amp; <a href="../newtonian-mechanics-review/">#13</a></div>
+      <p>G is <q>not an independently isolated physical property of nature — it is a calibration target derived from a software-processed, physically corrupted torsion balance.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>In #3, G is a real, dignified counterpart to Coulomb's constant. In #11/#13, it is a manufactured number with no referent in nature. It cannot be both.</p>
+    <div class="cx-type">Later undercuts earlier — #11/#13 vs #3.</div>
+  </article>
+
+  <!-- 10 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">10</span><h3>Hardware for thee, chalkboard for me</h3></div><span class="dmg mid">Med–High</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">He demands “hardware-first” isolation from everyone else while presenting no apparatus or data of his own — and asserting an unmeasured maglev dome, plasma engines, and mercury-vortex levitation.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../newtonian-mechanics-review/">Paper #13</a> (the stated axiom)</div>
+      <p><q>if a phenomenon cannot be physically accessed, isolated in a controlled laboratory, and stripped of confounding variables, it must be classified as an unverified mathematical abstraction.</q></p>
+    </div>
+    <div class="collide">— applied to others, not himself —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">#10</a> &amp; <a href="../kepler-mechanics-review/">#7</a></div>
+      <p>Presented with zero apparatus: a <q>pressurized containment dome</q>, luminaries on <q>fixed magnetic tracks</q>, <q>localized plasma engines</q>, and <q>active levitation… using frequency-driven vortex devices (such as mercury vortex or acoustic configurations).</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>He classifies as “unverified mathematical abstraction” anything not isolated in a lab, then builds his positive model entirely from unisolated, un-instrumented assertions — his single epistemic weapon disqualifies his own conclusions first.</p>
+    <div class="cx-type">Simultaneous tension — methodological hypocrisy running the length of the corpus.</div>
+  </article>
+
+  <!-- 11 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">11</span><h3>Pixelated when convenient, continuous when convenient</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Energy is discretely “pixelated”/quantized (to kill smooth spacetime) — but reality is a “continuous medium” (to kill particles).</p>
+    <div class="side a">
+      <div class="plbl"><a href="../field-mechanics-review/">Paper #9 · Einstein</a></div>
+      <p><q>energy and matter are inherently pixelated at the subatomic scale… a perfectly smooth, continuous geometric fabric cannot… coexist with a quantized universe.</q> (Discreteness, to refute General Relativity.)</p>
+    </div>
+    <div class="collide">— direct opposites —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../wave-graviton-review/">#12</a> &amp; <a href="../newtonian-mechanics-review/">#13</a></div>
+      <p>Reality is <q>an interlocking system of material resonators, continuous mediums, densities, and frequencies</q> (#12). (Continuity, to refute particles/quanta.)</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>“Energy is inherently pixelated” and “reality is a continuous medium” are direct opposites. He deploys quantization against smooth spacetime and continuity against discrete particles, in the same corpus.</p>
+    <div class="cx-type">Later undercuts earlier — #12/#13 vs #9.</div>
+  </article>
+
+  <!-- 12 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">12</span><h3>Trustworthy navigation, untrustworthy navigation</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">The reliability of gyroscopes, GPS and inertial navigation is assumed to prove Earth's shape never changed — then those same instruments are dismantled as artifact-ridden and circular.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../earth-shapes-review/">Paper #4 · Earth Shapes</a></div>
+      <p>A shape change would have made <q>all navigation systems (celestial, gyrocompass, inertial, barometric, GPS)… obsolete instantly</q> — and since none failed, none changed. The systems reliably work.</p>
+    </div>
+    <div class="collide">— relies on, then destroys —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../gyroscope-review/">#5</a> &amp; <a href="../atomic-clock-review/">#8</a></div>
+      <p>Gyroscope output <q>is a function of manufacturing defects and immediate environment — nothing more</q> (#5); GPS clock corrections are circular, unproven instrument behavior (#8).</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>You cannot use the fidelity of a gyrocompass as a premise while separately proving the gyrocompass measures only noise.</p>
+    <div class="cx-type">Later undercuts earlier — the dedicated teardowns #5/#8 vs #4.</div>
+  </article>
+
+  <!-- 13 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">13</span><h3>The gravimeter he trusts and the gravimeter he destroys</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Gravimeters are trusted engineering tools measuring “downward load-bearing capacity” in one paper — but every gravimeter measures only uncharacterized electromagnetic artifacts in another.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../gravity-audit-review/">Paper #1 · g₀ Audit</a></div>
+      <p>Praises engineers using <q>physical core drills and localized gravimeters to test the literal downward load-bearing capacity</q> — trustworthy “immediate material reality.”</p>
+    </div>
+    <div class="collide">— endorsed, then torn down —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../gravimeter-dissection-review/">Paper #2 · Gravimeters</a></div>
+      <p>Every gravimeter <q>measures electromagnetic displacement of a test mass inside an uncharacterized electromagnetic environment and attributes that displacement to a force — gravity — that has never been… demonstrated.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>#1 cites gravimeters as reliable instruments measuring a real “downward” quantity; #2 says no gravimeter reliably measures any downward quantity at all.</p>
+    <div class="cx-type">Later undercuts earlier — #2 elaborates and negates #1's endorsement.</div>
+  </article>
+
+  <!-- 14 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">14</span><h3>Satellites in a dome?</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">GPS satellites at orbital altitude are accepted as real in one paper — but the cosmos is a small enclosed dome with no orbital altitude in another.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../atomic-clock-review/">Paper #8 · Atomic Clocks</a></div>
+      <p>Treats the GPS constellation as real hardware in orbit — <q>approximately 45 microseconds gained from altitude effects and 7 microseconds lost from velocity effects</q> — accepting satellites at orbital altitude and velocity.</p>
+    </div>
+    <div class="collide">— no room for both —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">Paper #10 · Aristotle</a></div>
+      <p>The sky is a <q>pressurized containment dome</q> with an oxygen-ceiling firewall and nearby plasma/LED luminaries — no room for a 20,000-km-altitude orbiting constellation.</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>GPS satellites at orbital altitude and velocity cannot exist inside a low, sealed dome. His first paper presupposes the orbital space his capstone cosmology eliminates.</p>
+    <div class="cx-type">Later undercuts earlier — #10 vs #8, his first paper.</div>
+  </article>
+
+  <!-- 15 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">15</span><h3>Hero Einstein vs. fraud Einstein</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Einstein is rehabilitated as a suppressed truth-teller whose static universe is “completely vindicated” in one paper — but relativity is unproven thought-experiment fiction in others.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../field-mechanics-review/">Paper #9 · Einstein</a></div>
+      <p>Einstein and Planck are <q>intellectual brothers-in-arms</q>; stripping the cosmological constant means <q>Einstein's original static constant is completely vindicated.</q></p>
+    </div>
+    <div class="collide">— which Einstein? —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../atomic-clock-review/">#8</a> &amp; <a href="../newtonian-mechanics-review/">#13</a></div>
+      <p>Relativity was <q>produced through thought experiments — not physical demonstration</q> (#8); #13 lists Einstein's gravity among <q>non-existent mechanisms.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>The corpus cannot decide whether Einstein is a censored ally whose real physics was hijacked, or a peddler of unproven chalkboard fiction.</p>
+    <div class="cx-type">Simultaneous tension.</div>
+  </article>
+
+  <!-- 16 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">16</span><h3>What actually makes things fall?</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">At least three mutually incompatible “real” causes of down: an electrostatic potential gradient, mechanical weight/buoyancy, and “dielectric acceleration toward the densest point.”</p>
+    <div class="side a">
+      <div class="plbl"><a href="../inverse-square-constants-review/">#3</a>, <a href="../plant-gravity-review/">#6</a>, <a href="../newtonian-mechanics-review/">#13</a> (electrostatic)</div>
+      <p>Down <q>is provided by an overarching electrostatic gradient… the Earth's natural atmospheric potential gradient</q> — a specific <q>approximately 100 to 130 volts per meter.</q></p>
+    </div>
+    <div class="collide">— three different physics —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../plant-gravity-review/">#6</a>, <a href="../cavendish-metrology-review/">#11</a>, <a href="../wave-graviton-review/">#12</a> (mechanical / dielectric)</div>
+      <p>#6's conclusion drops electrostatics for <q>internal hydraulic pressure</q> and mechanical weight; #11 grounds everything in <q>weight density, buoyancy, pressure gradients</q>; #12 makes it <q>dielectric acceleration… toward the densest local point.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>These are different physics with different signatures — and buoyancy/density-sorting <em>presupposes</em> a pre-existing downward body force to sort against, the very thing he refuses to allow. #6 even swaps mechanisms mid-paper.</p>
+    <div class="cx-type">Simultaneous tension — his replacement for gravity is not one theory but several incompatible ones.</div>
+  </article>
+
+  <!-- 17 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">17</span><h3>Parallax needs distance and motion he denies</h3></div><span class="dmg mid">Medium</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">Stellar parallax and ephemeris tables are treated as real precision astrometry in one paper — but stars are nearby dome-mounted “LEDs,” there are no light-years, and Earth doesn't move in others.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../earth-shapes-review/">Paper #4 · Earth Shapes</a></div>
+      <p>Invokes <q>stellar parallax baselines,</q> <q>ephemeris tables,</q> and <q>star catalogs</q> as real, precise data that would shift measurably if the shape changed.</p>
+    </div>
+    <div class="collide">— requires what he denies —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">#10</a>, <a href="../newtonian-mechanics-review/">#13</a>, <a href="../gyroscope-review/">#5</a></div>
+      <p>Stars are <q>LEDs on a printed circuit board</q> (#10); the light-year is <q>an unverified mathematical abstraction</q> (#13); Earth is a <q>stationary, non-rotating topographical plane</q> (#10).</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>Stellar parallax specifically requires immense stellar distances <em>and</em> a moving Earth. #4 treats parallax as real astrometry; #10/#13/#5 deny both the distances and the motion it depends on.</p>
+    <div class="cx-type">Later undercuts earlier — #10/#13 vs #4.</div>
+  </article>
+
+  <!-- 18 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">18</span><h3>10³⁶ or 10³⁹ or 10⁴⁰?</h3></div><span class="dmg low">Low</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">The “gravity is negligibly weak” ratio is quoted three different ways.</p>
+    <div class="side a">
+      <div class="plbl"><a href="../newtonian-mechanics-review/">Paper #13 · Newton</a></div>
+      <p>EM stronger than gravity <q>by ~10³⁶.</q></p>
+    </div>
+    <div class="collide">— a factor-of-10,000 spread —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../inverse-square-constants-review/">#3</a>, <a href="../cavendish-metrology-review/">#11</a>, <a href="../earth-shapes-review/">#4</a></div>
+      <p><q>approximately 10³⁹ times</q> weaker (#3, #11); <q>roughly 10⁴⁰ times weaker than magnetism</q> (#4).</p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>A self-styled precision auditor quotes the same physical ratio as 10³⁶, 10³⁹ and 10⁴⁰ across papers — a factor-of-10,000 spread — while lecturing others on rigor.</p>
+    <div class="cx-type">Simultaneous tension — cosmetic, but corrosive to the “rigorous audit” persona.</div>
+  </article>
+
+  <!-- 19 -->
+  <article class="cx">
+    <div class="cx-head"><div><span class="cx-num">19</span><h3>No vacuum exists, except the one in my equation</h3></div><span class="dmg low">Low</span></div>
+    <p style="font-size:15.5px;margin:10px 0 0">A true vacuum is physically impossible and never a real void — yet he leans on vacuum-chamber demos and defines his key constant via “the permittivity of free space.”</p>
+    <div class="side a">
+      <div class="plbl"><a href="../aristotelian-mechanics-review/">#10</a> &amp; <a href="../gravity-audit-review/">#1</a></div>
+      <p><q>A true void or total vacuum is a physical impossibility</q>; an artificial one is <q>an artificial, highly pressurized tension zone</q> that <q>does not create an absolute void.</q></p>
+    </div>
+    <div class="collide">— except when he needs it —</div>
+    <div class="side b">
+      <div class="plbl"><a href="../inverse-square-constants-review/">#3</a> &amp; <a href="../wave-graviton-review/">#12</a></div>
+      <p>#3 defines Coulomb's constant via <q>kₑ = 1 / (4πε₀),</q> where <q>ε₀ represents the permittivity of free space</q>; #12 treats terrestrial vacuum-chamber demos as <q>empirical proof.</q></p>
+    </div>
+    <p class="cx-why"><b>Why it collides</b>He builds his electrostatic “down” on ε₀ — the permittivity of the very void he insists cannot exist — and treats vacuum-chamber results as empirical while denying any chamber is a real vacuum.</p>
+    <div class="cx-type">Simultaneous tension.</div>
+  </article>
+
+</section>
+
+<section id="scorecard">
+  <div class="kicker">The pattern</div>
+  <h2>Who is consistent, and who is the offender</h2>
+  <div class="scoregrid">
+    <h3>Most self-consistent</h3>
+    <p style="font-size:15.5px;color:var(--grey);margin-bottom:6px">They survive by making few positive claims.</p>
+    <ul>
+      <li><b><a href="../gravimeter-dissection-review/">#2 Gravimeters</a></b> and <b><a href="../atomic-clock-review/">#8 Atomic Clocks</a></b> — narrowly-scoped “the-instrument-measures-displacement-not-the-cause” teardowns. They stay tight precisely because they mostly withhold a cosmology; their only cross-corpus wounds are the imported photon-momentum fact (#2) and the accepted GPS satellites (#8) that his later dome papers contradict.</li>
+      <li><b><a href="../gyroscope-review/">#5 Gyroscopes</a></b> — same discipline; its one export (Coriolis is a non-physical pseudo-force) collides with his use of centrifugal force elsewhere, but the paper itself is coherent.</li>
+      <li><b><a href="../cavendish-metrology-review/">#11 Torsion Balance</a></b> — his most technically accurate; internally disciplined, but the gloating aether line and the “G is fiction” stance are its exposed flanks.</li>
+    </ul>
+    <h3>Biggest offenders</h3>
+    <ul>
+      <li><b><a href="../earth-shapes-review/">#4 Earth Shapes</a></b> — the single worst. It proves Earth is a “perfect sphere” using gravity and orbits, then denies it's a proven globe; it treats gravity, ocean equipotentials, satellites, parallax, and gyro/GPS reliability as real — everything the rest of the corpus abolishes.</li>
+      <li><b><a href="../aristotelian-mechanics-review/">#10 Aristotle</a></b> — a maximalist positive cosmology (dome, plasma engines, maglev tracks, no particles, no time) that collides with nearly every instrument paper and with his own “no particles / hardware-first” rules.</li>
+      <li><b><a href="../field-mechanics-review/">#9 Einstein</a></b> — rehabilitates relativity, the cosmological constant, and quantization (E = hv, “pixelated” energy), all of which later papers junk.</li>
+      <li><b><a href="../newtonian-mechanics-review/">#13 Newton</a></b> — a greatest-hits capstone; by recycling everything, it inherits every earlier collision at once.</li>
+    </ul>
+    <div class="note">
+      <div class="kicker">The through-line</div>
+      <p>The further he moves from “your instrument doesn't prove causation” (defensible, narrow) toward “here is what the universe actually is” (dome, plasma, maglev, no particles, no gravity, no time), the more he collides with himself. His scoped skeptical papers are consistent because they assert almost nothing; his cosmological papers are inconsistent because they assert almost everything — including, repeatedly, the very things his other papers were written to destroy.</p>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="kicker">On method</div>
+  <p>Every quotation above is transcribed verbatim from the papers (original spelling preserved), and each paper's full review — steelman, claim-by-claim, and primary sources — is one click away through the links. A contradiction between two of an author's own claims is not, by itself, proof that either is wrong; it is proof that they cannot <em>both</em> be right, and that the corpus has no single coherent physics underneath it. Where we think one side is also false on the merits, that case is made on the individual review page, not here.</p>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    FunWithScience · <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> Every quote checkable against the paper it came from.
+  </div>
+</footer>
+
+</body>
+</html>
