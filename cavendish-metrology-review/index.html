@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>They Agree on 6.674 — the "Cavendish Torsion Balance Dissection," reviewed | FunWithScience</title>
+<meta name="description" content="A review of the 'Cavendish to Eöt-Wash Torsion Balance Dissection,' which says conflicting G values prove gravity was never isolated. But every modern lab lands on 6.674×10⁻¹¹ — the famous disagreement is a ~0.05% fight over the fifth digit, not chaos. And the labs answer his exact objections in their own words, including a cold-atom measurement with no torsion balance at all.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FunWithScience">
+<meta property="og:title" content="They Agree on 6.674 — the 'Cavendish Torsion Balance Dissection,' reviewed">
+<meta property="og:description" content="He reads a lab's error budget as a confession of failure. But nine independent measurements all land on 6.674×10⁻¹¹, agreeing to four digits; mass-attraction was measured with a plumb bob before Cavendish; and a cold-atom experiment with no fiber and no turntable gets the same G. Verdict: reject.">
+<meta property="og:url" content="https://funwithscience.net/azimutha/cavendish-metrology-review/">
+<meta property="og:image" content="https://funwithscience.net/azimutha/cavendish-metrology-review/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="They Agree on 6.674 — the 'Cavendish Torsion Balance Dissection,' reviewed">
+<meta name="twitter:description" content="The 'irreconcilable' G values agree to four digits and differ by 0.05%. The labs answer his exact objections in their own words. And a mountain and a plumb bob measured gravity before Cavendish. Verdict: reject.">
+<meta name="twitter:image" content="https://funwithscience.net/azimutha/cavendish-metrology-review/card.png">
+<link rel="canonical" href="https://funwithscience.net/azimutha/cavendish-metrology-review/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F4F0; --card:#FBFBF8; --ink:#1B2433; --navy:#24405E;
+    --burgundy:#79212E; --brass:#8A661C; --grey:#5C6470; --rule:#D9DAD3;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --disp:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);padding:56px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px}
+  .eyebrow a{color:inherit;text-decoration:none}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5.4vw,54px);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
+  .sub{margin-top:20px;font-size:18px;color:var(--grey);max-width:52ch}
+  .byline{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  .byline b{color:var(--ink);font-weight:600}
+
+  /* header signature: every lab lands on 6.674 */
+  .cpanel{position:absolute;top:76px;right:24px;width:192px;text-align:center;font-family:var(--mono)}
+  .cpanel svg{width:180px;height:52px;display:block;margin:0 auto}
+  .cpanel .ax{stroke:var(--rule);stroke-width:1}
+  .cpanel .gd{fill:var(--brass);animation:gblink 3s ease-in-out infinite}
+  .cpanel .gd:nth-of-type(3){animation-delay:.3s}
+  .cpanel .gd:nth-of-type(4){animation-delay:.6s}
+  .cpanel .gd:nth-of-type(5){animation-delay:.9s}
+  .cpanel .gd:nth-of-type(6){animation-delay:1.2s}
+  .cpanel .gd:nth-of-type(7){animation-delay:1.5s}
+  .cpanel .gd.cod{fill:var(--navy)}
+  @keyframes gblink{0%,100%{opacity:.4}50%{opacity:1}}
+  .cpanel .cap{display:block;margin-top:7px;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--grey);line-height:1.5}
+  @media (max-width:980px){.cpanel{display:none}}
+  @media (min-width:981px){header .eyebrow,header h1,header .sub,header .byline{max-width:calc(100% - 219px)}}
+
+  main{padding:8px 0 40px}
+  section{padding:40px 0;border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;margin-bottom:16px}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  a{color:var(--navy)}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+
+  .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0;font-size:15.5px}
+  .note.warn{border-left-color:var(--burgundy)}
+  .note .kicker{margin-bottom:6px}
+
+  /* scale figure + table */
+  .figwrap{background:var(--card);border:1px solid var(--rule);padding:20px;margin:22px 0}
+  .figwrap svg{width:100%;height:auto;display:block}
+  .figcap{font-family:var(--mono);font-size:12px;color:var(--grey);margin-top:12px;line-height:1.55}
+  .gtable{width:100%;border-collapse:collapse;font-size:13.5px;margin:16px 0 0}
+  .gtable th{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--grey);text-align:left;padding:6px 8px;border-bottom:1.5px solid var(--rule)}
+  .gtable td{padding:6px 8px;border-bottom:1px solid var(--rule)}
+  .gtable td.v{font-family:var(--mono);white-space:nowrap;color:var(--ink)}
+  .gtable tr.cod td{background:#EEF0EC;font-weight:600}
+
+  /* lab-report callout */
+  .report{border:1px solid var(--rule);background:var(--card);padding:16px 18px;margin:16px 0}
+  .rlbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin:0 0 5px}
+  .rlbl.q{color:var(--burgundy)}
+  .rlbl.a{color:var(--navy);margin-top:15px}
+  .report .rq{font-style:italic;color:var(--grey);margin:0;font-size:15px}
+  .report .ra{margin:0;font-size:15.5px;border-left:3px solid var(--navy);padding-left:14px}
+  .report .who{display:block;font-family:var(--mono);font-size:12px;color:var(--grey);margin-top:7px}
+
+  .claim{background:var(--card);border:1px solid var(--rule);margin:0 0 18px}
+  .claim-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 22px 0}
+  .claim-head .slideref{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+  .claim-body{padding:6px 22px 20px}
+  .claim h2{font-size:clamp(20px,2.8vw,24px);margin:6px 0 12px}
+  .assertion{font-size:15.5px;color:var(--grey);border-left:2px solid var(--rule);padding-left:14px;margin:0 0 16px;font-style:italic}
+  .stamp{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px 4px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .stamp.true{color:var(--navy);border-color:var(--navy)}
+  .stamp.misleading{color:var(--brass);border-color:var(--brass)}
+  .stamp.false{color:var(--burgundy);border-color:var(--burgundy)}
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin:16px 0 6px}
+  .lbl.t{color:var(--navy)}
+  .lbl.w{color:var(--burgundy)}
+  .lbl.x{color:var(--brass)}
+  .lbl.p{color:var(--ink)}
+
+  .steelman{background:var(--ink);color:#EDEEE9}
+  .steelman .kicker{color:#B9925A}
+  .steelman h2{color:#fff}
+  .steelman p{color:#D5D7D0}
+  .steelman strong{color:#fff}
+
+  .qa{margin:14px 0 0}
+  .qa dt{font-weight:600;margin:18px 0 6px}
+  .qa dt::before{content:"↳ ";color:var(--burgundy)}
+  .qa dd{margin:0}
+  .qa dd p{font-size:16px}
+
+  .ledger{margin:14px 0 0;font-size:15.5px}
+  .ledger dt{font-weight:600;margin:16px 0 4px}
+  .ledger dt::before{content:"— ";color:var(--brass)}
+  .ledger dd{margin:0;color:var(--grey)}
+  .ledger dd p{font-size:15.5px}
+
+  .sources ol{margin:8px 0 0 20px;font-size:14.5px}
+  .sources li{margin-bottom:9px;color:var(--grey)}
+  .sources li b{color:var(--ink);font-weight:600}
+
+  footer{padding:34px 0 60px;font-family:var(--mono);font-size:12.5px;color:var(--grey)}
+  footer a{color:var(--navy)}
+  .vsep{color:var(--rule);margin:0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="cpanel" aria-hidden="true">
+      <svg viewBox="0 0 180 52" role="img">
+        <line class="ax" x1="8" y1="38" x2="172" y2="38"/>
+        <circle class="gd" cx="24" cy="38" r="3.2"/>
+        <circle class="gd" cx="40" cy="38" r="3.2"/>
+        <circle class="gd" cx="96" cy="38" r="3.2"/>
+        <circle class="gd cod" cx="103" cy="38" r="4"/>
+        <circle class="gd" cx="108" cy="38" r="3.2"/>
+        <circle class="gd" cx="116" cy="38" r="3.2"/>
+        <circle class="gd" cx="156" cy="38" r="3.2"/>
+      </svg>
+      <span class="cap">Every lab lands on 6.674</span>
+    </div>
+    <div class="eyebrow"><a href="../">← Azimutha.FE Reviews</a> · FunWithScience Peer Review Series</div>
+    <h1>They Agree on 6.674</h1>
+    <p class="sub">A review of the <em>"Cavendish to Eöt-Wash Torsion Balance Dissection"</em> — which argues that conflicting measurements of the gravitational constant <em>G</em> prove the force was never isolated, and that density and buoyancy replace it.</p>
+    <p class="byline"><b>Verdict up front:</b> the paper's headline is that modern labs "produce conflicting values for G," so gravity is a "calibration target," not a real force. Here is the scale it never shows you: every modern measurement lands on <strong>6.674×10⁻¹¹</strong>. The famous, genuinely-unresolved disagreement is a spread of about <strong>0.05%</strong> — a fight over the fourth and fifth digits, not a force that reads one value on Monday and another on Tuesday. And every specific objection the paper raises — the fiber's memory, the turntable's vibration, the "circular" software — is answered in the laboratories' own published words, which the paper does not quote. Mass-attraction was even measured with a plumb bob twenty-four years before Cavendish. Reading the reports is the whole job, and it is the job the paper skips.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- ============ PROVENANCE ============ -->
+<section id="provenance">
+  <div class="kicker">01 · Provenance</div>
+  <h2>What is this document?</h2>
+  <p>The eleventh paper from the Azimutha.FE TikTok account, and the most technically literate of the set: a fifteen-page "Research Brief" titled <em>"A Critical Analysis of Experimental Flaws and Circularity in Precision Gravitational Metrology,"</em> subtitled "Cavendish to Eöt-Wash." No "PPC" tag this time. Its caption promises "Torsion Balance Total Teardown… There is no argument left after this."</p>
+  <p>The argument, in five sections: the 1798 Cavendish torsion balance and its modern successor (the Eöt-Wash Group at the University of Washington) never cleanly isolate gravity from electrostatic, thermal, and vibrational interference; the rotating turntable of the modern version introduces vibration that is "permanently baked into" the fiber; the software that reduces that noise is "circular," a "confirmation bias simulator" seeking "a pre-specified Newtonian target"; the conflicting values of <em>G</em> across labs prove the force was never isolated; and therefore density, buoyancy and pressure gradients should replace "mass-attraction." It is, unusually, accurate about the apparatus — it correctly names the vacuum chambers, Faraday cages, fluid bearings, lock-in frequency separation, and blind data analysis. What it does with that accurate description is the problem.</p>
+  <p><strong>One fact holds for every paper in this series and is worth stating plainly:</strong> the author reports no physical test of their own — no measurement, no apparatus, no data, no experiment they performed — only argument about other people's work. This paper attacks the measurement of a constant without ever quoting the measurements' own accounts of how each objection was handled.</p>
+  <p style="font-family:var(--mono);font-size:13px"><a href="source/">▸ Read the original paper in full, transcribed verbatim</a> — his words, so you can check ours against them.</p>
+</section>
+
+<!-- ============ STEELMAN ============ -->
+<section class="steelman" id="steelman">
+  <div class="kicker">02 · Steelman</div>
+  <h2>The strongest version of the paper's case</h2>
+  <p><strong>Its central empirical fact is true, and worth conceding without flinching.</strong> <em>G</em> really is the most poorly-known of the fundamental constants. Modern high-precision laboratories really do publish values that disagree by more than their stated error bars — this is a real, open, embarrassing problem in metrology, sometimes called "the big-G problem," and physicists argue about it in print. The paper is right that gravity between laboratory masses is fantastically weak, right that torsion balances are delicate, and right that theory-laden instrumentation and confirmation bias are genuine hazards that good experiments must actively guard against. None of that is invented, and a serious review has to grant all of it.</p>
+  <p><strong>And one methodological instinct is sound.</strong> "An instrument built to confirm a theory can fool itself" is a real worry, and the correct response to it is exactly the machinery of blind analysis and cross-checks that the paper lists. So grant the whole steelman — the weak force, the delicate apparatus, the disagreeing values, the risk of bias — and then ask the two questions that decide the matter. First: <em>how big</em> is the disagreement the paper calls fatal? And second: when the paper says the labs never resolved his objections, <em>what do the labs' own reports actually say?</em> The paper answers neither, because it quotes no values and no reports. This review will.</p>
+</section>
+
+<!-- ============ CENTRAL MOVE ============ -->
+<section id="move">
+  <div class="kicker">03 · The Central Move</div>
+  <h2>Two misreadings: the size of the disagreement, and what a report is</h2>
+  <p>The paper turns on a phrase repeated in every section — that labs "produce conflicting values for G that disagree outside their stated margins of error," and that this proves "the target force remains uncleanly isolated." Every clause is true and the conclusion does not follow, because the paper never states the <em>size</em> of the disagreement. Here it is. These are the modern precision measurements of <em>G</em>, by independent groups on three continents using different apparatus:</p>
+
+  <div class="figwrap">
+    <svg viewBox="0 0 700 132" role="img" aria-label="Number line of modern G measurements clustered near 6.674">
+      <line x1="40" y1="78" x2="660" y2="78" stroke="#5C6470" stroke-width="1.2"/>
+      <!-- ticks -->
+      <line x1="40" y1="74" x2="40" y2="82" stroke="#5C6470" stroke-width="1"/>
+      <line x1="246" y1="74" x2="246" y2="82" stroke="#5C6470" stroke-width="1"/>
+      <line x1="453" y1="74" x2="453" y2="82" stroke="#5C6470" stroke-width="1"/>
+      <line x1="660" y1="74" x2="660" y2="82" stroke="#5C6470" stroke-width="1"/>
+      <text x="40" y="98" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5C6470" text-anchor="middle">6.6715</text>
+      <text x="246" y="98" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5C6470" text-anchor="middle">6.6730</text>
+      <text x="453" y="98" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5C6470" text-anchor="middle">6.6745</text>
+      <text x="660" y="98" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5C6470" text-anchor="middle">6.6760</text>
+      <!-- data dots -->
+      <circle cx="96" cy="78" r="5" fill="#8A661C"/>
+      <circle cx="156" cy="78" r="5" fill="#8A661C"/>
+      <circle cx="314" cy="78" r="5" fill="#8A661C"/>
+      <circle cx="410" cy="66" r="5" fill="#8A661C"/>
+      <circle cx="414" cy="90" r="5" fill="#8A661C"/>
+      <circle cx="419" cy="66" r="5" fill="#8A661C"/>
+      <circle cx="426" cy="78" r="6" fill="#24405E"/>
+      <circle cx="451" cy="90" r="5" fill="#8A661C"/>
+      <circle cx="597" cy="78" r="5" fill="#8A661C"/>
+      <!-- labels -->
+      <text x="96" y="52" font-family="'IBM Plex Mono',monospace" font-size="10.5" fill="#1B2433" text-anchor="middle">cold atoms</text>
+      <text x="426" y="40" font-family="'IBM Plex Mono',monospace" font-size="10.5" fill="#24405E" text-anchor="middle">torsion cluster + CODATA</text>
+      <text x="597" y="52" font-family="'IBM Plex Mono',monospace" font-size="10.5" fill="#1B2433" text-anchor="middle">BIPM</text>
+      <text x="350" y="126" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#79212E" text-anchor="middle">entire axis spans 0.05% — the whole "irreconcilable" disagreement</text>
+    </svg>
+    <table class="gtable">
+      <thead><tr><th>Experiment / method</th><th>Year</th><th>G (×10⁻¹¹ m³ kg⁻¹ s⁻²)</th></tr></thead>
+      <tbody>
+        <tr><td>LENS, Florence — <b>cold-atom interferometry</b> (no torsion balance)</td><td>2014</td><td class="v">6.67191 (99)</td></tr>
+        <tr><td>JILA — torsion balance</td><td>2010</td><td class="v">6.67234 (14)</td></tr>
+        <tr><td>HUST, Wuhan — torsion pendulum</td><td>2009</td><td class="v">6.67349 (18)</td></tr>
+        <tr><td>HUST, Wuhan — torsion, time-of-swing</td><td>2018</td><td class="v">6.674184 (78)</td></tr>
+        <tr><td>Eöt-Wash, U. Washington — torsion, angular-acceleration</td><td>2000</td><td class="v">6.674215 (92)</td></tr>
+        <tr><td>Univ. Zürich — beam balance</td><td>2006</td><td class="v">6.674252 (120)</td></tr>
+        <tr class="cod"><td>CODATA recommended value (22 ppm)</td><td>2018/22</td><td class="v">6.67430 (15)</td></tr>
+        <tr><td>HUST, Wuhan — torsion, angular-acceleration</td><td>2018</td><td class="v">6.674484 (78)</td></tr>
+        <tr><td>BIPM — torsion balance / servo</td><td>2013</td><td class="v">6.67554 (16)</td></tr>
+      </tbody>
+    </table>
+    <p class="figcap">Every value begins <b>6.67</b>; every serious modern value begins <b>6.674</b>. Lowest to highest is 6.67191 → 6.67554 — a spread of about <b>0.05% (≈540 ppm)</b>, a disagreement in the fourth and fifth significant figures. Sources: NIST/CODATA compilation and the original papers (linked below).</p>
+  </div>
+
+  <p><strong>That is the first misreading.</strong> "Disagree outside their error bars" is true and sounds damning until you see it is a quarrel over the fifth digit of a number that all of them agree is 6.674. A force that had "never been cleanly isolated" would not have nine independent groups, using torsion fibers, beam balances, and free-falling atoms, all landing between 6.6719 and 6.6756. They land there because they are all measuring the same real thing; the residual scatter is a subtle-systematics puzzle at the level of one part in two thousand, which is why it is interesting enough to publish and to keep chasing. The paper takes "we have measured gravity's strength to four digits and are fighting over the fifth" and reports it as "there is no force." For scale: if <em>G</em> behaved the way the paper's rhetoric implies, this chart's axis would have to run from about 6.7 to 13. It runs from 6.6719 to 6.6756. The dots would be on top of each other at any honest zoom.</p>
+
+  <p><strong>The second misreading is what a laboratory report <em>is</em>.</strong> Across several of these papers — the gravimeter dissection (<a href="../gravimeter-dissection-review/">#2</a>), the atomic-clock analysis (<a href="../atomic-clock-review/">#8</a>), and now this — the author reads a laboratory's own careful account of how it identifies and removes a systematic error as though it were a confession that the experiment failed. When a report says "we characterized the electrostatic effect and subtracted it," he hears "they fudged the data." But a published error budget is not a failure; it is the discipline doing exactly what it is supposed to do — naming every effect that could masquerade as signal and showing it was measured and removed. The paper's recurring move is to quote the existence of a correction as proof of corruption. The correct test is to read what the correction actually was, and whether an independent method with none of the same corrections gets the same answer. On both counts the reports already answer him — in their own words, below.</p>
+</section>
+
+<!-- ============ CLAIM BY CLAIM ============ -->
+<section id="claims">
+  <div class="kicker">04 · Claim by Claim</div>
+  <h2>The sections, audited</h2>
+  <p>Each card: what's real in the reasoning, the premise doing the work, the test that would tell, and the public record.</p>
+
+  <!-- C1 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 1 · Isolation failure and the 10³⁹ ratio</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Gravity is 10³⁹ times weaker than electromagnetism, so any stray EM effect dominates and corrupts the result"</h2>
+      <p class="assertion">Electrostatic charge, thermal convection, and magnetic coupling are never fully isolated, so the measured torsion is contaminated by forces other than mass-attraction.</p>
+      <span class="lbl t">What's true</span>
+      <p>The 10³⁹ ratio between gravity and electromagnetism (for fundamental charges) is real, and those three interference channels are real hazards a good experiment must control. Correctly identified.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That the hazard cannot be characterized and removed, and that the signal cannot be distinguished from it. Both are false. The 10³⁹ ratio applies to <em>charges</em>; the Cavendish masses are electrically <strong>neutral</strong>, so there is no first-order Coulomb force, and the residual patch-charge and van-der-Waals effects are short-range, falling off far faster than gravity's 1/r². More importantly, gravity has a <em>signature</em>: it scales with the attractor mass, reverses when the attractor is moved to the opposite side, and falls as 1/r² — and every one of those can be tested by varying charge, material, shielding, and geometry independently. No single electrostatic or thermal artifact reproduces all of those dependencies at once. The paper dismantles each control in isolation while ignoring that they are jointly diagnostic.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Attack the EM hypothesis directly: charge the masses, swap their material at fixed size and shape, add or remove the conducting shield. If the signal were electrostatic it would move; it scales with mass and holds under shielding and material change, exactly as gravity predicts. This is the same test the gravimeter review (<a href="../gravimeter-dissection-review/">#2</a>) already applied to the same "it could be EM" move.</p>
+      <span class="lbl p">The public record</span>
+      <p>Torsion-balance groups explicitly gold-coat or otherwise make surfaces conducting and interpose grounded shields to null electrostatics, then <em>test</em> the residual by deliberately charging the apparatus. The force that survives every such variation, scaling with mass and distance, is gravity — see the callouts in §5 for the labs' own descriptions.</p>
+    </div>
+  </article>
+
+  <!-- C2 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 2 · The turntable, the fiber, and "baked-in" vibration</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The rotating turntable adds vibration permanently baked into the fiber, and no software can remove it after the fact"</h2>
+      <p class="assertion">Motor and bearing micro-vibrations enter the torsion fiber and corrupt its physical state; frequency-domain separation is a mathematical excuse, not a physical fix.</p>
+      <span class="lbl t">What's true</span>
+      <p>A spinning platform does generate vibration, and noise physically present in a sensor cannot be "unhappened" retroactively. That much is correct.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That the fiber's properties and the vibration are inseparable from the signal. The modern Eöt-Wash design was built precisely to defeat both, and it does so <em>physically</em>, not by after-the-fact math. The turntable is spun so the pendulum feels a <em>sinusoidal</em> gravitational torque at a known frequency, and a feedback loop keeps the fiber from twisting at all — so the fiber's elasticity and "memory" drop out of the result by construction. Uncorrelated vibration at other frequencies averages toward zero over the many-hour measurement because it is not phase-locked to the known signal frequency; this is standard lock-in detection, not a cover-up. The paper's "baked-in forever" intuition confuses the fiber's instantaneous jitter with the time-averaged correlation that <em>is</em> the measurement. The lab's own words are in §5.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Measure with a method that has no fiber and no turntable at all, and see whether the answer changes. It does not — cold-atom interferometry (§5) drops the whole torsion apparatus and lands on the same <em>G</em>.</p>
+      <span class="lbl p">The public record</span>
+      <p>Gundlach &amp; Merkowitz (2000) state that because the fiber "does not experience any appreciable deflection, this technique is independent of many torsion fiber properties including anelasticity," and that "continuous attractor rotation reduces background noise." The fiber concern the paper builds a section on is the specific concern that design removes — quoted verbatim in §5.</p>
+    </div>
+  </article>
+
+  <!-- C3 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 3 · "Circularity" and conflicting values</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The apparatus is built to prove Newton, software subtracts disturbances, and irreconcilable values prove the force was never isolated"</h2>
+      <p class="assertion">Theory-laden instrumentation plus digital signal processing makes the result "a mathematical artifact… designed to seek a pre-specified Newtonian target," confirmed by the fact that G values disagree.</p>
+      <span class="lbl t">What's true</span>
+      <p>Circular calibration is a real sin, DSP can be misused, and the disagreement among G values is genuine and unresolved. All granted.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>Two false turns. First, "built to prove Newton, therefore circular" is the same fully-general argument the atomic-clock paper (<a href="../atomic-clock-review/">#8</a>) ran, and it would void all measurement. It is false here specifically: the experiment does not assume <em>G</em>, it <em>outputs</em> it from independently-measured geometry (the masses and distances, gauged with the ordinary scales and rulers the paper itself calls trustworthy), and <strong>blind analysis</strong> — a secret numerical offset the analysts cannot see until the method is frozen — exists precisely to stop anyone tuning toward a target. The paper lists blind analysis and then waves it away. Second, the disagreement proves the opposite of what he claims: if these labs were "confirmation-bias simulators" seeking one Newtonian number, they would all report that number. Instead they publish values that disagree at the fifth digit — including a single group (HUST, 2018) that ran <em>two independent methods</em> and openly published two different results. That is what non-circular measurement looks like: nobody is forcing the answer, which is exactly why they don't all match.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Ask whether the community hides the disagreement or advertises it. It advertises it — CODATA deliberately <em>inflated</em> the published uncertainty on <em>G</em> (by a factor of about 12 in 1998) precisely because the measurements disagree. A cover-up does not widen its own error bars in print.</p>
+      <span class="lbl p">The public record</span>
+      <p>Blind analysis is standard in modern G experiments; the 2018 HUST paper is titled "Measurements of the gravitational constant using two independent methods" and reports 6.674184 and 6.674484 — a published internal disagreement. CODATA's inflated uncertainty is the metrology community stating the big-G problem out loud, not concealing it.</p>
+    </div>
+  </article>
+
+  <!-- C4 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 4 · The density-buoyancy alternative</span>
+      <span class="stamp false">Refuted by Data</span>
+    </div>
+    <div class="claim-body">
+      <h2>"Density, buoyancy and pressure explain all motion; g = F/m omits the medium; mass-attraction is absent everywhere but the contested lab"</h2>
+      <p class="assertion">Objects sort by density in a pressure gradient with no long-range attraction; "mass naturally attracting mass is entirely absent across all observable scales" outside torsion balances.</p>
+      <span class="lbl t">What's true</span>
+      <p>Density sorting in a fluid is real — a stone sinks, a balloon rises — and the description of buoyancy is correct as far as it goes.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That buoyancy replaces gravity, and that mass-attraction is confined to the lab. Both collapse. Buoyancy is literally <em>ρ·g·V</em> — it <em>contains</em> <em>g</em>; "less dense rises" is a statement about a gravitational field, meaningless without one, so the density model is built out of the gravity it denies (the same self-own as the Aristotelian paper, <a href="../aristotelian-mechanics-review/">#10</a>). And "g = F/m omits the medium" is backwards: <em>g</em> is measured in <em>vacuum</em> precisely to remove the medium — the medium (buoyancy, drag) is the correction you subtract, and with it gone a coin and a feather still accelerate together. Most decisively, mass-attraction is <em>not</em> confined to the torsion balance: it was measured in the field, by a plumb bob deflected by a mountain, in <strong>1774 — twenty-four years before Cavendish</strong>; it raises the ocean tides through the Moon's pull; and satellites map Earth's own mass distribution by its gravity. "Absent everywhere but the lab" is false at every scale from a mountain to the Moon.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Look for mass-attraction with no torsion balance in sight. Hang a plumb line beside a mountain (Schiehallion, 1774): it tilts toward the mass. Drop cold atoms beside a half-tonne of tungsten (2014): they fall faster. Neither has a fiber, a turntable, or software subtracting anything.</p>
+      <span class="lbl p">The public record</span>
+      <p>The 1774 Schiehallion experiment measured the gravitational attraction of a mountain with a plumb line; ocean tides, satellite geodesy (GRACE), and every navigated interplanetary trajectory are mass-attraction observed outside any laboratory. Buoyancy, defined as the weight of displaced fluid, is proportional to <em>g</em> and vanishes in free-fall.</p>
+    </div>
+  </article>
+
+  <!-- C5 -->
+  <article class="claim">
+    <div class="claim-head">
+      <span class="slideref">Section 5 · Occam's Razor and "95% invisible"</span>
+      <span class="stamp misleading">Misleading</span>
+    </div>
+    <div class="claim-body">
+      <h2>"The aether, the graviton, and dark matter/energy show physics invents invisible parameters; 95% invisible means the theory is an artifact"</h2>
+      <p class="assertion">Occam's Razor condemns a framework that needs unobservable entities; dark matter (27%) and dark energy (68%) make 95% of the universe invisible, validating the critique.</p>
+      <span class="lbl t">What's true</span>
+      <p>Occam's Razor is a real principle, dark matter and dark energy are genuinely provisional and contested, and the graviton is unconfirmed. Fair points, honestly held by many physicists too.</p>
+      <span class="lbl w">The premise doing the work</span>
+      <p>That these bear on a benchtop measurement of <em>G</em>, and that his own model is more parsimonious. Neither holds. The luminiferous aether was abandoned <em>because of an experiment</em> (Michelson–Morley) — that is the method self-correcting, the exact opposite of the dogmatism alleged. Galaxy-scale puzzles like dark matter do not touch whether two lead spheres attract in a Seattle basement; the lab result stands or falls on the lab, not the cosmos. And Occam's Razor cuts hard the other way: the paper's own framework requires a solid dome, a plasma Sun on magnetic rails, an atmospheric "firewall," time as a control conspiracy, and "frequency" as a universal cause — vastly more unobserved entities than one attractive force. It invokes parsimony while proposing the least parsimonious cosmology on the table.</p>
+      <span class="lbl x">The test that would tell</span>
+      <p>Count the unobserved entities on each side. One inverse-square force, measured on a bench and in the field — versus a dome, a firewall, plasma luminaries, maglev tracks, and a time-conspiracy. Occam does not point where the paper thinks.</p>
+      <span class="lbl p">The public record</span>
+      <p>The aether's fate (falsified by Michelson–Morley, 1887) is the standard example of physics discarding an unobservable when experiment demands it — a point <em>for</em> the method. Dark sector debates are live and self-acknowledged in the literature; none of it bears on the torsion-balance value of <em>G</em>.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============ IN THEIR OWN WORDS ============ -->
+<section id="reports">
+  <div class="kicker">05 · In Their Own Words</div>
+  <h2>The objections, beside what the laboratories actually wrote</h2>
+  <p>This is the section the paper needed and skipped. Every objection it raises has a published answer from the people who built the instruments. Below, each of the paper's specific concerns is set beside the laboratories' own words — the reports the paper describes but does not quote. The pattern across the series is the tell: a report's careful account of a control is read as an admission of failure, when it is the record of the failure being prevented.</p>
+
+  <div class="report">
+    <span class="rlbl q">The paper's objection (§2) — the fiber's "material memory"</span>
+    <p class="rq">"To eliminate the material memory and micro-grain fatigue associated with a twisting suspension fiber… the mechanical properties of the fiber are mathematically removed from the data." — presented as an unphysical dodge.</p>
+    <span class="rlbl a">The laboratory, in its own words</span>
+    <p class="ra">"Since the torsion fiber does not experience any appreciable deflection, this technique is independent of many torsion fiber properties including anelasticity."
+    <span class="who">— Gundlach &amp; Merkowitz, <em>Phys. Rev. Lett.</em> 85, 2869 (2000)</span></p>
+    <p style="font-size:14.5px;color:var(--grey);margin-top:10px">The fiber's properties aren't "mathematically removed" — the fiber is physically prevented from twisting, by an angular-acceleration feedback loop, so its elasticity and "memory" never enter the measurement to begin with. The concern is designed out of the hardware.</p>
+  </div>
+
+  <div class="report">
+    <span class="rlbl q">The paper's objection (§2) — the turntable "bakes in" vibration</span>
+    <p class="rq">"A physical vibration introduced by a motor platform cannot be structurally separated from a highly sensitive torsion fiber… that noise is permanently baked into the physical state of the instrument."</p>
+    <span class="rlbl a">The laboratory, in its own words</span>
+    <p class="ra">"The turntable is first rotated at a constant rate so that the pendulum experiences a sinusoidal torque due to the gravitational interaction with the attractor masses… continuous attractor rotation reduces background noise."
+    <span class="who">— Gundlach &amp; Merkowitz, <em>Phys. Rev. Lett.</em> 85, 2869 (2000)</span></p>
+    <p style="font-size:14.5px;color:var(--grey);margin-top:10px">The signal is deliberately placed at a single known frequency; noise at other frequencies is uncorrelated and averages down over hours. Rotation isn't the source of an unfixable problem — it is the technique that lifts the signal out of the noise.</p>
+  </div>
+
+  <div class="report">
+    <span class="rlbl q">The paper's objection (§1) — "it's all the torsion balance's mechanical bugs"</span>
+    <p class="rq">"Outside of highly contested, non-isolated laboratory torsion balances, the phenomenon of mass naturally attracting mass is entirely absent across all observable scales."</p>
+    <span class="rlbl a">The laboratory, in its own words</span>
+    <p class="ra">A cloud of laser-cooled ⁸⁷Rb atoms in free fall — no fiber, no turntable, no shield — is used as the probe mass, yielding <em>G</em> = 6.67191(99)×10⁻¹¹, agreeing with the torsion balances to four digits.
+    <span class="who">— Rosi et al., <em>Nature</em> 510, 518 (2014), "Precision measurement of the Newtonian gravitational constant using cold atoms"</span></p>
+    <p style="font-size:14.5px;color:var(--grey);margin-top:10px">An entirely different apparatus — atoms, not a torsion balance — sharing none of the mechanical "bugs" the paper blames, lands on the same number. Whatever is being measured is not a property of the fiber.</p>
+  </div>
+
+  <div class="report">
+    <span class="rlbl q">The paper's objection (§3) — the experiment is "circular," seeking a Newtonian target</span>
+    <p class="rq">"The apparatus ceases to function as an independent observer of nature and instead operates as a confirmation bias simulator… designed to seek a pre-specified Newtonian target."</p>
+    <span class="rlbl a">The record, in its own terms</span>
+    <p class="ra">One group measured <em>G</em> by two independent methods and published <em>both</em> disagreeing values (6.674184 and 6.674484); and CODATA deliberately enlarged the recommended uncertainty on <em>G</em> — by roughly a factor of 12 in 1998 — <em>because</em> the world's measurements disagree.
+    <span class="who">— Li, Xue et al., <em>Nature</em> 560, 582 (2018); CODATA recommended values of the fundamental constants</span></p>
+    <p style="font-size:14.5px;color:var(--grey);margin-top:10px">A "confirmation-bias simulator" would return one agreed number. Instead the field publishes its disagreements and widens its error bars in public — the opposite of forcing a target.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT THE PAPER NEVER MENTIONS ============ -->
+<section id="omissions">
+  <div class="kicker">06 · What The Paper Never Mentions</div>
+  <h2>The mass-attraction it says isn't there</h2>
+  <p>A paper claiming mass-attraction exists only in "contested" torsion balances omits every place it is measured elsewhere — including before Cavendish, and with the author's own trusted instrument.</p>
+  <dl class="ledger">
+    <dt>A mountain and a plumb bob, 1774</dt>
+    <dd><p>The Schiehallion experiment measured the gravitational pull of a mountain by the sideways deflection of a plumb line — mass-attraction, in the field, with the simplest instrument there is, twenty-four years <em>before</em> Cavendish's laboratory version.</p></dd>
+    <dt>Cold atoms in free fall</dt>
+    <dd><p>Atom interferometry drops laser-cooled atoms past a source mass and measures <em>G</em> with no fiber, no turntable, no Faraday cage — and gets 6.67191(99)×10⁻¹¹, matching the torsion balances to four digits.</p></dd>
+    <dt>The tides</dt>
+    <dd><p>The Moon's mass raises the oceans twice a day. Mass attracting mass across 380,000 km, on a planetary scale, visible from any beach.</p></dd>
+    <dt>Satellites weighing the Earth</dt>
+    <dd><p>The GRACE mission mapped Earth's gravity field — and thus its shifting mass, from groundwater to ice sheets — by the tiny tugs on twin satellites. Mass-attraction measured from orbit, continuously, for years.</p></dd>
+    <dt>The size of the "disagreement"</dt>
+    <dd><p>Every modern value of <em>G</em> lands on 6.674×10⁻¹¹; the "irreconcilable" scatter is about 0.05%. The paper never states the number, because stated, it refutes the headline.</p></dd>
+    <dt>The community widening its own error bar</dt>
+    <dd><p>CODATA enlarged <em>G</em>'s published uncertainty roughly twelve-fold in 1998 <em>because</em> measurements disagreed — the discrepancy is advertised in the recommended value itself, not hidden.</p></dd>
+    <dt>Two methods, one honest group</dt>
+    <dd><p>HUST (2018) measured <em>G</em> two independent ways and published both slightly-different results in the same paper — the opposite of a machine tuned to one target.</p></dd>
+    <dt>Buoyancy's hidden <em>g</em></dt>
+    <dd><p>The density-buoyancy alternative is written in terms of a force it says doesn't exist: buoyancy is ρ·g·V, and it vanishes in free-fall, where a feather and a coin still accelerate together.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ ANTICIPATED RESPONSES ============ -->
+<section id="responses">
+  <div class="kicker">07 · Anticipated Responses</div>
+  <h2>Objections, answered in advance</h2>
+  <dl class="qa">
+    <dt>"You admit the G values disagree — that's my whole point."</dt>
+    <dd><p>They disagree at the fifth digit, by about 0.05%, while agreeing on 6.674 across torsion fibers, beam balances, and free-falling atoms. Agreement to four digits across independent methods is the signature of a real quantity; the residual scatter is a subtle-systematics puzzle, openly published and actively chased. "We measured it to four digits and are arguing over the fifth" is not "there is no force."</p></dd>
+    <dt>"Subtracting noise with software alters the raw data — the result is a fabrication."</dt>
+    <dd><p>Two independent checks close this. The signal is modulated to a known frequency, so uncorrelated noise averages to zero over hours — nothing is invented, the noise is simply not phase-locked to the signal. And blind analysis hides the answer from the analysts until the method is fixed, so no one can steer toward a target. If it were fabrication, the fabricators would agree with each other; they don't.</p></dd>
+    <dt>"The torsion balance is hopelessly delicate and could be measuring EM."</dt>
+    <dd><p>Then charge it, shield it, change the mass material — the signal survives, scaling with mass and falling as 1/r², which no electrostatic artifact does. And drop the torsion balance entirely: cold atoms in free fall, sharing none of its supposed bugs, get the same G. A mountain deflected a plumb bob in 1774 with no balance at all.</p></dd>
+    <dt>"Physics invents invisible things — dark matter, the graviton — so why not gravity itself?"</dt>
+    <dd><p>Gravity isn't invisible or unmeasured — it is read off a spring scale, a plumb line, a dropped atom, and a tide table. The aether, your best example, was discarded <em>because</em> an experiment ruled it out — the method working. And your own model needs a dome, a firewall, plasma luminaries and a time-conspiracy; Occam's Razor is not on the side proposing the most unseen machinery.</p></dd>
+    <dt>"The review didn't address the paper in its entirety."</dt>
+    <dd><p>The abstract and all five sections — isolation and the 10³⁹ ratio, the turntable and DSP, circularity and conflicting values, the density-buoyancy alternative, and the Occam/dark-sector close — are addressed above, with the laboratories' own words in §5. The standing invitation is unchanged: name one specific error on this page and it will be corrected, visibly.</p></dd>
+  </dl>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="kicker">08 · Primary Sources</div>
+  <h2>Check us</h2>
+  <ol>
+    <li><b><a href="https://arxiv.org/abs/gr-qc/0006043">Gundlach, J. H. &amp; Merkowitz, S. M. (2000)</a></b> — "Measurement of Newton's Constant Using a Torsion Balance with Angular Acceleration Feedback," <em>Phys. Rev. Lett.</em> 85, 2869. The fiber "does not experience any appreciable deflection… independent of many torsion fiber properties including anelasticity"; "continuous attractor rotation reduces background noise." <em>G</em> = 6.674215(92)×10⁻¹¹.</li>
+    <li><b><a href="https://arxiv.org/abs/1412.7954">Rosi, G. et al. (2014)</a></b> — "Precision measurement of the Newtonian gravitational constant using cold atoms," <em>Nature</em> 510, 518. Laser-cooled ⁸⁷Rb atoms in free fall — no torsion balance — giving <em>G</em> = 6.67191(99)×10⁻¹¹, matching torsion values to four digits.</li>
+    <li><b><a href="https://www.nature.com/articles/s41586-018-0431-5">Li, Q., Xue, C. et al. (2018)</a></b> — "Measurements of the gravitational constant using two independent methods," <em>Nature</em> 560, 582. One group, two methods, two published results: 6.674184(78) and 6.674484(78)×10⁻¹¹.</li>
+    <li><b><a href="https://physics.nist.gov/cgi-bin/cuu/Value?bg">CODATA / NIST — Newtonian constant of gravitation</a></b> — recommended value <em>G</em> = 6.67430(15)×10⁻¹¹ (relative uncertainty 22 ppm). The uncertainty was enlarged roughly twelve-fold in 1998 because independent measurements disagree — the big-G problem, stated in the recommended value itself.</li>
+    <li><b><a href="https://en.wikipedia.org/wiki/Gravitational_constant">Modern measurements of G</a></b> — the compiled values plotted above (BIPM 2013 6.67554(16); Zürich 2006 6.674252; JILA 2010 6.67234(14); HUST 2009 6.67349(18); LENS 2014 6.67191(99); etc.). Every value begins 6.674; the total spread is ≈0.05%.</li>
+    <li><b><a href="https://en.wikipedia.org/wiki/Schiehallion_experiment">The Schiehallion experiment (1774)</a></b> — Maskelyne measured the gravitational deflection of a plumb line by a mountain's mass, twenty-four years before Cavendish: mass-attraction in the field, with a plumb bob.</li>
+    <li><b><a href="https://en.wikipedia.org/wiki/GRACE_and_GRACE-FO">GRACE (2002–2017)</a></b> — twin satellites mapped Earth's gravity field, and its shifting mass, by mutual gravitational tugs: mass-attraction measured continuously from orbit.</li>
+    <li><b><a href="https://en.wikipedia.org/wiki/Michelson%E2%80%93Morley_experiment">Michelson–Morley (1887)</a></b> — the experiment that falsified the luminiferous aether: physics discarding an unobservable when the data demanded it, the paper's own example working <em>for</em> the method.</li>
+    <li><b>Buoyancy / Archimedes' principle</b> — the buoyant force is the weight of displaced fluid, ρ·g·V, proportional to <em>g</em>; it vanishes in free-fall, where objects of any density accelerate identically. The density-buoyancy "alternative" is built from the gravity it denies.</li>
+  </ol>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../">Azimutha.FE Reviews</a> <span class="vsep">|</span> <a href="../gravity-audit-review/">#1</a> <span class="vsep">|</span> <a href="../gravimeter-dissection-review/">#2</a> <span class="vsep">|</span> <a href="../inverse-square-constants-review/">#3</a> <span class="vsep">|</span> <a href="../earth-shapes-review/">#4</a> <span class="vsep">|</span> <a href="../gyroscope-review/">#5</a> <span class="vsep">|</span> <a href="../plant-gravity-review/">#6</a> <span class="vsep">|</span> <a href="../kepler-mechanics-review/">#7</a> <span class="vsep">|</span> <a href="../atomic-clock-review/">#8</a> <span class="vsep">|</span> <a href="../field-mechanics-review/">#9</a> <span class="vsep">|</span> <a href="../aristotelian-mechanics-review/">#10</a> <span class="vsep">|</span> FunWithScience · funwithscience.net <span class="vsep">|</span> @PhysicsUnifier <span class="vsep">|</span> <a href="/method-objections/">Objections to the method, answered</a>
+  </div>
+</footer>
+
+</body>
+</html>
