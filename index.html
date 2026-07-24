@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Azimutha.FE — Paper Reviews | FunWithScience</title>
-<meta name="description" content="Ongoing reviews of the paper-formatted documents published by the Azimutha.FE TikTok account. Every claim checked against primary sources.">
+<meta name="description" content="The complete review of the Azimutha.FE papers — thirteen documents formatted as physics research, each checked against primary sources. What they add up to, and where each one fails.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FunWithScience">
 <meta property="og:title" content="Azimutha.FE — Paper Reviews | FunWithScience">
-<meta property="og:description" content="An anonymous account publishing documents formatted as research papers — hosted nowhere, citing nothing checkable. Every paper reviewed against primary sources.">
+<meta property="og:description" content="Thirteen papers, one argument made thirteen times: if science can't yet name a cause, the thing is a fiction. Answered each time by an instrument the author already trusts. Every claim checked against primary sources.">
 <meta property="og:url" content="https://funwithscience.net/azimutha/">
 <meta property="og:image" content="https://funwithscience.net/azimutha/card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Azimutha.FE — Paper Reviews | FunWithScience">
-<meta name="twitter:description" content="Steelman first, then claim-by-claim against primary sources. Every review checkable.">
+<meta name="twitter:description" content="Read one at a time they look like thirteen arguments; read together they are one, made thirteen times — and answered each time by a tool the author already trusts.">
 <meta name="twitter:image" content="https://funwithscience.net/azimutha/card.png">
 <link rel="canonical" href="https://funwithscience.net/azimutha/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +47,16 @@
   p:last-child{margin-bottom:0}
   .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
 
+  /* macro summary */
+  .pattern .lede{font-size:19px;color:var(--ink)}
+  .pattern p{margin-bottom:16px}
+  .pattern .turn{font-weight:600}
+
+  /* thematic groups */
+  .group{font-family:var(--disp);font-weight:600;font-size:21px;line-height:1.15;margin:0 0 4px;padding-top:30px;border-top:2px solid var(--ink)}
+  .group.first{border-top:none;padding-top:6px}
+  .groupnote{font-size:15.5px;color:var(--grey);margin:0 0 18px;max-width:66ch}
+
   /* review index cards */
   .review{display:block;background:var(--card);border:1px solid var(--rule);padding:22px 24px;margin:0 0 16px;text-decoration:none;color:var(--ink);transition:border-color .15s}
   .review:hover{border-color:var(--navy)}
@@ -56,8 +66,6 @@
   .review .blurb{font-size:15.5px;color:var(--grey);margin:0;max-width:64ch}
   .stamp{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px 3px;border:2px solid;transform:rotate(2deg);white-space:nowrap;flex-shrink:0}
   .stamp.reject{color:var(--burgundy);border-color:var(--burgundy)}
-  .review.pending{opacity:.65;border-style:dashed}
-  .review.pending .stamp{color:var(--grey);border-color:var(--grey)}
 
   .note{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:18px 20px;margin:18px 0 0;font-size:15.5px}
   .note .kicker{margin-bottom:6px}
@@ -72,41 +80,94 @@
   <div class="wrap">
     <div class="eyebrow"><a href="/">← FunWithScience</a> · Peer Review Series</div>
     <h1>Azimutha.FE</h1>
-    <p class="sub">An anonymous TikTok account publishing documents formatted as research papers — attributed only to <em>“Independent Research,”</em> hosted nowhere, citing nothing checkable. Since the author invites an audit, we're providing one: every paper reviewed here, every claim checked against primary sources you can verify yourself.</p>
+    <p class="sub">An anonymous TikTok account publishing documents formatted as research papers — attributed only to <em>“Independent Research,”</em> hosted nowhere, citing nothing checkable. The author invited an audit; here is one. The series is now complete: all thirteen papers reviewed, every claim checked against primary sources you can verify yourself.</p>
   </div>
 </header>
 
 <main>
 <div class="wrap">
 
-<section id="who">
-  <div class="kicker">About This Series</div>
-  <h2>Why these papers get their own page</h2>
-  <p>The Azimutha.FE account posts multi-slide photo carousels styled as formal academic papers: title pages, section headings, justified type, technical vocabulary. The formatting borrows the authority signals of published research while carrying none of its accountability — no named author, no checkable citations, no data, no DOI, and no hosted copy that can be searched or quoted. As of our reviews (searched July 2026), none of these documents could be found anywhere on the indexed web outside the carousels themselves.</p>
-  <p>The papers are also better than average for the genre: the historical footnotes are frequently accurate, the prose is fluent, and the arguments are structured. That makes them more persuasive than the usual fare — and more worth answering carefully. Our approach on every review is the same: steelman first, concede what's true, then check what remains against primary sources.</p>
-  <div class="note">
-    <div class="kicker">Standing invitation</div>
-    <p>If the author of these documents wants to respond, publish a citable copy, or correct anything on these pages — the contact form works, and unlike the papers under review, everything here has a fixed address. Corrections are applied publicly and credited.</p>
-  </div>
+<section id="pattern" class="pattern">
+  <div class="kicker">The Pattern</div>
+  <h2>What the thirteen papers add up to</h2>
+  <p class="lede">Read one at a time, the papers look like thirteen different arguments — about clocks, gyroscopes, Kepler's orbits, the Cavendish experiment, the graviton. Read together, they are one argument, made thirteen times.</p>
+  <p>Every paper runs on a single move: <span class="turn">if science cannot yet state the physical cause of something, that something is a fiction</span> — a “mathematical ghost,” a “legal fiction,” a “calibration target.” The move is never applied evenly. It is aimed only at the forces and particles the author has already decided to reject, and never at the ones his own model needs.</p>
+  <p>That is why every review ends the same way — not with an appeal to authority, but with an instrument the author himself trusts. He does not doubt magnetism, whose cause was described three centuries after the compass. He accepts the inverse-square law for light while calling the identical law for gravity a fiction. He venerates E&nbsp;=&nbsp;hv while denying the photon that equation counts. He uses a Faraday cage in one paper to explain away gravity in another. His gravimeters are trustworthy when they drill foundations and corrupt when they measure gravity. Each paper is refuted by a tool from the paper beside it.</p>
+  <p>Under several of the papers sits one physics point worth stating plainly. The inverse-square law — the thing he grants for light and denies for gravity — is not a claim about light, or gravity, or any mechanism at all. It is a fact about three-dimensional space: anything spread from a point over the surface of a growing sphere thins as one over distance squared, because that is how the area of a sphere grows. Light, sound, an electric field and a gravitational field share the exponent because they share the geometry, not because they share a cause. There is no coherent place to accept it for one and deny it for the other.</p>
+  <p>The positive model fares no better than the demolition. Rename the downward force — call it density, electrostatics, or “frequency,” as the papers variously do — and if it is still strong enough to hold the oceans and point “down” toward a common center, it is still a central force acting on a spherical mass, and it still builds the globe the model was written to deny. The replacement physics reconstructs the shape it rejects.</p>
+  <p>And the papers do not agree with <em>each other</em>. Gravity is denied across the corpus, then invoked by name to explain a drooping branch and the Moon's orbit; particles are ghosts, except the plasma the sun is made of; the aether is a mainstream embarrassment, except the light-carrying medium his own optics require. We mapped nineteen of these collisions on a <a href="contradictions/">separate page</a> — and the pattern is consistent: the further the papers move from “your instrument doesn't prove causation” toward “here is what the universe actually is,” the more they contradict themselves.</p>
+  <p>One fact holds across all thirteen: the author reports no measurement of his own — no apparatus, no data, no experiment performed — only argument about other people's work, under a demand that everyone else be “hardware-first.” None of which makes the papers worthless to read. The history in them is frequently accurate, the prose is fluent, and the stated instinct — prefer what can be measured to what can only be asserted — is a good one. The papers fail on their own standard, and that is the most honest way to answer them: not from authority, but from the measurements the author already trusts.</p>
 </section>
 
 <section id="together">
   <div class="kicker">Reading Them Together</div>
   <h2>The Contradiction Map</h2>
-  <p>Each review checks one paper against the physics. Read all thirteen at once and a different problem appears: the papers don't agree with <em>each other</em>. Gravity is denied across the corpus, then invoked by name to explain a drooping branch and the Moon's orbit; the inverse-square law is a “verified fact” for light but a “fiction” for gravity; the aether he mocks is the medium his own optics need.</p>
+  <p>The collisions above are worth seeing side by side. Nineteen of them, ranked by damage, every quotation verbatim and linked to the paper it came from.</p>
   <a class="review" href="contradictions/" style="border-left:3px solid var(--navy)">
     <div class="meta">
       <span class="date">Cross-corpus audit · 19 collisions</span>
       <span class="stamp reject">Self-refuted</span>
     </div>
     <h3>The Contradiction Map — his own words, against himself</h3>
-    <p class="blurb">Nineteen places where one paper's claim is incompatible with another's, ranked by damage — every quotation verbatim and linked to the paper it came from.</p>
+    <p class="blurb">Where one paper's claim is incompatible with another's: gravity denied then used by name, the inverse-square law “fact” for light and “fiction” for gravity, the aether mocked then relied on.</p>
   </a>
 </section>
 
 <section id="reviews">
   <div class="kicker">The Reviews</div>
-  <h2>Papers reviewed to date</h2>
+  <h2>Thirteen papers, grouped</h2>
+  <p>The papers fall into three families. Each review follows the same method — steelman first, then claim-by-claim against primary sources — and every one links its verbatim source and its citations.</p>
+
+  <h3 class="group first">The instrument teardowns</h3>
+  <p class="groupnote">His most disciplined papers, and his strongest, because they assert the least: each takes one instrument and argues it measures its own behaviour, not the thing it reports. The recurring problem — the instruments supposedly measuring nothing all agree with each other, and with instruments built on unrelated physics.</p>
+
+  <a class="review" href="gravimeter-dissection-review/">
+    <div class="meta">
+      <span class="date">Reviewed July 2026 · 20 slides</span>
+      <span class="stamp reject">Reject</span>
+    </div>
+    <h3>“Gravimeter Analysis” (the ‘Gravitimeter Dissection’)</h3>
+    <p class="blurb">Tables every gravimeter type and dismisses each with one move: the displacement “could equally be electromagnetic.” That's a testable hypothesis — charge the mass, swap the material, shield the instrument — and physics has bounded the material-dependence to parts in 10¹⁵, far below anything that could imitate gravity. Also: the paper's own numbering runs its cross-cutting failures 1, 4, 5 — its Failures 2 and 3 don't exist.</p>
+  </a>
+
+  <a class="review" href="cavendish-metrology-review/">
+    <div class="meta">
+      <span class="date">Reviewed July 2026 · 15 pages · the “teardown”</span>
+      <span class="stamp reject">Reject</span>
+    </div>
+    <h3>“A Critical Analysis of… Precision Gravitational Metrology” (the “Cavendish Torsion Balance Dissection”)</h3>
+    <p class="blurb">Says conflicting measurements of G prove gravity was never isolated, and density-buoyancy replaces it. But here's the scale it never shows: every modern lab lands on 6.674×10⁻¹¹ — the famous disagreement is a ~0.05% fight over the fourth digit, not a force that reads differently day to day. And every specific objection — the fiber's memory, the turntable's vibration, the “circular” software — is answered in the labs' own published words, including a cold-atom measurement with no torsion balance at all. Mass-attraction was measured with a plumb bob 24 years before Cavendish.</p>
+  </a>
+
+  <a class="review" href="gyroscope-review/">
+    <div class="meta">
+      <span class="date">Reviewed July 2026 · 17 slides</span>
+      <span class="stamp reject">Reject</span>
+    </div>
+    <h3>“A Critical Examination of Gyroscope Manufacturing…”</h3>
+    <p class="blurb">Twelve gyroscope types, each declared uniquely blind to Earth's 15°/h rotation while trusted for every other rotation it reports — a device can't tell the two apart. The error budgets are real; the engineers who wrote them solved them. The separating test (turn the box around; the planet's reading flips, the drift doesn't) is run daily at every airport gate and in every wellbore, and seventeen slides never mention the gyrocompass, the Foucault pendulum, or a century of ships steering by the signal the paper says was never detected.</p>
+  </a>
+
+  <a class="review" href="atomic-clock-review/">
+    <div class="meta">
+      <span class="date">Reviewed July 2026 · 32 pages · PPC · his first paper</span>
+      <span class="stamp reject">Reject</span>
+    </div>
+    <h3>“The Atomic Clock Analysis and breakdown”</h3>
+    <p class="blurb">Argues atomic clocks measure “instrument behavior,” not time, so time dilation is “an interpretation, not a fact.” But it concedes the clocks differ and disputes only the label — and the clocks that agree run on unrelated physics: microwave cesium, optical strontium, gamma-ray Mössbauer nuclei, and the bare lifetime of a muon that has no dial at all. They report the same shift, including two clocks a millimetre apart on one shielded bench. His one serious objection — a shared “toroidal field” nudging every oscillator — dies where magnetism is excluded by construction: a muon in a 1.5-tesla ring (30,000× Earth's field) dilates by the pure relativistic number. The more tests he demands, the more nails he hammers.</p>
+  </a>
+
+  <a class="review" href="gravity-audit-review/">
+    <div class="meta">
+      <span class="date">Reviewed July 2026 · 13 slides</span>
+      <span class="stamp reject">Reject</span>
+    </div>
+    <h3>“An Audit of Terrestrial Gravity and Geodetic Standardizations”</h3>
+    <p class="blurb">Argues that standard gravity (9.80665&nbsp;m/s²) is a “legal fiction” and that pendulums, triangulation, and vacuum chambers don't count as measurement. The 1901 history is real; the epistemology is engineered to exclude inconvenient instruments — including the worldwide network of absolute gravimeters that measure g by literally dropping a mirror in vacuum, which the paper never mentions.</p>
+  </a>
+
+  <h3 class="group">The forces and the particles</h3>
+  <p class="groupnote">Where gravity, the photon, the neutrino and the graviton are declared mathematical fictions — and answered by the thing that finds them: the neutrino detected in 1956 and now imaged in observatories, the Higgs found twice over in independent machines, gravity's inverse-square law confirmed in the lab to sub-millimetre range.</p>
 
   <a class="review" href="newtonian-mechanics-review/">
     <div class="meta">
@@ -123,25 +184,7 @@
       <span class="stamp reject">Reject</span>
     </div>
     <h3>“A Critical Audit of Wave Propagation Mechanics and the Quantization of Gravity” (the graviton “magnum opus”)</h3>
-    <p class="blurb">His longest paper: waves don't really spread (the “fan” is just molecules catching the resonance), the graviton is a fiction, and gravity is a pressure gradient. But pump the air out of a vacuum chamber — his own §5 apparatus, on the workbench his §9 demands — and a lamp or radio inside still spreads as 1/r² with no molecules to catch anything; his favourite wave, the electromagnetic one, needs no medium (as Michelson–Morley showed, which he endorsed last paper). And to kill the spreading wave he breaks it into “thousands of straight-line rays” — a particle stream, the very thing he denies. Wave, or particle? He needs both. Even directed, a beam still thins as 1/r².</p>
-  </a>
-
-  <a class="review" href="cavendish-metrology-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · 15 pages · the “teardown”</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“A Critical Analysis of… Precision Gravitational Metrology” (the “Cavendish Torsion Balance Dissection”)</h3>
-    <p class="blurb">Says conflicting measurements of G prove gravity was never isolated, and density-buoyancy replaces it. But here's the scale it never shows: every modern lab lands on 6.674×10⁻¹¹ — the famous disagreement is a ~0.05% fight over the fifth digit, not a force that reads differently day to day. And every specific objection — the fiber's memory, the turntable's vibration, the “circular” software — is answered in the labs' own published words (quoted here), including a cold-atom measurement with no torsion balance at all. Mass-attraction was measured with a plumb bob 24 years before Cavendish.</p>
-  </a>
-
-  <a class="review" href="aristotelian-mechanics-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · 13 pages · PPC v5.0 · the capstone</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“A Mechanistic Audit of Classical Natural Philosophy” (the “Aristotelian Mechanics Dissection”)</h3>
-    <p class="blurb">The capstone manifesto — the whole model in one place: no gravity, only density and pressure, on a stationary dome-contained plane with plasma luminaries on maglev tracks, and time recast as “population management.” But density has no acceleration term, and a dropped rock speeds up — you can read the pull off a spring scale. Here's the trap it never sees: a downward pull that consistent, pointing to local vertical everywhere and weakening with altitude, is a central force on a spherical mass, whatever you call it. Rename gravity “electromagnetism” or “frequency,” as he does elsewhere, and any of them still builds the globe. His replacement physics builds the shape it denies — even if he wins the argument, he loses the Earth.</p>
+    <p class="blurb">His longest paper: waves don't really spread (the “fan” is just molecules catching the resonance), the graviton is a fiction, and gravity is a pressure gradient. But pump the air out of a vacuum chamber — his own §5 apparatus, on the workbench his §9 demands — and a lamp or radio inside still spreads as 1/r² with no molecules to catch anything; his favourite wave, the electromagnetic one, needs no medium. And to kill the spreading wave he breaks it into “thousands of straight-line rays” — a particle stream, the very thing he denies. Wave, or particle? He needs both. Even directed, a beam still thins as 1/r².</p>
   </a>
 
   <a class="review" href="field-mechanics-review/">
@@ -150,52 +193,7 @@
       <span class="stamp reject">Reject</span>
     </div>
     <h3>“The Functional Anatomy of Field Mechanics”</h3>
-    <p class="blurb">Casts Einstein as an anti-particle determinist and calls the photon “materially unrealistic” — but Einstein's 1921 Nobel was for the photon, and the paper venerates E = hv while denying the quantum that equation is. It sells the Einstein-versus-quantum schism as knowledge “hidden from us”; it's the most-discussed controversy in a century of physics. Its grand alternative — “a particle is a knot in a field” — is quantum field theory almost verbatim, with the quantization deleted that explains the photoelectric effect, the STM, and every laser. And its tired-light cosmology dies on the supernova time dilation the author denied one paper earlier.</p>
-  </a>
-
-  <a class="review" href="atomic-clock-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · 32 pages · PPC · his first paper</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“The Atomic Clock Analysis and breakdown”</h3>
-    <p class="blurb">Argues atomic clocks measure “instrument behavior,” not time, so time dilation is “an interpretation, not a fact.” But it concedes the clocks differ and disputes only the label — and the clocks that agree run on unrelated physics: microwave cesium, optical strontium, gamma-ray Mössbauer nuclei, and the bare lifetime of a muon that has no dial at all. They report the same shift, including two clocks a millimetre apart on one shielded bench. His one serious objection — a shared “toroidal field” nudging every oscillator — dies where magnetism is excluded by construction: a muon in a 1.5-tesla ring (30,000× Earth's field) dilates by the pure relativistic number. The more tests he demands, the more nails he hammers.</p>
-  </a>
-
-  <a class="review" href="kepler-mechanics-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · 9 slides · PPC v5.0</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“A Critical Audit of Keplerian Mechanics and Foundational Optics”</h3>
-    <p class="blurb">Calls the elliptical orbit a “geometric abstraction” forced onto raw observation. But the ellipse is the observation — eight arcminutes of Tycho Brahe's data, which the paper itself calls hardware-grade, are what forced Kepler off the circle. The paper endorses the inverse-square law for light as “a verified, measurable fact” three slides after treating the identical law for gravity as fiction, and its whole project is to undo the fall of epicycles — the very correction the author elsewhere holds up as science's model. The orbits it calls impossible are the ones we fly spacecraft to.</p>
-  </a>
-
-  <a class="review" href="plant-gravity-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · Illustrated paper</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“A Critical Analysis of … Plant Structural Dynamics”</h3>
-    <p class="blurb">Argues plants have no sense of gravity — only soil-anchoring, hydraulics, and reaching for light. The caption says gravity doesn't affect plants; the body says gravity “generates a downward torque” on the branch. A seed planted upside down still roots down in dark soil; a clinostat and an orbiting centrifuge switch directional growth off and back on with no soil anywhere; and hydroponics grows correctly-oriented plants with no dirt to “clamp” anything. The paper attacks the 1806 experiment that already answered it.</p>
-  </a>
-
-  <a class="review" href="gyroscope-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · 17 slides</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“A Critical Examination of Gyroscope Manufacturing…”</h3>
-    <p class="blurb">Twelve gyroscope types, each declared uniquely blind to Earth's 15°/h rotation while trusted for every other rotation it reports — a device can't tell the two apart. The error budgets are real; the engineers who wrote them solved them. The separating test (turn the box around; the planet's reading flips, the drift doesn't) is run daily at every airport gate and in every wellbore, and seventeen slides never mention the gyrocompass, the Foucault pendulum, or a century of ships steering by the signal the paper says was never detected.</p>
-  </a>
-
-  <a class="review" href="earth-shapes-review/">
-    <div class="meta">
-      <span class="date">Reviewed July 2026 · 11 slides</span>
-      <span class="stamp reject">Reject</span>
-    </div>
-    <h3>“A Critical Examination of Earth's Physical Shape…”</h3>
-    <p class="blurb">Proves at length that Earth never physically morphed between sphere, spheroid, pear, and geoid — which is the mainstream position, verbatim; the “phase timeline” is a meme, not literature, and the paper's own §2.2 concedes it. Its two live claims both fail: the barometric gradient and the mass-selective atmospheric leak falsify dome containment, and the orbital-instability argument is refuted by the stable, precessing orbits of the very satellites in its own reference list.</p>
+    <p class="blurb">Casts Einstein as an anti-particle determinist and calls the photon “materially unrealistic” — but Einstein proposed the light-quantum in 1905, and the paper venerates E = hv while denying the very quantum that equation counts. It sells the Einstein-versus-quantum schism as knowledge “hidden from us”; it's the most-discussed controversy in a century of physics. Its grand alternative — “a particle is a knot in a field” — is quantum field theory almost verbatim, with the quantization deleted that explains the photoelectric effect, the STM, and every laser. And its tired-light cosmology dies on the supernova time dilation the author denied one paper earlier.</p>
   </a>
 
   <a class="review" href="inverse-square-constants-review/">
@@ -207,35 +205,55 @@
     <p class="blurb">Argues kₑ and G are “perfectly mirrored bookends” based on their dimensional formulas, with “down” supplied by the atmosphere's electric field. The formulas are correct; the inversion is SI bookkeeping that vanishes in Gaussian units, where kₑ = 1. The atmospheric-gradient mechanism fails the charged-balloon, thunderstorm, and Faraday-cage tests — the last using the author's own shielding principle from paper #2.</p>
   </a>
 
-  <a class="review" href="gravimeter-dissection-review/">
+  <h3 class="group">The shape of the world</h3>
+  <p class="groupnote">The positive model — a stationary plane under a pressurized dome, with plasma luminaries on magnetic tracks — and the celestial mechanics it has to deny to hold together. The recurring problem: the replacement force still builds the globe.</p>
+
+  <a class="review" href="aristotelian-mechanics-review/">
     <div class="meta">
-      <span class="date">Reviewed July 2026 · 20 slides</span>
+      <span class="date">Reviewed July 2026 · 13 pages · PPC v5.0 · the capstone</span>
       <span class="stamp reject">Reject</span>
     </div>
-    <h3>“Gravimeter Analysis” (the ‘Gravitimeter Dissection’)</h3>
-    <p class="blurb">Tables every gravimeter type and dismisses each with one move: the displacement “could equally be electromagnetic.” That's a testable hypothesis — charge the mass, swap the material, shield the instrument — and physics tested it to fifteen decimal places. Also: the paper's own numbering runs its cross-cutting failures 1, 4, 5 — its Failures 2 and 3 don't exist.</p>
+    <h3>“A Mechanistic Audit of Classical Natural Philosophy” (the “Aristotelian Mechanics Dissection”)</h3>
+    <p class="blurb">The capstone manifesto — the whole model in one place: no gravity, only density and pressure, on a stationary dome-contained plane with plasma luminaries on maglev tracks, and time recast as “population management.” But density has no acceleration term, and a dropped rock speeds up — you can read the pull off a spring scale. Here's the trap it never sees: a downward pull that consistent, pointing to local vertical everywhere and weakening with altitude, is a central force on a spherical mass, whatever you call it. Rename gravity “electromagnetism” or “frequency,” as he does elsewhere, and any of them still builds the globe. His replacement physics builds the shape it denies — even if he wins the argument, he loses the Earth.</p>
   </a>
 
-  <a class="review" href="gravity-audit-review/">
+  <a class="review" href="earth-shapes-review/">
     <div class="meta">
-      <span class="date">Reviewed July 2026 · 13 slides</span>
+      <span class="date">Reviewed July 2026 · 11 slides</span>
       <span class="stamp reject">Reject</span>
     </div>
-    <h3>“An Audit of Terrestrial Gravity and Geodetic Standardizations”</h3>
-    <p class="blurb">Argues that standard gravity (9.80665&nbsp;m/s²) is a “legal fiction” and that pendulums, triangulation, and vacuum chambers don't count as measurement. The 1901 history is real; the epistemology is engineered to exclude inconvenient instruments — including the worldwide network of absolute gravimeters that measure g by literally dropping a mirror in vacuum, which the paper never mentions.</p>
+    <h3>“A Critical Examination of Earth's Physical Shape…”</h3>
+    <p class="blurb">Proves at length that Earth never physically morphed between sphere, spheroid, pear, and geoid — which is the mainstream position, verbatim; the “phase timeline” is a meme, not literature, and the paper's own §2.2 concedes it. Its two live claims both fail: the mass-selective atmospheric leak falsifies dome containment, and the orbital-instability argument is refuted by the stable, precessing orbits of the very satellites in its own reference list.</p>
   </a>
 
-  <!--
-  TEMPLATE — copy for the next paper:
-  <a class="review" href="SLUG/">
+  <a class="review" href="kepler-mechanics-review/">
     <div class="meta">
-      <span class="date">Reviewed MONTH YEAR · N slides</span>
+      <span class="date">Reviewed July 2026 · 9 slides · PPC v5.0</span>
       <span class="stamp reject">Reject</span>
     </div>
-    <h3>“PAPER TITLE”</h3>
-    <p class="blurb">One-paragraph summary: what it claims, what's true, where it fails.</p>
+    <h3>“A Critical Audit of Keplerian Mechanics and Foundational Optics”</h3>
+    <p class="blurb">Calls the elliptical orbit a “geometric abstraction” forced onto raw observation. But the ellipse is the observation — eight arcminutes of Tycho Brahe's data, which the paper itself calls hardware-grade, are what forced Kepler off the circle. The paper endorses the inverse-square law for light as “a verified, measurable fact” three slides after treating the identical law for gravity as fiction — though 1/r² is not a fact about light or gravity but about the geometry of space, shared by both. Its whole project is to undo the fall of epicycles — the very correction the author elsewhere holds up as science's model.</p>
   </a>
-  -->
+
+  <a class="review" href="plant-gravity-review/">
+    <div class="meta">
+      <span class="date">Reviewed July 2026 · Illustrated paper</span>
+      <span class="stamp reject">Reject</span>
+    </div>
+    <h3>“A Critical Analysis of … Plant Structural Dynamics”</h3>
+    <p class="blurb">Argues plants have no sense of gravity — only soil-anchoring, hydraulics, and reaching for light. The caption says gravity doesn't affect plants; the body says gravity “generates a downward torque” on the branch. A seed planted upside down still roots down in dark soil; a clinostat and an orbiting centrifuge switch directional growth off and back on with no soil anywhere; and hydroponics grows correctly-oriented plants with no dirt to “clamp” anything. The paper attacks the 1806 experiment that already answered it.</p>
+  </a>
+</section>
+
+<section id="who">
+  <div class="kicker">About This Series</div>
+  <h2>Why these papers get their own page</h2>
+  <p>The Azimutha.FE account posts multi-slide photo carousels styled as formal academic papers: title pages, section headings, justified type, technical vocabulary. The formatting borrows the authority signals of published research while carrying none of its accountability — no named author, no checkable citations, no data, no DOI, and no hosted copy that can be searched or quoted. As of our reviews (searched July 2026), none of these documents could be found anywhere on the indexed web outside the carousels themselves.</p>
+  <p>The papers are also better than average for the genre: the historical footnotes are frequently accurate, the prose is fluent, and the arguments are structured. That makes them more persuasive than the usual fare — and more worth answering carefully. Our approach on every review is the same: steelman first, concede what's true, then check what remains against primary sources.</p>
+  <div class="note">
+    <div class="kicker">Standing invitation</div>
+    <p>If the author of these documents wants to respond, publish a citable copy, or correct anything on these pages — the contact form works, and unlike the papers under review, everything here has a fixed address. Corrections are applied publicly and credited.</p>
+  </div>
 </section>
 
 <section id="responses">
